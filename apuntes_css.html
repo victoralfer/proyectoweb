@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="author" content="Víctor">
+		<meta name="description" content="Apuntes CSS">
+		<meta name="keywords" content="css, margin, padding, border, contenedores, apuntes">
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilo-apuntes-css.css">
+		
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="js/javascript_css.js"></script>
+
+		<title>Apuntes CSS 3 - Víctor Álvarez</title>
+
+	</head>
+
+	<body>
+
+		<!-- IMAGEN CABECERA -->
+		<header>
+
+			<img id="img-cab" src="img/cabecera_css.jpg" alt="imagen de cabecera apuntes css3">
+			
+			<div id="ham-cerrar">
+				
+				<img id="img-ham" src="img/hamburguesa.png" onclick="fun_css()" title="Haz click para desplegar el menú">
+			
+				<img id="img-cerrar" src="img/cerrar.png" onclick="fun_css()" title="Haz click para cerrar el menú">
+			
+			</div>
+		
+		</header>
+
+
+		<!-- CAPA PRINCIPAL -->
+		<div id="principal">
+
+			<!-- MENÚ VERTÍCAL -->
+			<aside id="aside">
+			
+				<h2 onclick="fun_css()" title="Haz click para cerrar el menú">CERRAR MENÚ</h2>
+			
+				<!-- Menú Botones: Apuntes -->
+				<div id="menu-prin">
+				
+					<h4 class="proy-apun" onclick="fun_pro()" title="Haz click para acceder a los Apuntes">APUNTES</h4>
+					
+					<!-- Capa con Botones de Apuntes -->
+					<div id="botones">
+
+						<h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes HTML"><a href="apuntes_html.html">APUNTES HMTL</a></h4>
+
+						<h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de Formularios"><a href="apuntes_formularios.html">FORMULARIOS</a></h4>
+
+						<h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de CSS"><a href="#">APUNTES CSS</a></h4>
+
+						<h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de JavaScript"><a href="apuntes_js.html">APUNTES JS</a></h4>
+						
+						<h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de jQuery"><a href="apuntes_jQuery.html">APUNTES JQUERY</a></h4>
+
+					</div>
+										
+				</div>
+				
+				<!-- Menús Selectores y Propiedades -->
+				<div id="menus">
+				
+					<!-- MEDIDAS -->
+					<a href="#medidas" onclick="fun_buscador_reset()"><h4 class="medvert" title="Haz click para ver la información">MEDIDAS</h4></a>
+
+					<!-- SELECTOR -->
+					<h4 class="catvert" onclick="fun_selector()" title="Haz click para expander/contraer">SELECTORES</h4>
+					
+					<ul id="selector">
+						<a href="#selectores" onclick="fun_buscador_reset()"><li>Sintaxis y Tipos</li></a>
+						<a href="#jerarquia" onclick="fun_buscador_reset()"><li>Jerarquía</li></a>
+						<a href="#grupo" onclick="fun_buscador_reset()"><li>Grupo</li></a>
+					</ul>
+
+					<h4 class="catvert" onclick="fun_prop()" title="Haz click para expander/contraer">PROPIEDADES</h4>
+					
+					
+					<!-- PROPIEDADES -->
+					<div id="menus-prop">
+
+						<!-- Propiedades: Formato -->
+						<h4 class="propvert" onclick="fun_menu_formato()" title="Haz click para expander/contraer">FORMATO</h4>
+
+						<ul id="formato">
+							<a href="#colores" onclick="fun_buscador_reset()"><li>Colores</li></a>
+							<a href="#fuente" onclick="fun_buscador_reset()"><li>Fuente</li></a>
+							<a href="#rayados" onclick="fun_buscador_reset()"><li>Rayados</li></a>
+							<a href="#sombreado" onclick="fun_buscador_reset()"><li>Sombreado</li></a>
+							<a href="#texto" onclick="fun_buscador_reset()"><li>Textos</li></a>
+							<a href="#ancho" onclick="fun_buscador_reset()"><li>Ancho y Alto</li>
+							<a href="#margenes" onclick="fun_buscador_reset()"><li>Márgenes</li></a>
+							<a href="#bordes" onclick="fun_buscador_reset()"><li>Bordes</li></a>
+							<a href="#relleno" onclick="fun_buscador_reset()"><li>Rellenos</li></a>
+							<a href="#fondos" onclick="fun_buscador_reset()"><li>Fondos</li></a>
+							<a href="#tablas" onclick="fun_buscador_reset()"><li>Tablas</li></a>
+						</ul>
+
+
+						<!-- Propiedades: Listas-->
+						<h4 class="propvert" onclick="fun_menu_listas()" title="Haz click para expander/contraer">LISTAS</h4>
+
+						<ul id="listas">
+							<a href="#listas" onclick="fun_buscador_reset()"><li>Formato</li></a>
+							<a href="#listash" onclick="fun_buscador_reset()"><li>Horizontalidad</li></a>
+						</ul>
+
+
+						<!-- Propiedades: Posicionamiento -->
+						<h4 class="propvert"  onclick="fun_menu_pos()" title="Haz click para expander/contraer">POSICIONAMIENTO</h4>
+
+						<ul id="posicionamiento">
+							<a href="#flotante" onclick="fun_buscador_reset()"><li>Flotante</li></a>
+							<a href="#absoluto" onclick="fun_buscador_reset()"><li>Absoluto</li></a>
+							<a href="#relativo" onclick="fun_buscador_reset()"><li>Relativo</li></a>
+						</ul>
+
+
+						<!-- Propiedades: Capas -->
+						<h4 class="propvert" onclick="fun_menu_capas()" title="Haz click para expander/contraer">CAPAS Y DISPLAY</h4>
+
+						<ul id="capas">
+							<a href="#capas" onclick="fun_buscador_reset()"><li>Capas</li></a>
+							<a href="#display" onclick="fun_buscador_reset()"><li>Display</li></a>
+							<a href="#visibility" onclick="fun_buscador_reset()"><li>Visibility</li></a>
+						</ul>
+
+						
+						<!-- Propiedades: FlexBox -->
+						<h4 class="propvert" onclick="fun_menu_fb()" title="Haz click para expander/contraer">FLEX BOX</h4>
+
+						<ul id="flexbox">
+							<a href="#flex" onclick="fun_buscador_reset()"><li>Flex</li></a>
+							<a href="#justify" onclick="fun_buscador_reset()"><li>Justify-Content</li></a>
+							<a href="#align" onclick="fun_buscador_reset()"><li>Alineación Secundaria</li></a>
+							<a href="#gap" onclick="fun_buscador_reset()"><li>Espaciados</li></a>
+							<a href="#flexbasis" onclick="fun_buscador_reset()"><li>Adaptación</li></a>
+						</ul>
+						
+					</div>
+
+
+					<!-- + OPCIONES -->
+					<h4 class="catvert mas-prop" onclick="fun_menu_prop()" title="Haz click para expander/contraer">+ OPCIONES</h4>
+					
+					<ul id="propiedades">
+						<a href="#pseudo" onclick="fun_buscador_reset()"><li>Pseudo-Clases</li></a>
+						<a href="#media" onclick="fun_buscador_reset()"><li>Media Querys</li></a>
+						<a href="#otras" onclick="fun_buscador_reset()"><li>Variedad</li></a>
+					</ul>
+					
+				</div>
+
+			</aside>
+
+
+			<!-- BUSCADOR -->
+				
+			<div id="capa-buscador">
+
+				<h4 id="busc-bot" onclick="fun_sacar_buscador()" title="Pulsa 'Ctrl + b' para abrir/cerrar el Buscador de Prácticas">BUSCADOR</h4>
+
+
+				<div id="busc-prac">
+					
+					<label for="buscador">BUSCADOR PROPIEDADES</label>
+						
+					<input id="buscador" name="buscador" type="text">
+						
+					<div id="botones-buscador">
+						
+						<button id="buscar" onclick="fun_buscador()" title="Pulsa 'Enter' para buscar">BUSCAR</button>
+						
+						<button id="reset" onclick="fun_buscador_reset()" title="Pulsa 'Ctrl + z' para resetear">RESET</button>
+						
+					</div>
+		
+				</div>
+				
+			</div>
+
+
+			<!-- SECCIÓN CON APUNTES -->
+			<section>
+			
+				<!-- MEDIDAS -->
+				
+				<article>
+				
+					<a name="medidas"></a>
+					
+					<h2 class="h2article">Medidas</h2>
+					
+					
+					<!-- Porcentaje -->
+					<h4>Porcentaje: %</h4>
+					
+					<p class="explicacion2">El símbolo <span class="negrita2">% representa una medida relativa al tamaño del elemento contenedor</span>.</p>
+					
+					<p class="explicacion">Es muy útil para crear diseños flexibles y responsivos, ya que el tamaño del elemento cambia automáticamente cuando el contenedor se redimensiona.</p>
+					
+					
+					<!-- Pixel-->
+					<h4>Pixel: px</h4>
+					
+					<p class="explicacion2">La unidad px significa píxel, y <span class="negrita2">representa una medida absoluta basada en el punto más pequeño que puede mostrarse en la pantalla</span>.</p>
+					
+					<p class="explicacion">Es ideal para obtener precisión visual, aunque no es adaptable a diferentes pantallas o configuraciones de accesibilidad.</p>
+					
+					
+					<!-- EM -->
+					<h4>Medida Relativa: em</h4>
+					
+					<p class="explicacion2">La unidad <span class="negrita2">em se usa para definir medidas relativas</span> al tamaño de fuente del elemento padre.</p> 
+					
+					<p class="explicacion">Es muy útil para lograr proporciones coherentes en tipografía y espaciados, aunque puede acumularse en elementos anidados.</p>
+					
+					
+					<!-- Ancho Viewport -->
+					<h4>Ancho Pantalla Visible: vw</h4>
+					
+					<p class="explicacion2">La unidad <span class="negrita2">vw significa ancho del viewport</span>, es decir, un porcentaje del ancho visible de la ventana del navegador.</p>
+					
+					<p class="explicacion">Es perfecta para diseños fluidos, ya que <span class="resaltado">el tamaño se adapta automáticamente al cambiar el tamaño de la ventana o al visualizar la página en distintos dispositivos</span>.</p>
+					
+					
+					<!-- Altura Dinámica Visible -->
+					<h4>Altura Dinámica Visible: dvh</h4>
+				
+					<p class="explicacion2">La unidad <span class="negrita2">dvh representa la altura dinámica visible del viewport</span>, adaptándose a los cambios que ocurren en pantallas móviles (como cuando aparece el teclado o se oculta la barra de navegación).</p>
+				
+	
+				</article>
+			
+
+				
+				<!-- SINTAXIS SELECTORES -->
+				<article>
+
+					<a name="selectores"></a>
+
+					<h2 class="h2article">Selectores</h2>
+
+					<img src="img/sintaxis-css3.png" class="imgsintaxis">
+
+					<h4>Selector Universal</h4>
+
+					<p>
+						<span class="propiedades"> <span class="bg">{ font-family: arial; }</span></span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: su uso no es habitual, pero se puede utilizar para aplicar propiedades a todas las etiquetas utilizadas en una página.</p>
+
+					<h4>Selector de Etiqueta</h4>
+
+					<p>
+						<span class="etiqueta">li </span><span class="propiedades">{ font-size: 0.9em; }</span>
+					</p>
+
+					<h4>Selector de Clase</h4>
+
+					<p>
+						<span class="clase">.contamarillo </span><span class="propiedades">{ font-weight: bold; }</span>
+					</p>
+
+					<h4>Selector de Identificación</h4>
+
+					<p>
+						<span class="cont">#capa1</span><span class="propiedades"> { width: 90%; }</span>
+					</p>
+
+				</article>
+
+
+				<!-- SELECTORES DE JERARQUÍA -->
+				<article>
+
+					<a name="jerarquia"></a>
+
+					<h2 class="h2article">Sel. Jerarquía</h2>
+
+					<h4>Dentro de una Clase</h4>
+
+					<p>
+						<span class="clase">.contamarillo </span> <span class="etiqueta">li</span> <span class="propiedades">{ color: blue; font-family: arial; }</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: Se selecciona para establecer estilo a los elementos <span class="negrita2">'li'</span> de la clase <span class="negrita2">'contamarillo'</span>.</p>
+
+					<h4>Dentro de una Clase perteneciente a un Identificador</h4>
+
+					<p>
+						<span class="cont">#contenedor1 </span><span class="clase">.contamarillo </span> <span class="etiqueta">li</span> <span class="propiedades">{ color: blue; font-family: arial; }</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se selecciona para establecer estilo a los elementos <span class="negrita2">'li'</span> de la clase <span class="negrita2">'contamarillo'</span> que están dentro del contenedor con identificador <span class="negrita2">'contenedor1'</span>.</p>
+
+				</article>
+
+
+				<!-- SELECTORES DE GRUPO -->
+				<article>
+
+					<a name="grupo"></a>
+
+					<h2 class="h2article">Sel. Grupo</h2>
+
+					<p>
+						<span class="etiqueta">p</span>, <span class="etiqueta">li</span> <span class="propiedades">{ color: blue; font-family: arial; }</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: los selectores se separan por comas, permitiendo en este ejemplo establecer estilos a todos los párrafos <span class="negrita2">'p'</span> y los elementos <span class="negrita2">'li'</span>.</p>
+
+					
+					<hr>
+					
+										
+					<p>
+						<span class="etiqueta">p</span>, <span class="cont">#contenedor1 </span><span class="clase">.contamarillo </span> <span class="etiqueta">li</span> <span class="propiedades">{ color: blue; font-family: arial; }</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: los selectores se separan por comas, permitiendo en este ejemplo establecer estilos a todos los párrafos <span class="negrita2">'p'</span> y los elementos <span class="negrita2">'li'</span> que pertenecen a la clase <span class="negrita2">'contamarillo'</span> dentro del contenedor con identificador <span class="negrita2">'contenedor1'</span>.</p>
+
+				</article>
+
+
+				<!-- COLORES -->
+				<article>
+
+					<a name="colores"></a>
+
+					<h2 class="h2article">Colores</h2>
+
+					<h4>Nombre del Color</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ color: yellow; }</span></p>
+
+					<h4>Valor Hexadecimal</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ color: #FFFFFF; }</span></p>
+
+					<h4>RGB (Valores del 0 al 255 en cada color)</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ color: rgb(47, 170, 170); }</span></p>
+
+					<h4>RGBA (Valores del 0 al 255 en cada color) con canal alfa (Valores entre 0 y 1)</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ color: rgba(252, 245, 109, 0.7); }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: la <span class="negrita2">'R'</span> se refiere a la intensidad del color rojo, la <span class="negrita2">'G'</span> a la intensidad del color verde, la <span class="negrita2">'B'</span> a la intensidad del color azul y la <span class="negrita2">'A'</span> (canal alfa) al nivel de transparencia.</p>
+					
+				</article>
+
+
+				<!-- PROPIEDADES DE FORMATO DE FUENTE-->
+				<article>
+
+					<a name="fuente"></a>
+
+					<h2 class="h2article">Formato de Fuente</h2>
+
+					<h4>Color de Letra</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ color: green; }</span></p>
+
+					<h4>Tipo de Letra</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ font-family: arial; }</span></p></p>
+
+					<h4>Tamaño de Letra (px, em, %,...)</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ font-size: 0.9em; }</span></p></p>
+
+					<h4>Negrita</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ font-weight: bold; }</span></p></p>
+
+					<h4>Cursiva</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ font-style: italic; }</span></p>
+
+					<h4>Letras minúsculas en Versalitas (Mayúsculas + pequeñas)</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ font-variant: small-caps; }</span></p>
+
+					<h4>Convertir todas las letras a MAYÚSCULAS</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-transform: uppercase; }</span></p>
+
+					<h4>Convertir todas las letras a minúsculas</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-transform: lowercase; }</span></p>
+
+					<h4>Primera Letra de cada palabra en MAYÚSCULA</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-transform: capitalize; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se pueden aplicar en etiquetas de párrafos, títulos, listas, tablas, contenedores, ...</p>
+
+				</article>
+
+
+				<!-- SUBRAYADOS -->
+				<article>
+
+					<a name="rayados"></a>
+
+					<h2 class="h2article">Rayados</h2>
+
+					<h4>Normal (Subrayado)</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-decoration: underline; }</span></p>
+
+					<h4>Rayado por encima del texto</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-decoration: overline; }</span></p>
+
+					<h4>Tachado</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-decoration: line-through; }</span></p>
+
+					<h4>Ninguno</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-decoration: none; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: habitualmente se utilizan el rayado normal (subrayado) y el tachado.</p>
+
+					<p class="explicacion">La opción <span class="negrita2">'none'</span> se aplica a las etiquetas <span	class="resaltado">&lt;a href=""&gt; &lt;/a&gt;</span> para quitar la línea que aparece cuando se crea un hipervínculo (enlace).</p>
+
+				</article>
+
+
+				<!-- SOMBREADO -->
+				<article>
+
+					<a name="sombreado"></a>
+
+					<h2 class="h2article">Sombreado</h2>
+
+					<h4>Sombreado en un Texto</h4>
+
+					<p><span class="etiqueta">h1</span> <span class="propiedades">{ text-shadow: 3px 3px 2px black; }</span></p>
+
+					<h4>Sombreado en una Caja</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ box-shadow: 3px 3px 2px grey; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utilizan para establecer sombras a un texto o caja. El <span class="negrita2">'primer parámetro'</span> corresponde a la franja horizontal (sombra hacía abajo), el <span class="negrita2">'segundo parámetro'</span> a la franja vertical (sombra hacía la derecha), el <span class="negrita2">'tercer parámetro'</span> al difuminado (intensidad de menor a mayor) y el <span class="negrita2">'cuarto'</span> al color del sombreado.</p>
+
+					<p class="explicacion">Los tres primeros parámetros utilizan como unidad de medida el pixel. Si en los <span class="resaltado">'dos primeros'</span> parámetros se utilizan medidas negativas estas se aplican de manera inversa, es decir sombra hacía arriba (primer parámetro) y/o sombra hacía la izquierda (segundo parámetro).</p>
+
+				</article>
+
+
+
+				<!-- PROPIEDADES DE TEXTOS -->
+				<article>
+
+					<a name="texto"></a>
+
+					<h2 class="h2article">Formato Textos</h2>
+
+					<h4>Alineación de Texto</h4>
+
+					<p><span class="etiqueta">h2</span> <span class="propiedades">{ text-align: center; }</span></p>
+
+					
+					<h4>Espacio entre Letras</h4>
+
+					<p><span class="etiqueta">h2</span> <span class="propiedades">{ letter-spacing: 5px; }</span></p>
+
+					
+					<h4>Espacio entre Líneas</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ line-height: 6px; }</span></p>
+
+					
+					<h4>Sangría de Primera Línea</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-indent: 30px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: estas propiedades se pueden aplicar en todas aquellas etiquetas que vayan a contener texto (títulos, párrafos, ...).</p>
+
+					
+					<h4>Modo de Escritura</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ writing-mode: vertical-lr; }</span></p>
+					
+					<p class="explicacion"><span class="negrita">Explicación</span>: esta propiedad define la dirección principal del texto (cómo se colocan las líneas) y la dirección del bloque (cómo se apilan las líneas).</p>
+					
+					<h5 class="alinearizquierda">Posibles Valores</h5>
+					
+					<ul>
+						<li><span class="negrita2">vertical-lr:</span> escritura de izquierda a derecha.</li>
+						<li><span class="negrita2">vertical-rl:</span> escritura de derecha a izquierda.</li>
+						<li><span class="negrita2">horizontal-tb (modo por defecto)</span>.</li>
+					</ul>
+					
+					
+					<h4>Orientación de los Caracteres</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ text-orientation: upright; }</span></p>
+					
+					<p class="explicacion"><span class="negrita">Explicación</span>: controla cómo se escriben los caracteres dentro de una línea vertical.</p> 
+					
+					<p class="explicacion"><span class="resaltado">Sólo tiene efecto cuando se usa la propiedad 'writing-mode' con los valores verticales</span>.</p>
+					
+				</article>
+
+
+				<!-- PROPIEDADES DE ANCHO Y ALTO -->
+				<article>
+
+					<a name="ancho"></a>
+
+					<h2 class="h2article">Ancho y Alto</h2>
+
+					<h4>Ancho</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ width: 90%; }</span>
+					
+					
+					<h4>Ancho Máximo deseado</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ max-width: 250px; }</span>
+					
+
+					<h4>Alto</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ height: 500px; }</span></p>
+					
+					
+					<h4>Alto Máximo deseado</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ max-height: 500px; }</span>
+					
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: las propiedades de alto (height) y ancho (width) en CSS se pueden aplicar fundamentalmente a capas contenedoras, imágenes, vídeos o áreas de texto.</p>
+
+					<p class="explicacion">Las propiedades <span class="negrita2">max-width (ancho máximo)</span> o <span class="negrita2">max-height (alto máximo)</span> se utilizan para indicar un ancho o alto máximo siempre que el contenedor o la ventana lo permita.</p>
+
+					<p class="explicacion">Hay que tener especial cuidado con el uso de la propiedad <span class="negrita2">'height'</span> para que el contenedor no se vea superado por textos, imágenes u otros objetos incluidos en estas capas.</p>
+
+					<p class="explicacion"> También <span class="resaltado">hay que prestar especial atención en las imágenes o vídeos cuando se quiere aplicar <span class="negrita2">'height'</span> de forma combinada con <span class="negrita2">'width'</span></span>, ya que puede provocar un aumento o reducción 'no proporcional' del tamaño de ese tipo de contenido multimedia.</p>
+
+				</article>
+				
+
+				<!-- BOX-MODEL -->
+
+				<!-- MÁRGENES -->
+				<article>
+
+					<a name="margenes"></a>
+
+					<h2 class="h2article">Márgenes</h2>
+
+					<img src="img/box-model.png" class="imgboxmodel">
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ margin: 3px 2px 4px 5px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: cuando aparecen <span class="resaltado">cuatro parámetros</span> los márgenes se aplican en el siguiente orden: arriba, derecha, abajo e izquierda.</p>
+
+					<p class="explicacion">Cuando aparecen tan sólo <span class="resaltado">dos parámetros</span> el <span class="negrita2">primero</span> es referido a los márgenes superior e inferior y el <span class="negrita2">segundo</span> parámetro a los márgenes derecho e izquierdo.</p>
+
+					<p class="explicacion">Si aparece <span class="resaltado">un sólo parámetro</span>, la cantidad se aplica a todos los lados del contenedor.</p>
+
+					<h4>Posición de los Márgenes</h4>
+
+					<ol>
+						<li><span class="negrita2">Superior: </span><span class="etiqueta">div</span> <span class="propiedades">{ margin-top: 2px; }</span></li>
+						<li><span class="negrita2">Inferior: </span><span class="etiqueta">div</span> <span class="propiedades">{ margin-bottom: 2px; }</span></li>
+						<li><span class="negrita2">Izquierdo: </span><span class="etiqueta">div</span> <span class="propiedades">{ margin-left: 2px; }</span></li>
+						<li><span class="negrita2">Derecho: </span><span class="etiqueta">div</span> <span class="propiedades">{ margin-right: 2px; }</span></li>
+					</ol>
+
+					<h4>Alineación Centrada con Márgenes</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ margin: 0 auto; }</span>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: cuando se aplican los parámetros <span class="resaltado">'0' y 'auto' conjuntamente</span> en un contenedor, este se alinea en el centro con respecto a su contenedor padre (se recomienda que el 'padre' tenga un ancho definido).</p>
+
+				</article>
+
+				<!-- BORDES -->
+				<article>
+
+					<a name="bordes"></a>
+
+					<h2 class="h2article">Bordes</h2>
+
+					<h4>Bordes en todo el contenedor</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ border: 1px solid black; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: el primer parámetro indica el grosor, el segundo parámetro el tipo de borde y el tercer parámetro el color del borde.</p>
+
+					<h4>Tipos de Bordes</h4>
+
+					<ol>
+						<li><span class="negrita2">Solido: </span><span class="etiqueta">div</span> <span class="propiedades">{ border: 1px solid; }</span></li>
+						<li><span class="negrita2">Punteado: </span><span class="etiqueta">div</span> <span class="propiedades">{ border: 2px dotted; }</span></li>
+						<li><span class="negrita2">Doble: </span><span class="etiqueta">div</span> <span class="propiedades">{ border: 3px double; }</span></li>
+						<li><span class="negrita2">Línea Discontinua: </span><span class="etiqueta">div</span> <span class="propiedades">{ border: 2px dashed; }</span></li>
+					</ol>
+
+					<h4>Posición de los Bordes</h4>
+
+					<ol>
+						<li><span class="negrita2">Superior: </span><span class="etiqueta">div</span> <span class="propiedades">{ border-top: 1px solid; }</span></li>
+						<li><span class="negrita2">Inferior: </span><span class="etiqueta">div</span> <span class="propiedades">{ border-bottom: 2px dotted; }</span></li>
+						<li><span class="negrita2">Izquierdo: </span><span class="etiqueta">div</span> <span class="propiedades">{ border-left: 3px double; }</span></li>
+						<li><span class="negrita2">Derecho: </span><span class="etiqueta">div</span> <span class="propiedades">{ border-right: 2px dashed; }</span></li>
+					</ol>
+
+					<h4>Bordes Redondeados</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ border-radius: 3px 3px 4px 5px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: el <span class="negrita2">primer parámetro</span> indica el borde superior izquierdo, el <span class="negrita2">segundo parámetro</span> el borde superior derecho, el <span class="negrita2">tercer parámetro</span> el borde inferior derecho y el <span class="negrita2">cuarto parámetro</span> el borde inferior izquierdo.</p>
+
+					<p class="explicacion">Si sólo se muestran <span class="resaltado">dos parámetros</span> el <span class="negrita2">primer parámetro</span> indica los bordes superior izquierdo e inferior derecho, y el <span class="negrita2">segundo parámetro</span> el borde superior derecho y el borde inferior izquierdo.</p>
+
+					<p class="explicacion">Si <span class="resaltado">sólo se muestra un parámetro</span>, este se aplica a todos los bordes.</p>
+
+					
+					<h4>Bordes sin sobresalir</h4>
+
+					<p><span class="etiqueta">li</span> <span class="propiedades">{ box-sizing: border-box; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: 
+					la propiedad <span class="negrita2">'box-sizing'</span> con el dato 
+					<span class="negrita2">'border-box'</span> hace que los bordes 
+					crezcan hacía dentro y no hacía afuera.</p>
+
+
+				</article>
+
+
+				<!-- RELLENOS -->
+				<article>
+
+					<a name="relleno"></a>
+
+					<h2 class="h2article">Rellenos</h2>
+
+					<h4>Rellenos en todo el contenedor</h4>
+
+					<p><span class="etiqueta">h3</span> <span class="propiedades">{ padding: 1px 2px 4px 3px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: el <span class="negrita2">primer parámetro</span> se aplica al relleno entre el contenedor y el borde superior, el <span class="negrita2">segundo parámetro</span> se aplica al relleno entre el contenedor y el borde derecho, el <span class="negrita2">tercer parámetro</span> se aplica al relleno entre el contenedor y el borde inferior y el <span class="negrita2">cuarto parámetro</span> al relleno entre el contenedor y el borde izquierdo.</p>
+
+					<p class="explicacion"> Si se mostraran <span class="resaltado">dos parámetros</span>, el <span class="negrita2">primero</span> se aplicaría al relleno entre el contenedor y los bordes superior e inferior, mientras el el <span class="negrita2">segundo</span> se aplicaría al relleno entre el contenedor y los bordes derecho e izquierdo.</p>
+
+					<p class="explicacion">Si <span class="resaltado">sólo aparece un parámetro</span>, este se aplica a todo el relleno entre el contenedor y los bordes.</p>
+
+					<h4>Rellenos concretos</h4>
+
+					<ol>
+						<li><span class="negrita2">Superior: </span><span class="etiqueta">li</span> <span class="propiedades">{ padding-top: 2px; }</span></li>
+						<li><span class="negrita2">Inferior: </span><span class="etiqueta">li</span> <span class="propiedades">{ padding-bottom: 2px; }</span></li>
+						<li><span class="negrita2">Izquierdo: </span><span class="etiqueta">li</span> <span class="propiedades">{ padding-left: 2px; }</span></li>
+						<li><span class="negrita2">Derecho: </span><span class="etiqueta">li</span> <span class="propiedades">{ padding-right: 2px; }</span></li>
+					</ol>
+
+				</article>
+
+
+				<!-- BACKGROUND -->
+				<article>
+
+					<a name="fondos"></a>
+
+					<h2 class="h2article">Fondos</h2>
+
+					<h4>Color de Fondo</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ background-color: blue; }</span></p>
+
+					
+					<h4>Degradado Lineal</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ background: linear-gradient(to right, blue 50%, white 50%); }</span></p>
+					
+					<p class="explicacion"><span class="negrita">Explicación</span>: el <span class="negrita2">primer parámetro</span> indica la dirección a seguir, el <span class="negrita2">segundo parámetro</span> el primer color y el porcentaje que ocupa y el <span class="negrita2">tercer parámetro</span> el segundo color y el porcentaje que ocupa.</p>
+
+					<p class="explicacion">Se pueden utilizar <span class="resaltado">tanto posiciones como grados</span> para las direcciones del degradado.</p>
+					
+					<ul>
+						<li><span class="negrita2">to right</span> = 90deg</li>
+						<li><span class="negrita2">to left</span> = 270deg</li>
+						<li><span class="negrita2">to bottom</span> = 180deg</li>
+						<li><span class="negrita2">to top</span> = 0deg</li>
+					</ul>
+
+					<p class="explicacion">No es necesario el uso de porcentajes para conseguir un difuminado de colores, bastando solo con indicar la posición de inicio y los colores a fundir.</p>
+
+					
+					<h4>Degradado Radial</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ background-color: radial-gradient(ellipse at center, blue 50%, white 50%); }</span></p>
+					
+					<p class="explicacion"><span class="negrita">Explicación</span>: el <span class="negrita2">primer parámetro</span> indica la opción y la posición de inicio, el <span class="negrita2">segundo parámetro</span> el primer color y el porcentaje que ocupa y el <span class="negrita2">tercer parámetro</span> el segundo color y el porcentaje que ocupa.</p>
+					
+					<h5 class="alinearizquierda">Tipos de Degradado</h5>
+					<ul>
+						<li><span class="negrita2">circle</span></li>
+						<li><span class="negrita2">ellipse</span></li>
+					</ul>
+					
+					<h5 class="alinearizquierda">Posición de Inicio</h5>
+					<ul>
+						<li><span class="negrita2">at center</span></li>
+						<li><span class="negrita2">at right</span></li>
+						<li><span class="negrita2">at left</span></li>
+						<li><span class="negrita2">at bottom</span></li>
+						<li><span class="negrita2">at top</span></li>
+					</ul>
+					
+					<h4>Imagen de Fondo</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ background-image: url("img/pantersa-rosa.png"), url("img/gato.jpg"); }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: será necesario incluir la ruta donde se encuentra alojada la imagen. Se pueden incluir varias imágenes separando las rutas de los archivos por comas.</p>
+
+					<h4>Tamaño de la Imagen de Fondo</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ background-size: 40%, 50px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: lo más habitual es dimensionarlo por porcentajes o por el ancho medido en píxeles (px). Si se han incluido más imágenes, se separan sus tamaños por comas.</p>
+
+					<h4>Posición de la Imagen de Fondo</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ background-position: top left, 50px 30px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se pueden utilizar las posiciones <span class="negrita2">top</span> (superior), <span class="negrita2">bottom</span> (inferior), <span class="negrita2">left</span> (izquierda), <span class="negrita2">right</span> (derecha) o combinaciones lógicas de las mismas. Si se han incluido varias imágenes de background, los datos de sus posiciones se separan por comas.</p>
+
+					<p class="explicacion">También se pueden meter coordenadas cartesianas 'x' e 'y' en píxeles (px) para fijar la posición de la imagen.</p>
+
+					<h4>Repetición de la Imagen de Fondo</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ background-repeat: no-repeat, repeat-y; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: si la imagen no ocupa todo el contenedor, esta se repetirá indefinidamente hasta cubrirlo; por este motivo es necesario establecer un dato entre los que encontramos <span class="negrita2">'no-repeat'</span> (que no se repita), <span class="negrita2">'repeat-x'</span> (repetir horizontalmente) o <span class="negrita2">'repeat-y'</span> (repetir verticalmente). Si se han incluido más imágenes, se separan los datos de repetición por comas.</p>
+
+					<h4>Fijar la Imagen de Fondo</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ background-attachment: fixed; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: esta propiedad junto con el dato <span class="negrita2">'fixed'</span>, fija el contenido del background en la pantalla visible.</p>
+
+				</article>
+
+
+				<!-- TABLAS -->
+				<article>
+
+					<a name="tablas"></a>
+					
+					<h2 class="h2article">Tablas</h2>
+
+					<h4>Separación entre celdas</h4>
+
+					<p><span class="etiqueta">table</span> <span class="propiedades">{ border-collapse: collapse; }</span></p>
+
+					<p><span class="etiqueta">table</span> <span class="propiedades">{ border-spacing: 10px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: la propiedad <span class="resaltado">border-collapse</span> con el dato <span class="negrita2">'collapse'</span> suprime el espacio entre celdas.</p>
+
+					<p class="explicacion">Si se utiliza la propiedad <span class="resaltado">border-spacing</span> se puede aplicar un espacio determinado entre celdas.</p>
+
+					<h4>Alineación Horizontal</h4>
+
+					<p><span class="etiqueta">table</span> <span class="propiedades">{ vertical-align: top; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: las tablas pueden alinearse con respecto a su contenedor en las posiciones <span class="negrita2">left</span> (izquierda), <span class="negrita2">center</span> (centro) y <span class="negrita2">right</span> (derecha).</p>
+
+					<p class="explicacion">Esta propiedad también se puede aplicar en las celdas (td o th) y en las filas (tr).</p>
+
+					<h4>Alineación Vertical</h4>
+
+					<p><span class="etiqueta">td</span> <span class="propiedades">{ vertical-align: top; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: las celdas pueden alinear verticalmente su contenido en las posiciones <span class="negrita2">'top'</span> (arriba), <span class="negrita2">'middle'</span> (centro) y <span class="negrita2">'bottom'</span> (abajo).</p>
+
+				</article>
+
+
+				<!-- LISTAS -->
+				<article>
+
+					<a name="listas"></a>
+					
+					<h2 class="h2article">Listas</h2>
+
+					<h4>Cambiar Viñetas en las Listas UL</h4>
+
+					<ul>
+						<li><span class="negrita2">Círculo Sólido: </span><span class="etiqueta">ul</span> <span class="propiedades">{ list-style-type: disc; }</span></li>
+						<li><span class="negrita2">Círculo Hueco: </span> <span class="etiqueta">ul</span> <span class="propiedades">{ list-style-type: circle; }</span></li>
+						<li><span class="negrita2">Cuadrado: </span><span class="etiqueta">ul</span> <span class="propiedades">{ list-style-type: square; }</span></li>
+						<li><span class="negrita2">Sin Viñetas: </span><span class="etiqueta">ul</span> <span class="propiedades">{ list-style-type: none; }</span></li>
+					</ul>
+
+					<h4>Cambiar Numeración en las Listas OL</h4>
+
+					<ol>
+						<li><span class="negrita2">Decimal: </span><span class="etiqueta">ol</span> <span class="propiedades">{ list-style-type: decimal; }</span></li>
+						<li><span class="negrita2">Romanos MAYÚSCULAS: </span><span class="etiqueta">ol</span> <span class="propiedades">{ list-style-type: upper-roman; }</span></li>
+						<li><span class="negrita2">Romanos minúsculas: </span><span class="etiqueta">ol</span> <span class="propiedades">{ list-style-type: lower-roman; }</span></li>
+						<li><span class="negrita2">Letras MAYÚSCULAS: </span><span class="etiqueta">ol</span> <span class="propiedades">{ list-style-type: upper-alpha; }</span></li>
+						<li><span class="negrita2">Letras minúsculas: </span><span class="etiqueta">ol</span> <span class="propiedades">{ list-style-type: lower-alpha; }</span></li>
+						<li><span class="negrita2">Sin numeración: </span><span class="etiqueta">ol</span> <span class="propiedades">{ list-style-type: none; }</span></li>
+					</ol>
+
+					<h4>Incluir una imagen personalizada como viñeta</h4>
+
+					<p><span class="etiqueta">ul</span> <span class="propiedades">{ list-style-image: url("img/icon.png"); }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: esta propiedad se puede aplicar tanto en las etiquetas <span class="negrita2">'ul'</span> y <span class="negrita2">'ol'</span> como en la etiqueta <span class="negrita2">'li'</span> referida a cada elemento de la lista.</p>
+
+					<h4>Posición de la Viñeta en el contenido</h4>
+
+					<p><span class="etiqueta">ul</span> <span class="propiedades">{ list-style-position: inside; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: tanto las viñetas como la numeración se pueden colocar dentro del bloque con <span class="negrita2">'inside'</span> o fuera del bloque (por defecto) con <span class="negrita2">'outside'</span>.</p>
+
+				</article>
+
+
+				<article>	
+
+					<!-- LISTAS EN HORIZONTAL -->
+
+					<a name="listash"></a>
+
+					<h2 class="h2article">Listas Horizontales</h2>
+
+					<h4>Propiedad Float</h4>
+
+					<p><span class="etiqueta">li</span> <span class="propiedades">{ float: left; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: si se opta por utilizar esta propiedad se recomienda aplicarla en los elementos <span class="negrita2">'li'</span>.</p>
+
+					<h4>Propiedad Display</h4>
+
+					<p><span class="etiqueta">li</span> <span class="propiedades">{ display: inline; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: si se utilizan los datos <span class="resaltado">'inline'</span> o <span class="resaltado">'inline-block'</span> se recomienda aplicarlo en los elementos <span class="negrita2">'li'</span>. Si se usa el dato <span class="resaltado">'flex'</span>, se aplica directamente en la etiqueta <span class="negrita2">'ul'</span>.</p>
+
+				</article>
+
+
+				<!-- POSICIONAMIENTO: FLOTANTE -->
+				<article>
+
+					<a name="flotante"></a>
+					
+					<h2 class="h2article">Pos. Flotante</h2>
+
+					<h4>Propiedad Float (Imagen)</h4>
+
+					<p><span class="etiqueta">img</span> <span class="propiedades">{ float: left; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: esta propiedad actualmente se utiliza para hacer flotar imágenes por encima de un texto. Si se pone el dato <span class="negrita2">'left'</span> la imagen flota a la izquierda, mientras que con el dato <span class="negrita2">'right'</span> la imagen flota a la derecha.</p>
+
+					<h4>Propiedad Clear (Texto)</h4>
+
+					<p><span class="etiqueta">p</span> <span class="propiedades">{ clear: both; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para indicar que un texto concreto no flote con respecto a una imagen cuya propiedad flotante está activada.</p>
+
+				</article>
+
+
+				<!-- POSICIONAMIENTO: ABSOLUTO -->
+				<article>
+					
+					<a name="absoluto"></a>
+
+					<h2 class="h2article">Pos. Absoluto</h2>
+
+					<p><span class="cont">#capa1</span> <span class="propiedades">{ position: absolute; top: 20px; right: 50px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza cuando se quiere posicionar un texto con respecto a un 'padre'. Es necesario indicar con las propiedades <span class="negrita2">'top'</span> o <span class="negrita2">'bottom'</span> y/o <span class="negrita2">'left'</span> o <span class="negrita2">'right'</span> la posición que se desea (en píxeles).</p>
+
+					<hr>
+
+					<h5>Posicionamiento del Contenedor Padre</h5>
+
+					<br>
+
+					<p class="explicacion"> Si el 'padre' no tiene posicionamiento establecido, se acude al inmediamente superior.</p>
+
+					<p class="explicacion"> Si ningún 'padre' tiene posicionamiento, el contenedor se posiciona con respecto al BODY.</p>
+
+				</article>
+
+
+				<!-- POSICIONAMIENTO: RELATIVO -->
+				<article>
+
+					<a name="relativo"></a>
+					
+					<h2 class="h2article">Pos. Relativo</h2>
+
+					<h5 class="negrita2">Contenedor Padre</h5>
+
+					<p> <span class="cont">#capa1</span> <span class="propiedades"> <br> { position: relative; top: 20px; right: 50px; }</span></p>
+
+					
+					<hr>
+					
+					
+					<h5 class="negrita2">Contenedor Hijo</h5>
+
+					<p><span class="cont">#capa1-1</span> <span class="propiedades"> <br> { position: absolute; bottom: 10px; left: 20px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: el contenedor se posiciona de manera absoluta con respecto al 'padre' (este cuenta con posicionamiento relativo).</p>
+
+					<p class="explicacion"> El 'padre' no requiere de manera obligatoria la inserción de los píxeles (px) de posición.</p>
+
+				</article>
+
+
+				<!-- CAPAS -->
+				<article>
+
+					<a name="capas"></a>
+					
+					<h2 class="h2article">Propiedades Capas</h2>
+
+					<h4>Prioridad en las Capas</h4>
+
+					<p><span class="etiqueta">section</span> <span class="propiedades">{ z-index: 8; }</span></p>
+
+					<p><span class="etiqueta">article</span> <span class="propiedades">{ z-index: 10; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: es muy habitual su aplicación cuando se utiliza posicionamiento absoluto y/o relativo. Permite en el caso de capas superpuestas, que aquellas que tengan una numeración más alta posean prioridad a la hora de mostrarse en pantalla.</p>
+
+					<h4>Desborde de contenido</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ overflow: hidden; }</span></p>
+					
+					<h4>Desborde de contenido en el Eje X</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ overflow-x: hidden; }</span></p>
+					
+					<h4>Desborde de contenido en el Eje Y</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ overflow-y: auto; }</span></p>
+					
+					<h5 class="alinearizquierda">Valores + usados</h5>
+					
+					<ul>
+						<li><span class="negrita2">Hidden</span>: corta el desborde de contenido.</li>
+						<li><span class="negrita2">Auto</span>: incluye barras de desplazamiento para ver el contenido desbordado.</li>
+					</ul>
+					
+					<p class="explicacion"><span class="negrita">Explicación</span>: el <span class="negrita2">valor 'hidden'</span> dentro de la propiedad 'overflow' se utiliza de manera habitual cuando se incluyen imágenes y no se quiere que su tamaño supere la capa. Ejemplo de uso: Redondeo de bordes.</p>
+					
+					<p class="explicacion">El <span class="negrita2">valor 'auto'</span> permite el uso de barras de desplazamiento para ver contenido que desborda la capa. Se puede utilizar en ambos ejes.</p>
+
+				
+				</article>
+				
+
+				<!-- DISPLAY -->
+				<article>
+
+					<a name="display"></a>
+
+					<h2 class="h2article">Propiedad Display</h2>
+
+					<h4>Block</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ display: block; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: el elemento ocupa todo el ancho disponible del contenedor. Permite definir propiedades como <span class="negrita2">'width'</span>, <span class="negrita2">'height'</span>, <span class="negrita2">'margin'</span>, <span class="negrita2">'padding'</span>, ...</p>
+
+					<h4>Inline</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ display: inline; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: los elementos se muestran en línea unos con otros mientras haya ancho disponible. <span class="resaltado">No permite establecer <span class="negrita2">'width'</span> ni <span class="negrita2">'height'</span></span>.</p>
+
+					<h4>Inline-Block</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ display: inline-block; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: los elementos se muestran en línea unos con otros mientras haya ancho disponible. <span class="resaltado">Permite el uso de <span class="negrita2">'width'</span> y <span class="negrita2">'height'</span></span>.</p>
+
+					<h4>None</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ display: none; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: el elemento no se muestra ni ocupa espacio en la página. Se utiliza en <span class="resaltado">FLEX RESPONSIVE</span> para ocultar determinados elementos al adaptarse el contenido a la pantalla de dispositivos de diferentes tamaños.</p>
+
+				</article>
+				
+				
+				
+				<!-- Visibility -->
+				<article>
+				
+					<a name="visibility"></a>
+
+					<h2 class="h2article">Propiedad Visibility</h2>
+
+					<h4>Hidden</h4>
+					
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ visibility: hidden; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: oculta el contenedor o etiqueta en el que se aplica, sin permitir que se ocupe su hueco.</p>
+
+					<p class="explicacion">La diferencia sustancial con la propiedad 'display' es que <span class="resaltado">'visibility' no permite ocupar su espacio cuando el contendor se oculta, mientras que 'display' si lo permite porque realmente desactiva el contenedor</span>.</p>
+
+					
+					<h4>Visible</h4>
+					
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ visibility: visible; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: visualiza el contenedor o etiqueta en el que se aplica.</p>
+
+					<p class="explicacion">El uso de la propiedad 'visibility' es muy habitual en contenido responsive para ocultar / visibilizar contenedores en función del tamaño de la pantalla.</p>
+									
+				</article>
+
+
+
+				<!-- FLEX BOX -->
+				<article class="alineacion">
+
+					<a name="flex"></a>
+
+					<h2 class="h2article">FlexBox</h2>
+
+					<h4>Display: Flex</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ display: flex; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para aplicar Flexbox, un modelo de diseño que permite alinear y distribuir espacio entre elementos dentro de un contenedor, incluso cuando su tamaño es desconocido o dinámico.</p>
+
+					<p class="explicacion">Cuando se aplica display: flex; a un contenedor, <span class="resaltado">sus elementos hijos directos se convierten en elementos flexibles</span>, dando un control más preciso sobre <span class="negrita2"> alineación (vertical y horizontal)</span>, <span class="negrita2">tamaño proporcional</span>, <span class="negrita2">orden de los elementos</span> y <span class="negrita2">distribución de espacios disponibles</span>.</p>
+
+					<a href="img/flex.png" target="_blank"><img src="img/flex.png" class="flexboxex" alt="Explicación funcionamiento de Flexbox"></a>
+					
+					<a href="img/flex-2.png" target="_blank"><img src="img/flex-2.png" class="flexboxex" alt="Explicación funcionamiento de Flexbox"></a>
+					
+					<h4>Flex-Flow</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ flex-flow: row wrap; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza en <span class="negrita2">FLEXBOX</span> para determinar la dirección de los elementos (filas o columnas) y si los elementos deben ajustarse o no (wrap).</p>
+
+					<ul>
+						<li><span class="negrita2">flex-flow: row wrap</span></li>
+
+							<ul>
+								<li>Dirección: De izquierda a derecha.</li>
+								<li>Ajuste de Contenido: nueva línea (abajo).</li>
+							</ul>
+
+						<li><span class="negrita2">flex-flow: row</span></li>
+
+							<ul>
+								<li>Dirección: De izquierda a derecha.</li>
+								<li>Ajuste de Contenido: NO.</li>
+							</ul>
+
+						<li><span class="negrita2">flex-flow: column wrap</span></li>
+
+							<ul>
+								<li>Dirección: De arriba a abajo.</li>
+								<li>Ajuste de Contenido: nueva columna (a la derecha).</li>
+							</ul>
+
+						<li><span class="negrita2">flex-flow: column</span></li>
+
+							<ul>
+								<li>Dirección: De arriba a abajo.</li>
+								<li>Ajuste de Contenido: NO.</li>
+							</ul>
+					</ul>
+					
+					<h5 class="negrita2">Ejemplo flex-flox: row wrap</h5>
+					<img src="img/flex-wrap.png" class="wrap" alt="explicacion funcionamiento flex-wrap: row wrap">
+					
+					<h5 class="negrita2">Ejemplo flex-flox: column wrap</h5>
+					<img src="img/flex-wrap-column.png" class="wrap" alt="explicacion funcionamiento flex-wrap: columm wrap">
+
+				</article>
+
+
+				<!-- ALINEACIÓN EJE PRIMARIO -->
+				<article class="alineacion">
+
+					<a name="justify"></a>
+
+					<h2 class="h2article">Alin. Eje Prim.</h2>
+
+					<h4>Justify-Content</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ justify-content: space-around; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza en <span class="negrita2">FLEXBOX</span> para alinear los elementos hijos a lo largo del eje principal del contenedor flexible.</p>
+
+					<p class="explicacion">Cuando el dato de la dirección es <span class="negrita">'row'</span> (de izquierda a derecha) el <span class="negrita2">eje es horizontal</span>. <span class="resaltado">Esta opción es la más habitual</span>.</p>
+
+					<p class="explicacion">Cuando el dato de la dirección es <span class="negrita">'column'</span> (de arriba a abajo) el <span class="negrita2">eje es vertical</span>.</p>
+
+					<img src="img/justify-content.png" alt="explicación de las distintas opciones de la propiedad justify-content">
+
+				</article>
+
+
+				<!-- ALINEACIÓN EJE SECUNDARIO -->
+				<article class="alineacion">
+
+					<a name="align"></a>
+
+					<h2 class="h2article">Alin. Eje Sec.</h2>
+
+					<h4>Align-Items</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ align-items: flex-start; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza en <span class="negrita2">FLEXBOX</span> para alinear <span class="negrita2">el contenido (los elementos hijos)</span> a lo largo del eje secundario del contenedor flexible.</p>
+
+					<img src="img/align-items.png" alt="explicación de las distintas opciones de la propiedad align-items">
+
+					<h4>Align-Content</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ align-content: center; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza en <span class="negrita2">FLEXBOX</span> para alinear el <span class="negrita2">conjunto de líneas</span> a lo largo del eje secundario del contenedor flexible.</p>
+
+					<img src="img/align-content.png" alt="explicación de las distintas opciones de la propiedad align-content">
+
+					<hr>
+
+					<p class="explicacion">Cuando el dato de la dirección es <span class="negrita">'row'</span> (de izquierda a derecha) el <span class="negrita2">eje secundario es vertical</span>. <span class="resaltado">Esta opción es la más habitual</span>.</p>
+
+					<p class="explicacion">Cuando el dato de la dirección es <span class="negrita">'column'</span> (de arriba a abajo) el <span class="negrita2">eje es secundario es vertical</span>.</p>
+
+				</article>
+
+
+				<!-- GAP PROPIEDAD ENTRE CONTENEDORES -->
+				<article class="alineacion">
+
+					<a name="gap"></a>
+
+					<h2 class="h2article">Espaciados</h2>
+
+					<h4>Gap</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ gap: 20px 10px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza en 
+					<span class="negrita2">FLEXBOX</span> para aplicar <span class="negrita2">espacios 
+					entre los contenedores hijos</span> dentro del contenedor padre.</p>
+					
+					<p class="explicacion">
+					Si hay <span class="resaltado">dos parámetros</span>, el <span class="negrita2">primero</span>
+					indica el <span class="negrita2">espacio entre filas</span> y el <span class="negrita2">segundo</span>
+					el <span class="negrita2">espacio entre columnas</span>.
+					</p>
+					
+					<p class="explicacion">
+					Si hay <span class="resaltado">un sólo parámetro</span>, este se aplica <span class="negrita2">tanto 
+					al espacio entre filas como entre columnas</span>.
+					</p>
+					
+					<h4>Row-Gap</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ row-gap: 20px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza en 
+					<span class="negrita2">FLEXBOX</span> para aplicar <span class="negrita2">espacios 
+					entre las filas de los contenedores hijos</span> dentro del contenedor padre.</p>
+					
+					<h4>Column-Gap</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ column-gap: 20px; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza en 
+					<span class="negrita2">FLEXBOX</span> para aplicar <span class="negrita2">espacios 
+					entre las columnas de los contenedores hijos</span> dentro del contenedor padre.</p>
+
+				</article>
+				
+				
+				
+				<!-- FLEX-BASIS -->
+				<article class="alineacion">
+
+					<a name="flexbasis"></a>
+
+					<h2 class="h2article">Adaptación</h2>
+					
+					<h4>Flex-Basis</h4>
+
+					<p><span class="etiqueta">article</span> <span class="propiedades">{ flex-basis: 80%; }</span></p>
+					
+					<p class="explicacion"><span class="negrita">Explicación</span>: define el tamaño inicial de 
+					un elemento flexible a lo largo del eje principal antes de que se distribuya el 
+					espacio disponible entre los elementos flexibles.</p>
+					
+					<p class="explicacion">
+					Se utiliza en 'responsive' para <span class="negrita2">aplicar el tamaño</span> de cada contenedor 
+					flexible <span class="negrita2">cuando los tamaños de pantalla son distintos</span>.
+					</p>
+					
+					<h4>Order</h4>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ order: 2; }</span></p>
+					
+					<p class="explicacion"><span class="negrita">Explicación</span>: la propiedad 
+					'order' permite ordenar las capas cuando el <span class="negrita2">contenedor 
+					'padre' usa FLEXBOX</span>.
+					
+					<p class="explicacion">
+					Las capas 'hijas' pueden tener otro orden distinto en el archivo HTML.
+					</p>
+					
+					<p class="explicacion">
+					Las capas con una numeración más baja tendrán prioridad en la colocación
+					que se mostrará en la pantalla.
+					</p>
+					
+				</article>
+
+
+
+				<!-- PSEUDOCLASES -->
+				<article>
+
+					<a name="pseudo"></a>
+					
+					<h2 class="h2article">Pseudo-Clases</h2>
+
+					<h4>Hover</h4>
+
+					<p><span class="cont">#capa1</span><span class="etiqueta"> li</span><span class="pseudoclase">:hover</span> <span class="propiedades">{ color: white; background-color: blue; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para aplicar estilos cuando el usuario pasa el cursor (ratón) sobre un elemento.</p>
+
+					<h4>First-Line</h4>
+
+					<p><span class="cont">#capa1</span><span class="etiqueta"> p</span><span class="pseudoclase">:first-line</span> <span class="propiedades">{ text-decoration: underline; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para aplicar estilos a la primera línea de un texto seleccionado.</p>
+
+					<h4>First-Letter</h4>
+
+					<p><span class="cont">#capa1</span><span class="etiqueta"> p</span><span class="pseudoclase">:first-letter</span> <span class="propiedades">{ font-size: 1.2em; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para aplicar estilos a la primera letra de un texto seleccionado.</p>
+
+				</article>
+				
+				
+				<!-- MEDIA QUERYs -->
+				<article>
+				
+					<a name="media"></a>
+					
+					<h2 class="h2article">MEDIA QUERYS</h2>
+					
+					<h4>Responsive: @media</h4>
+
+					<p><span class="mq">@media (min-width: 768px) </span><span class="propiedades">{ width: 50%; background-color: yellow; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para cambiar propiedades de los objetos 
+					en función del dispositivo que lo visualice.</p>
+					
+					<p class="explicacion">Se recomienda diseñar la página primero para dispositivos más pequeños y posteriormente 
+					a través del Responsive (@media) aplicar con min-width las diferentes propiedades (fundamentalmente tamaños).</p>
+					
+					<h5 class="alinearizquierda">Tamaños Responsive</h5>
+					
+					<ul>
+						<li><span class="negrita2">Pequeños Dispositivos</span>: hasta 576px.</li>
+						<li><span class="negrita2">Móviles</span>: hasta 768px.</li>
+						<li><span class="negrita2">Tablets</span>: hasta 992px.</li>
+						<li><span class="negrita2">Escritorios</span>: hasta 1440px.</li>
+						<li><span class="negrita2">Grandes Escritorios</span>: a partir de 1440px.</li>
+					</ul>
+					
+					
+					<h4>Tipos de Letra: @font-face</h4>
+
+					<p><span class="mq">@font-face </span><span class="propiedades">{ font-family: "mi-letra"; src: url("../fonts/gembul.otf"); }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para incorporar tipos de letra personalizados a una página web. Será necesario <span class="resaltado">añadir un nombre para la fuente</span> a través de la <span class="negrita2">propiedad 'font-family'</span> y una <span class="resaltado">ruta para encontrar dicha fuente</span> en nuestro alojamiento a través de la <span class="negrita2">propiedad 'src'</span>.
+					</p>
+
+				</article>
+
+
+				<!-- OTRAS PROPIEDADES -->
+				<article>
+
+					<a name="otras"></a>
+					
+					<h2 class="h2article">Otras Propiedades</h2>
+
+					<h4>Cursor</h4>
+
+					<p><span class="cont">#capa1</span><span class="etiqueta"> li</span><span class="pseudoclase">:hover</span> <span class="propiedades">{ cursor: pointer; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza habitualmente para cambiar el cursor cuando este pasa por encima de un elemento determinado.</p>
+
+					<ul>
+						<li><span class="negrita2">Pointer</span>: convierte el cursor en un puntero.</li>
+						<li><span class="negrita2">Zoom-in</span>: convierte el cursor en una lupa de aumento.</li>
+						<li><span class="negrita2">Zoom-out</span>: convierte el cursor en una lupa de reducción.</li>
+						<li><span class="negrita2">url("<span class="brown">ruta de la imagen</span>"), auto</span>: cursor personalizado.</li>
+					</ul>
+					
+					<h4>Opacity</h4>
+
+					<p><span class="etiqueta">img</span> <span class="propiedades">{ opacity: 0.5; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: la propiedad 'opacity' se puede usar en cualquier elemento HTML que admita estilo visual, ya que afecta a la transparencia visual del elemento y su contenido. Se le pueden poner <span class="negrita2">valores entre 0 y 1</span>.</p>
+
+					<h4>Transform</h4>
+
+					<p><span class="etiqueta">img</span> <span class="propiedades">{ transform: scale(1.01); }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: 
+					la propiedad 'transform' permite aplicar transformaciones visuales 
+					a elementos HTML</p>
+					
+					<ul>
+						<li><span class="negrita2">scale</span>: escala porcentualmente un elemento.</li>
+					</ul>
+					
+					<p><span class="etiqueta">img</span> <span class="propiedades">{ transform: scale(1.03); }</span></p>
+					
+					<ul>
+						<li><span class="negrita2">translate</span>: mueve un elemento en 'x' e 'y'.</li>
+					</ul>
+					
+					<p><span class="etiqueta">img</span> <span class="propiedades">{ transform: translate(50px, 100px; }</span></p>
+						
+					<ul>
+						<li><span class="negrita2">rotate</span>: rota un elemento (en grados).</li>
+					</ul>
+					
+					<p><span class="etiqueta">img</span> <span class="propiedades">{ transform: rotate(45deg); }</span></p>
+				
+					<ul>
+						<li><span class="negrita2">skew</span>: deforma un elemento en 'x' e 'y' (en grados).</li>
+					</ul>
+							
+					<p><span class="etiqueta">img</span> <span class="propiedades">{ transform: skew(30deg 50deg); }</span></p>
+
+					<p class="explicacion">Todas las transformaciones a realizar en un selector se deben hacer introduciendo 
+					sólo una vez la propiedad 'transform' y separando los datos de dichas transformaciones por comas.</p>
+
+					<h4>Transition</h4>
+
+					<p><span class="etiqueta">img</span> <span class="propiedades">{ transition: width 0.5s linear 1s; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para hacer transiciones a nuevos 
+					datos aportados por diferentes propiedades. El <span class="negrita2">primer parámetro</span> indica el dato 
+					de la propiedad a modificar, el <span class="negrita2">segundo parámetro</span> la duración de la transición, 
+					el <span class="negrita2">tercer parámetro</span> la forma y el <span class="negrita2">cuarto parámetro</span> el 
+					retardo con el que se inicia la transición.</p>
+					
+					<p class="explicacion">Todas las transiciones a realizar en un selector se deben hacer introduciendo 
+					sólo una vez la propiedad 'transition' y separando los datos de dichas transiciones por comas.</p>
+					
+					<p class="explicacion">El cambio a los nuevos datos de la propiedades <span class="resaltado">se aplica con la 
+					pseudo-clase 'hover'</span>.</p>
+
+					<p><span class="etiqueta">div</span> <span class="propiedades">{ width: 200px; background-color: yellow; <span class="negrita2">transition: width 0.2s linear 1s, background-color 0.3s linear 1s;</span> }</span></p>
+					<p><span class="etiqueta">div</span>:<span class="negrita2">hover</span> <span class="propiedades">{ width: 400px; background-color: pink; }</span></p>
+				
+					
+				</article>
+				
+
+				<!-- Capa de NO HAY COINCIDENCIAS para el Buscador -->
+				<div id="nocoincide" onclick="fun_buscador_reset()">
+
+					<h3>NO HAY COINCIDENCIAS EN LA BÚSQUEDA</h3>
+
+					<img src="img/css3.png" alt="logo ccs3">	
+
+				</div>
+				
+
+			</section>
+
+
+			<!-- BOTÓN VOLVER PARTE SUPERIOR -->
+		
+			<img id="ancla" src="img/volver.png">
+
+		</div>
+
+		
+		<!-- PIE DE PÁGINA -->
+		<footer>
+
+			<div class="f1">
+
+				<img src="img/logoies.jpg" class="footermin">
+
+			</div>
+			
+			<div class="f2">
+
+				<p>Copyright @ 2025 Víctor Álvarez</p>
+
+			</div>
+
+		</footer>
+
+	</body>
+
+</html>

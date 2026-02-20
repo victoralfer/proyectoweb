@@ -1,0 +1,2774 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="author" content="Víctor">
+		<meta name="description" content="Apuntes CSS">
+		<meta name="keywords" content="javascript, funciones, objetos, variables, arrays, apuntes">
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilo-apuntes-js.css">
+		
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="js/javascript_js.js"></script>
+
+		<title>Apuntes JavaSctipt - Víctor Álvarez</title>
+
+	</head>
+
+	<body>
+
+		<!-- IMAGEN CABECERA -->
+		<header>
+
+			<img id="img-cab" src="img/cabecera_js.jpg" alt="imagen de cabecera apuntes javascript">
+			
+			<div id="ham" onclick="fun_hamburguesa()">
+				
+				<img id="img-ham" src="img/hamburguesa.png" onclick="fun_css()" title="Haz click para desplegar el menú">
+						
+			</div>
+
+		
+		</header>
+
+
+		<!-- CAPA PRINCIPAL -->
+		<div id="principal">
+
+			<!-- MENÚ VERTÍCAL -->
+			<aside id="aside">
+			
+				<!-- Menú Botones: Apuntes -->
+				<div id="menu-prin">
+
+					<h4 id="ham-cerrar" onclick="fun_hamburguesa()" title="Haz click para cerrar menú Hamburguesa">CERRAR MENÚ</h4>
+				
+					<h4 id="proy-apun" onclick="fun_botones()" title="Haz click para acceder a los Apuntes">APUNTES</h4>
+					
+					<!-- Capa con Botones de Apuntes -->
+					<div id="botones">
+
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes HTML"><a href="apuntes_html.html">APUNTES HMTL</a></h4>
+
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes de Formularios"><a href="apuntes_formularios.html">FORMULARIOS</a></h4>
+
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes de CSS"><a href="apuntes_css.html">APUNTES CSS</a></h4>
+						
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes de JS"><a href="#">APUNTES JS</a></h4>
+						
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes de jQuery"><a href="apuntes_jQuery.html">APUNTES JQUERY</a></h4>
+						
+					</div>
+					
+				</div>
+				
+
+				<!-- Menús Contenido -->	
+				<div id="menus">
+					
+					<!-- Menú Iniciación -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_inic()">INICIACIÓN</h4>
+					
+					<ul id="menu-iniciacion">
+						<a href="#intro" onclick="fun_buscador_reset()"><li>Introducción</li></a>
+						<a href="#variables" onclick="fun_buscador_reset()"><li>Variables</li></a>
+						<a href="#constantes" onclick="fun_buscador_reset()"><li>Constantes</li></a>
+						<a href="#alertas" onclick="fun_buscador_reset()"><li>Alertas</li></a>
+						<a href="#document-write" onclick="fun_buscador_reset()"><li>Alertas en HTML</li></a>
+					</ul>
+					
+					
+					<!-- Menú Operaciones Aritméticas -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_arit()">OP. ARITMÉTICAS</h4>
+					
+					<ul id="menu-operaciones-arit">
+						<a href="#concatenado" onclick="fun_buscador_reset()"><li>Concatenado</li></a>
+						<a href="#basicas" onclick="fun_buscador_reset()"><li>Operaciones Básicas</li></a>
+						<a href="#otras" onclick="fun_buscador_reset()"><li>Otras Operaciones</li></a>
+						<a href="#incrementos" onclick="fun_buscador_reset()"><li>Incrementos</li></a>
+						<a href="#decrementos" onclick="fun_buscador_reset()"><li>Decrementos</li></a>
+						<a href="#otros-incrementos" onclick="fun_buscador_reset()"><li>Asig. Compuesta</li></a>
+						<a href="#intercambio" onclick="fun_buscador_reset()"><li>Intercambio Valores</li></a>
+					</ul>
+					
+					
+					<!-- Menú Operaciones Lógicas -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_log()">OP. LÓGICAS</h4>
+					
+					<ul id="menu-operaciones-log">
+						<a href="#igual" onclick="fun_buscador_reset()"><li>Igual</li></a>
+						<a href="#distinto" onclick="fun_buscador_reset()"><li>Distinto</li></a>
+						<a href="#menormayoque" onclick="fun_buscador_reset()"><li>Menor / Mayor</li></a>
+						<a href="#estrictamente" onclick="fun_buscador_reset()"><li>Estrictamente</li></a>
+						<a href="#and" onclick="fun_buscador_reset()"><li>Operador AND</li></a>
+						<a href="#or" onclick="fun_buscador_reset()"><li>Operador OR</li></a>
+						<a href="#valoresbool" onclick="fun_buscador_reset()"><li>Valores Booleanos</li></a>
+					</ul>
+					
+					
+					<!-- Menú Prompt -->
+					<a href="#prompt" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">PROMPT</h4></a>
+					
+					
+					<!-- Menú Funciones -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_fun()">FUNCIONES</h4>
+					
+					<ul id="menu-funciones">
+						<a href="#typeof" onclick="fun_buscador_reset()"><li>Typeof</li></a>
+						<a href="#number" onclick="fun_buscador_reset()"><li>Number</li></a>
+						<a href="#parse" onclick="fun_buscador_reset()"><li>parseInt / parseFloat</li></a>
+						<a href="#minusculas" onclick="fun_buscador_reset()"><li>Conversión Minúsculas</li></a>
+						<a href="#mayusculas" onclick="fun_buscador_reset()"><li>Conversión Mayúsculas</li></a>
+					</ul>
+					
+					
+					<!-- Menú Funciones Math -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_math()">FUNCIONES MATH</h4>
+					
+					<ul id="menu-math">
+						<a href="#pi-potencias" onclick="fun_buscador_reset()"><li>PI, Potencias y Raices</li></a>
+						<a href="#redondeos" onclick="fun_buscador_reset()"><li>Redondeos</li></a>
+						<a href="#aleatorio" onclick="fun_buscador_reset()"><li>Número Aleatorio</li></a>
+					</ul>
+					
+					
+					<!-- Menú + Funciones -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_mas_fun()">MÁS FUNCIONES</h4>
+					
+					<ul id="menu-mas-funciones">
+						<a href="#tofixed" onclick="fun_buscador_reset()"><li>Redondeo Decimales</li></a>
+						<a href="#length" onclick="fun_buscador_reset()"><li>Número de Caracteres</li></a>
+						<a href="#caracteres" onclick="fun_buscador_reset()"><li>Caracteres Concretos</li></a>
+						<a href="#posiciones-concretas" onclick="fun_buscador_reset()"><li>Posiciones Concretas</li></a>
+					</ul>
+					
+					
+					<!-- ARRAYS -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_array()">ARRAYS</h4>
+					
+					<ul id="menu-arrays">
+						<a href="#array" onclick="fun_buscador_reset()"><li>Explicación</li></a>
+						<a href="#array-anadir" onclick="fun_buscador_reset()"><li>Añadir Valores</li></a>
+						<a href="#array-eliminar" onclick="fun_buscador_reset()"><li>Eliminar Valores</li></a>
+					</ul>
+					
+					
+					<!-- CONDICIONAL SENCILLO -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_cond()">CONDICIONALES</h4>
+					
+					<ul id="menu-condicionales">
+						<a href="#condicional-sencillo" onclick="fun_buscador_reset()"><li>Condicional Sencillo</li></a>
+						<a href="#condicional-if" onclick="fun_buscador_reset()"><li>Condicional IF / ELSE IF</li></a>
+					</ul>
+					
+					
+					<!-- BUCLES -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_bucles()">BUCLES</h4>
+					
+					<ul id="menu-bucles">
+						<a href="#bucle-while" onclick="fun_buscador_reset()"><li>Indeterminado: While</li></a>
+						<a href="#bucle-for" onclick="fun_buscador_reset()"><li>Determinado: For</li></a>
+						<a href="#for-each" onclick="fun_buscador_reset()"><li>forEach</li></a>
+					</ul>
+					
+					
+					<!-- CREACIÓN FUNCIONES -->
+					<a href="#creacion-funciones" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">FUNCTION ()</h4></a>
+					
+					
+					<!-- EVENTOS HTML -->
+					<a href="#eventos-html" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">EVENTOS EN HTML</h4></a>
+					
+					
+					<!-- CAPTURA OBJETOS EN HTML -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_capt()">CAPTURA OBJETOS</h4>
+					
+					<ul id="captura-objetos-html">
+						<a href="#captura-id" onclick="fun_buscador_reset()"><li>Captura por ID</li></a>
+						<a href="#captura-class" onclick="fun_buscador_reset()"><li>Captura por Clase</li></a>
+						<a href="#captura-tags" onclick="fun_buscador_reset()"><li>Captura por Etiquetas</li></a>
+						<a href="#querySelector" onclick="fun_buscador_reset()"><li>querySelector</li></a>
+						<a href="#querySelectorAll" onclick="fun_buscador_reset()"><li>querySelectorAll</li></a>
+					</ul>
+					
+					
+					<!-- INNERHTML -->
+					<a href="#innerhtml" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">INNERHTML</h4></a>
+					
+
+					<!-- CLASSLIST -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_class()">CLASSLIST</h4>
+					
+					<ul id="class-list">
+						<a href="#toggle" onclick="fun_buscador_reset()"><li>Toggle</li></a>
+						<a href="#add" onclick="fun_buscador_reset()"><li>Añadir</li></a>
+						<a href="#remove" onclick="fun_buscador_reset()"><li>Eliminar</li></a>
+					</ul>
+					
+					<!-- EJECUCIÓN FUNCIONES EN JS -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_add()">ADDEVENTLISTENER</h4>
+					
+					<ul id="add-event-listener">
+						<a href="#objetos-capturados" onclick="fun_buscador_reset()"><li>Objetos Capturados</li></a>
+						<a href="#cualquier-objeto" onclick="fun_buscador_reset()"><li>Cualquier Objeto</li></a>
+						<a href="#pulsacion-tecla" onclick="fun_buscador_reset()"><li>Teclas</li></a>
+					</ul>
+
+
+					<!-- EVENTOS ADDEVENTLISTENER -->
+					<a href="#eventos-add" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">EVENTOS EN JS</h4></a>
+					
+					
+					<!-- EXTRACIÓN TAMAÑOS -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_tam()">TAMAÑOS</h4>
+					
+					<ul id="extracion-tamanos">
+						<a href="#tamano-ventana" onclick="fun_buscador_reset()"><li>Tamaño Ventana</li></a>
+						<a href="#tamano-etiqueta" onclick="fun_buscador_reset()"><li>Tamaño Etiquetas</li></a>
+					</ul>
+
+
+					<!-- ELEMENTO SALE DEL AREA VISIBLE-->
+					<a href="#intersection" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">ÁREA VISIBLE</h4></a>
+
+
+					<div class="ultimo"></div>
+
+				</div>
+					
+			</aside>
+
+
+			<!-- BUSCADOR -->
+				
+			<div id="capa-buscador">
+
+				<h4 id="busc-bot" onclick="fun_sacar_buscador()" title="Pulsa 'Ctrl + b' para abrir/cerrar el Buscador de Prácticas">BUSCADOR</h4>
+
+
+				<div id="busc-prac">
+					
+					<label for="buscador">BUSCADOR</label>
+						
+					<input id="buscador" name="buscador" type="text">
+						
+					<div id="botones-buscador">
+						
+						<button id="buscar" onclick="fun_buscador()" title="Pulsa 'Enter' para buscar">BUSCAR</button>
+						
+						<button id="reset" onclick="fun_buscador_reset()" title="Pulsa 'Ctrl + z' para resetear">RESET</button>
+						
+					</div>
+		
+				</div>
+				
+			</div>
+
+
+			<!-- SECCIÓN CON APUNTES -->
+			<section>
+				
+				<!-- INTRODUCCIÓN -->
+				<article>
+
+					<a name="intro"></a>
+					
+					<!-- Título Principal -->
+					<h1>Introducción</h1>
+
+					<!-- Título Secundario -->
+					<h4>Formato de los Archivos: <span class="blue">.js</span></h4>
+
+					<p>Los archivos se ejecutan en el Cliente.</p>
+
+					<!-- Título Secundario -->
+					<h4>Etiqueta Script</h4>
+
+					<ul>
+						<li>Enlaza con un archivo de código JavaScript.</li>
+						<li>Permite también añadir código de manera directa <span class="cursiva">(opción poco utilizada)</span>.</li>
+						<li>Los <span class="negrita">enlaces</span> a los archivos <span class="negrita blue">.js</span> <span class="negrita">se escriben en el <span class="cursiva purple">&lt;head&gt; &lt;/head&gt;</span>, debajo del link que contiene el CSS.</span></li>
+						<li>La <span class="negrita red">ruta del archivo</span> <span class="negrita blue">.js</span> se coloca en el <span class="negrita red">atributo src</span>.</li>
+					</ul>
+
+					<p id="tag-script"> &lt;script <span class="green">type="text/javascript"</span> <span class="red">src="js/javascript.js"</span>&gt; &lt;/script&gt; </p>
+
+				</article>
+				
+				
+				
+				<!-- VARIABLES -->
+				<article>
+				
+					<a name="variables"></a>
+
+					<!-- Título Principal -->
+					<h1>Variables</h1>
+
+					<!-- Título Secundario -->
+					<h4>Tipos de Datos:</h4>
+
+					<ul>
+						<li><span class="negrita">Numéricos <span class="cursiva">(sin comillas)</span>:</span> <span class="green negrita cursiva">nota = 2;</span></li>
+						<li><span class="negrita">String <span class="cursiva">(con comillas)</span>:</span> <span class="green negrita cursiva">nombre = "Victor";</span></li>
+						<li><span class="negrita">Booleano <span class="cursiva">(True/False)</span>:</span> <span class="green negrita cursiva">activo = true;</span></li>
+						<li><span class="negrita">Objetos:</span> Captura de etiquetas del HTML.</li>
+					</ul>
+
+					<!-- Título Secundario -->
+					<h4>Declaración de Variables</h4>
+					
+					<ul>
+						<li><span class="negrita">var</span></li>
+						<li><span class="negrita">let</span> <span class="cursiva">(Opción más usada. No genera conflictos entre variables locales y globales): <span class="green negrita cursiva">let edad;</span></span></li>
+					</ul>
+					
+					<!-- Título Secundario -->
+					<h4>Iniciación de Variables</h4>
+					
+					<p class="green cursiva negrita">Ejemplo: edad = 2;</p>
+					
+					<!-- Título Secundario -->
+					<h4>Declaración + Iniciación</h4>
+					
+					<ul>
+						<li><span class="negrita">Numéricos:</span> <span class="green negrita cursiva">let nota = 8;</span></li>
+						<li><span class="negrita">Numéricos con Decimales:</span> <span class="green negrita cursiva">let precio = 15.2;</span></li>
+						<li><span class="negrita">String:</span> <span class="green negrita cursiva">let comentario = "Bien hecho";</span></li>
+						<li><span class="negrita">Booleano:</span> <span class="green negrita cursiva">let activo = false;</span></li>
+					</ul>		
+
+				</article>
+				
+				
+				
+				<!-- CONSTANTES -->
+				<article>
+				
+					<a name="constantes"></a>
+
+					<!-- Título Principal -->
+					<h1>Constantes: const</h1>
+					
+					<h4>Usos</h4>
+
+					<p>Se utilizan constantes cuando se necesitan valores que no sufrirán modificaciones.</p>
+					
+					<h4>Declaración e Iniciación</h4>
+					
+					<p>Se declaran e inician en un solo paso.</p>
+					
+					<h4>Ejemplo</h4>
+					
+					<p class="green cursiva negrita">const dilatacion = 0.3;</p>
+
+				</article>
+				
+				
+				
+				<!-- ALERTAS: PROMPT -->
+				<article>
+				
+					<a name="alertas"></a>
+
+					<!-- Título Principal -->
+					<h1>Alertas: alert()</h1>
+
+					<!-- Título Secundario -->
+					<h4>Tipos de Muestras</h4>
+
+					<ul>
+						<li><span class="negrita">Variables:</span> <span class="negrita green cursiva">alert (<span class="purple">suma</span>); </span></li>
+						<li><span class="negrita">Textos:</span> <span class="negrita green cursiva">alert (<span class="blue">"Hola Mundo"</span>); </span></li>
+						<li><span class="negrita">Concatenado (Texto + Variable):</span> <span class="negrita green cursiva">alert (<span class="blue">"La edad de: "</span> + <span class="purple">nombre</span> + <span class="blue">" es:"</span> + <span class="purple">edad</span>); </span></li>
+					</ul>
+					
+					<!-- Título Secundario -->
+					<h4>Salto de Línea: <span class="red">\n</span></h4>
+					
+					<p>Sólo funcionan con las alertas.</p>
+					
+					<h4>Ejemplo</h4>
+					
+					<p class="green negrita cursiva centrado"> alert (<span class="blue">"La edad de "</span> + <span class="purple">nombre</span> + <span class="blue">" es:"</span> + <span class="purple"> <span class="red">"\n"</span> + edad</span>); </p>
+
+				</article>
+				
+				
+				
+				<!-- ALERTAS: HTML -->
+				<article>
+				
+					<a name="document-write"></a>
+
+					<!-- Título Principal -->
+					<h1>Alertas en HTML</h1>
+					
+					<h4>Usos <span class="purple">document.write()</span></h4>
+					
+					<p>Permite el uso de etiquetas, clases e identificadores para incorporar estilos (CSS), mostrando las alertas en el HTML.</p>
+					
+					<h4>Ejemplo</h4>
+					
+					<p class="green cursiva negrita">let num = prompt("Introduce un número: ");</p>
+
+					<p class="green cursiva negrita"><span class="purple">document.write(</span>"<span class="red">&lt;h4&gt;</span> la potencia de 2 es: <span class="red">&lt;/h4&gt;</span>" + Math.pow(num, 2)<span class="purple">)</span>;</p>
+
+				</article>
+				
+				
+				
+				<!-- CONCATENADO -->
+				<article>
+				
+					<a name="concatenado"></a>
+
+					<!-- Título Principal -->
+					<h1>Concatenado</h1>
+					
+					<h4>Explicación</h4>
+					
+					<p>Los concatenados de variables con <span class="purple negrita">valores tipo 'string'</span> o <span class="green negrita">tipo 'numéricas'</span> se realizan con el <span class="red negrita">simbólo +</span>. El <span class="blue negrita">texto explicativo</span> se coloca <span class="blue negrita">entre comillas " "</span>.</p>
+					
+					<h4>Ejemplo</h4>
+					
+					<p class="negrita cursiva centrado"> alert (<span class="blue">"Su nombre es: "</span> <span class="red">+</span> <span class="purple">nombre</span>) <span class="red">+</span> <span class="blue">" y su edad: "</span> <span class="red">+</span> <span class="green">edad</span>); </p>
+
+				</article>
+
+
+				<!-- OPERACIONES BÁSICAS -->
+				<article>
+				
+					<a name="basicas"></a>
+
+					<!-- Título Principal -->
+					<h1>Operaciones Básicas</h1>
+					
+					
+					<h4>Suma</h4>
+					
+					<p>Se realiza con el <span class="red negrita">operador +</span>, utilizando constantes o variables de <span class="purple negrita">'tipo numérico'</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">edad1</span> = <span class="purple">5</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">edad2</span> = <span class="purple">10</span>;</p> 
+					
+					<p class="green negrita">let <span class="purple">suma</span> = <span class="purple">edad1</span> <span class="red">+</span> <span class="purple">edad2</span>;</p>
+					
+					
+					<h4>Resta</h4>
+					
+					<p>Se realiza con el <span class="red negrita">operador -</span>, utilizando constantes o variables de <span class="purple negrita">'tipo numérico'</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">nota1</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">nota2</span> = <span class="purple">4</span>;</p> 
+					
+					<p class="green negrita">let <span class="purple">resta</span> = <span class="purple">nota1</span> <span class="red">-</span> <span class="purple">nota2</span>;</p>
+					
+					
+					<h4>Multiplicación</h4>
+					
+					<p>Se realiza con el <span class="red negrita">operador *</span>, utilizando constantes o variables de <span class="purple negrita">'tipo numérico'</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">arboles</span> = <span class="purple">15</span>;</p>
+										
+					<p class="green negrita">let <span class="purple">multiplicacion</span> = <span class="purple">arboles</span> <span class="red">*</span> <span class="purple">2</span>;</p>
+					
+					
+					<h4>División</h4>
+					
+					<p>Se realiza con el <span class="red negrita">operador /</span>, utilizando constantes o variables de <span class="purple negrita">'tipo numérico'</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">tortillas</span> = <span class="purple">10</span>;</p>
+										
+					<p class="green negrita">let <span class="purple">division</span> = <span class="purple">tortillas</span> <span class="red">/</span> <span class="purple">5</span>;</p>
+					
+				</article>
+				
+				
+				<!-- OTRAS OPERACIONES ARITMÉTICAS -->
+				<article>
+				
+					<a name="otras"></a>
+
+					<!-- Título Principal -->
+					<h1>Otras Operaciones</h1>
+					
+					
+					<h4>Resto de una División</h4>
+					
+					<p>Se realiza con el <span class="red negrita">operador %</span>, utilizando constantes o variables de <span class="purple negrita">'tipo numérico'</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">sillas</span> = <span class="purple">12</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">mesas</span> = <span class="purple">2</span>;</p> 
+					
+					<p class="green negrita">let <span class="purple">resto_division</span> = <span class="purple">sillas</span> <span class="red">%</span> <span class="purple">mesas</span>;</p>
+				
+
+					<h4>Potencias</h4>
+					
+					<p>Se realiza con el <span class="red negrita">operador **</span>, utilizando constantes y variables de <span class="purple negrita">'tipo numérico'</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">pantallas</span> = <span class="purple">2</span>;</p>
+										
+					<p class="green negrita">let <span class="purple">cuadrado</span> = <span class="purple">pantallas</span> <span class="red">**</span> <span class="purple">2</span>;</p>
+				
+					<p class="green negrita">let <span class="purple">cubo</span> = <span class="purple">pantallas</span> <span class="red">**</span> <span class="purple">3</span>;</p>
+				
+				</article>
+				
+				
+				<!-- INCREMENTOS -->
+				<article>
+				
+					<a name="incrementos"></a>
+
+					<!-- Título Principal -->
+					<h1>Incrementos</h1>
+					
+					
+					<h4>Opción 1: a++</h4>
+					
+					<p>Se realiza <span class="negrita">primero la operación</span> y después el incremento de la variable.</p>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">2</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p> 
+					
+					<p class="green negrita">let <span class="purple">suma</span> = <span class="purple">a++</span> <span class="red">+</span> <span class="purple">b</span>;</p>
+				
+					<p class="brown negrita">// suma = 5, nuevo valor de a: 3</span></p>
+
+					
+					<h4>Opción 2: ++a</h4>
+					
+					<p>Se realiza <span class="negrita">primero el incremento</span> de la variable y después la operación.</p>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">2</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p> 
+					
+					<p class="green negrita">let <span class="purple">suma</span> = <span class="purple">++a</span> <span class="red">+</span> <span class="purple">b</span>;</p>
+				
+					<p class="brown negrita">// suma = 6, nuevo valor de a: 3</span></p>
+
+				</article>
+			
+			
+				<!-- DECREMENTOS -->
+				<article>
+				
+					<a name="decrementos"></a>
+
+					<!-- Título Principal -->
+					<h1>Decrementos</h1>
+					
+				
+					<h4>Opción 1: a--</h4>
+					
+					<p>Se realiza <span class="negrita">primero la operación</span> y después el decremento de la variable.</p>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">2</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p> 
+					
+					<p class="green negrita">let <span class="purple">resta</span> = <span class="purple">a--</span> <span class="red">+</span> <span class="purple">b</span>;</p>
+				
+					<p class="brown negrita">// resta = -1, nuevo valor de a: 1</span></p>
+
+					
+					<h4>Opción 2: --a</h4>
+					
+					<p>Se realiza <span class="negrita">primero el decremento</span> de la variable y después la operación.</p>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">2</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p> 
+					
+					<p class="green negrita">let <span class="purple">resta</span> = <span class="purple">--a</span> <span class="red">+</span> <span class="purple">b</span>;</p>
+				
+					<p class="brown negrita">// resta = -2, nuevo valor de a: 1</span></p>
+
+				</article>
+				
+				
+				<!-- OPERADORES ASIGNACIÓN COMPUESTA -->
+				<article>
+				
+					<a name="otros-incrementos"></a>
+
+					<!-- Título Principal -->
+					<h1>Asig. Compuesta</h1>
+					
+				
+					<h4>Otros Incrementos</h4>
+															
+					<p class="negrita green">Incremento de '2' en '2':<span class="purple"> i+=2;</span></p>
+					
+					<p class="negrita green">Incremento de '3' en '3':<span class="purple"> i+=3;</span></p>
+					
+					<p class="negrita green">Incremento multiplicado por '3':<span class="purple"> i*=3;</span></p>
+					
+					
+					<h4>Otros Decrementos</h4>
+															
+					<p class="negrita green">Decremento de '2' en '2':<span class="purple"> i-=2;</span></p>
+					
+					<p class="negrita green">Decremento de '3' en '3':<span class="purple"> i-=3;</span></p>
+					
+					<p class="negrita green">Decremento dividido por '3':<span class="purple"> i/=3;</span></p>
+
+				</article>
+				
+			
+				<!-- INTERCAMBIO DE VALORES -->
+				<article>
+				
+					<a name="intercambio"></a>
+
+					<!-- Título Principal -->
+					<h1>Intercambio Valores</h1>
+					
+					<h4>Explicación</h4>
+					
+					<p>Se realiza utilizando una variable auxiliar.</p>
+					
+					<h4>Ejemplo</h4>
+										
+					<p class="green negrita">let <span class="purple">uno</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">dos</span> = <span class="purple">30</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">auxiliar</span>;</p>
+					
+					<p class="green negrita"><span class="purple">auxiliar</span> = <span class="purple">uno</span>;</p>
+				
+					<p class="green negrita"><span class="purple">uno</span> = <span class="purple">dos</span>;</p>
+
+					<p class="green negrita"><span class="purple">dos</span> = <span class="purple">auxiliar</span>;</p>
+					
+					<p class="brown negrita">// Resultado: uno = 30, dos = 10</span></p>
+
+				</article>
+				
+				
+				
+				<!-- OPERADORES LÓGICOS: IGUAL -->
+				<article>
+				
+					<a name="igual"></a>
+
+					<!-- Título Principal -->
+					<h1>Valores iguales <span class="red">==</span></h1>
+					
+					<h4>Explicación</h4>
+					
+					<p>Se utiliza para comparar valores y determinar si son o no iguales.</p>
+					
+					<ul>
+						<li><span class="negrita">Valores iguales:</span> <span class="negrita brown">'true'</span></li>
+						<li><span class="negrita">Valores distintos:</span> <span class="negrita brown">'false'</span></li>
+					</ul>
+
+					<h4>Ejemplo</h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">a <span class="red">==</span> b</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'false'</span></p>
+
+				</article>
+				
+				
+				<!-- OPERADORES LÓGICOS: DISTINTO -->
+				<article>
+				
+					<a name="distinto"></a>
+
+					<!-- Título Principal -->
+					<h1>Valores distintos <span class="red">!=</span></h1>
+					
+					<h4>Explicación</h4>
+					
+					<p>Se utiliza para comparar valores y determinar si son o no distintos.</p>
+					
+					<ul>
+						<li><span class="negrita">Valores distintos:</span> <span class="negrita brown">'true'</span></li>
+						<li><span class="negrita">Valores iguales:</span> <span class="negrita brown">'false'</span></li>
+					</ul>
+
+					<h4>Ejemplo</h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">a <span class="red">!=</span> b</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'false'</span></p>
+
+				</article>
+				
+				
+				
+				<!-- OPERADORES LÓGICOS: MENOR QUE - MAYOR QUE -->
+				<article>
+				
+					<a name="menormayoque"></a>
+
+					<!-- Título Principal -->
+					<h1>Menor / Mayor que</h1>
+					
+					<h4>Explicación</h4>
+					
+					<p>Se utiliza para comparar valores y determinar si son mayores o menores.</p>
+					
+					<ul>
+						<li><span class="negrita">Valores Ciertos:</span> <span class="negrita brown">'true'</span></li>
+						<li><span class="negrita">Valores Inciertos:</span> <span class="negrita brown">'false'</span></li>
+					</ul>
+
+					<h4>Ejemplo 'Menor que' <span class="red">&lt;</span></h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">a <span class="red">&lt;</span> b</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'false'</span></p>
+
+				
+					<h4>Ejemplo 'Mayor que' <span class="red">&gt;</span></h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">a <span class="red">&gt;</span> b</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'true'</span></p>
+
+					
+					<h4>Ejemplo 'Menor o igual que' <span class="red">&lt;=</span></h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">a <span class="red">&lt;=</span> b</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'false'</span></p>
+
+
+					<h4>Ejemplo 'Mayor o igual que' <span class="red">&gt;=</span></h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">a <span class="red">&gt;=</span> b</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'true'</span></p>
+
+				</article>
+				
+				
+				<!-- OPERADORES LÓGICOS: ESTRICTAMENTE IGUAL -->
+				<article>
+				
+					<a name="estrictamente"></a>
+
+					<!-- Título Principal -->
+					<h1>Estrictamente</h1>
+					
+					<h4>Explicación </h4>
+					
+					<p>Se utiliza para comparar valores y determinar si son estrictamente iguales o distintos.</p>
+					
+					<ul>
+						<li><span class="negrita">Valores Iguales:</span> <span class="negrita brown">'true'</span></li>
+						<li><span class="negrita">Valores Distintos:</span> <span class="negrita brown">'false'</span></li>
+					</ul>
+
+					<h4>Ejemplo Estrictamente Igual <span class="red">===</span></h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">a <span class="red">===</span> b</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'true'</span></p>
+
+
+					<h4>Ejemplo Estrictamente Distinto <span class="red">!==</span></h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">10</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">3</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">a <span class="red">!==</span> b</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'true'</span></p>
+
+				</article>
+				
+				
+				<!-- OPERADORES LÓGICOS: AND (Y LÓGICO) -->
+				<article>
+				
+					<a name="and"></a>
+
+					<!-- Título Principal -->
+					<h1>Operador AND <span class="red">&&</span></h1>
+					
+					<h4>Explicación</h4>
+					
+					<p>Este operador se utiliza cuando se requiere el <span class="negrita">cumplimiento de todas las opciones</span> propuestas.</p>
+					
+					<p class="cursiva">Se recomienda el uso de paréntesis para delimitar las opciones.</p>
+
+					<h5>Posibilidades:</h5>
+					
+					<ul>
+						<li><span class="negrita">Se cumplen todas las opciones:</span> <span class="negrita brown">'true'</span></li>
+						<li><span class="negrita">No se cumplen todas las opciones:</span> <span class="negrita brown">'false'</span></li>
+					</ul>
+
+					<h4>Ejemplo</h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">2</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">2</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">c</span> = <span class="purple">4</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">d</span> = <span class="purple">4</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">(a == b) <span class="red">&&</span> (c == d)</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'true', se cumple tanto la primera como la segunda opción.</span></p>
+
+				</article>
+
+
+
+				<!-- OPERADORES LÓGICOS: OR (O LÓGICO) -->
+				<article>
+				
+					<a name="or"></a>
+
+					<!-- Título Principal -->
+					<h1>Operador OR <span class="red">||</span></h1>
+					
+					<h4>Explicación</h4>
+					
+					<p>Este operador se utiliza cuando se requiere el <span class="negrita">cumplimiento de al menos una de las opciones</span> propuestas.</p>
+					
+					<p class="cursiva">Se recomienda el uso de paréntesis para delimitar las opciones.</p>
+					
+					<h5>Posibilidades:</h5>
+					
+					<ul>
+						<li><span class="negrita">Se cumple al menos una opción:</span> <span class="negrita brown">'true'</span></li>
+						<li><span class="negrita">No se cumple ninguna opción:</span> <span class="negrita brown">'false'</span></li>
+					</ul>
+
+					<h4>Ejemplo</h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">2</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">2</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">c</span> = <span class="purple">4</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">d</span> = <span class="purple">5</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">(a == b) <span class="red">||</span> (c == d)</span>;</p>
+					
+					<p class="brown negrita">// Resultado: total es 'true', se cumple sólo la primera opción.</span></p>
+
+				</article>
+				
+				
+				<!-- VALORES BOOLEANOS -->
+				<article>
+				
+					<a name="valoresbool"></a>
+
+					<!-- Título Principal -->
+					<h1>Valores Boolenaos</h1>
+					
+					<h4>Explicación</h4>
+					
+					<p>Los valores booleanos en JavaScript son <span class="red negrita">'true'</span> y <span class="red negrita">'false'</span>. Se generan a partir de operaciones lógicas y de comparación y son fundamentales para la toma de decisiones en el código.</p>
+					
+					<h4>VALORES TRUE</h4>
+					
+					<ul>
+						<li><span class="negrita">Numeros Enteros (distintos de 0):</span> <span class="negrita brown"> 1, 2, 3, ...</span></li>
+						<li><span class="negrita">Caracteres:</span> <span class="negrita brown"> "a", "J", ... </span></li>
+						<li><span class="negrita">Cadena de Caracteres:</span> <span class="negrita brown"> "Hola", "¿Cómo estás?", ... </span></li>
+					</ul>
+					
+					
+					<h4>VALORES FALSE</h4>
+					
+					<ul>
+						<li class="negrita">0</li>
+						<li><span class="negrita">Cadena de Caracteres Vacía:</span> <span class="negrita brown"> " "</span>.</li>
+						<li><span class="negrita">NaN (No es un número):</span> <span class="negrita brown"> este hecho se da cuando se están utilizando números y se introduce o compara con algo que no lo es</span>.</li>
+						<li class="negrita">Null (campo vacío)</li>
+						<li class="negrita">undefined (sin definir)</li>
+					</ul>
+				
+
+					<h4>Ejemplo</h4>
+										
+					<p class="green negrita">let <span class="purple">a</span> = <span class="purple">3</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">b</span> = <span class="purple">5</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple">!a <span class="red">==</span> b</span>;</p>
+					
+					<p class="brown negrita">/* Resultado: total es 'false'</p>
+					
+					<ol class="brown negrita romanos">
+						<li>El valor 'a' al ser un número entero es 'true'. Este valor se convierte en 'false' por el símbolo <span class="red">!</span>.</li>
+						<li>El valor 'b' al ser un número entero es 'true'.</li>
+						<li>La comparación 'false' (!a) no es igual a 'true' (b). */</li>
+					</ol>
+
+				</article>
+				
+				
+				
+				<!-- PROMPT -->
+				<article>
+				
+					<a name="prompt"></a>
+
+					<!-- Título Principal -->
+					<h1>Prompt()</h1>
+					
+					<h4>¿Qué es el prompt?</h4>
+					
+					<p>El prompt es una <span class="negrita">función que permite la aparición de una ventana emergente inicial</span> que se utiliza para <span class="negrita red">mostrar alertas (alert)</span>	o <span class="negrita blue">introducir valores</span> a una variable.</p>
+					
+					<p>Los datos que se introducen por el 'prompt' son de tipo 'string'.</p>
+					
+					<h4>Ejemplo de Uso</h4>
+										
+					<p class="green negrita">let <span class="purple">edad</span> = <span class="purple">prompt("Escribe tu edad: ")</span>;</p>
+					
+					
+					<h4>Conversión a Dato Numérico</h4>
+					
+					<p>Para convertir un dato introducido por el 'prompt' en numérico será necesario <span class="blue negrita">multiplicar el dato por '1'</span> o <span class="blue negrita">utilizar la función Number()</span>.</p>
+					
+					<p>Es indispensable realizar esta conversión cuando se pretenden sumar valores. Si no se realiza dicha conversión el <span class="red negrita">operador +</span> se interpretará como una concatenación.</p>
+
+
+					<h4>Ejemplos de Conversión</h4>
+					
+					<h5 class="h5-margen">Multiplicando por 1</h5>
+					
+					<p class="green negrita">let <span class="purple">edad</span> = <span class="purple">prompt("Escribe tu edad: ") <span class="blue">* 1</span></span>;</p>
+
+					<h5>Utilizando la función Number()</h5>
+
+					<p class="green negrita">let <span class="purple">edad</span> = <span class="purple"><span class="blue">Number(</span>prompt("Escribe tu edad: ") </span><span class="blue">)</span>;</p>
+
+				</article>
+				
+				
+				
+				<!-- FUNCIÓN TYPEOF -->
+				<article>
+				
+					<a name="typeof"></a>
+
+					<!-- Título Principal -->
+					<h1>Función Typeof</h1>
+										
+					<p><span class="negrita">Indica el tipo de variable</span> si la mostramos a través de una alerta tanto en el prompt como en el HTML.</p>
+					
+					<h4>Ejemplo Variable Numérica</h4>
+
+					<p class="green negrita">let <span class="purple">numero</span> = <span class="purple">1</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">typeof(<span class="blue">numero</span>)</span>);</p>
+					
+					<p class="brown negrita">// Tipo de Dato: 'number'</p>
+
+					
+					<h4>Ejemplo Variable String</h4>
+					
+					<p class="green negrita">let <span class="purple">nombre</span> = <span class="purple">"Pepe"</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">typeof(<span class="blue">nombre</span>)</span>);</p>
+					
+					<p class="brown negrita">// Tipo de Dato: 'string'</p>
+					
+					
+					<h4>Ejemplo Variable Boolena</h4>
+					
+					<p class="green negrita">let <span class="purple">activo</span> = <span class="purple">true</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">typeof(<span class="blue">activo</span>)</span>);</p>
+					
+					<p class="brown negrita">// Tipo de Dato: 'boolean'</p>
+					
+				</article>
+				
+				
+				<!-- FUNCIÓN NUMBER -->
+				<article>
+				
+					<a name="number"></a>
+
+					<!-- Título Principal -->
+					<h1>Función Number</h1>
+					
+					<h4>Number()</h4>
+										
+					<p>Se utiliza para <span class="negrita">identificar o convertir a tipo numérico un valor de una variable</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">edad</span> = <span class="purple">"5"</span>;</p>
+					
+					<p class="green negrita">const <span class="purple">decada</span> = <span class="purple">10</span>;</p>
+
+					<p class="green negrita">let <span class="purple">numerico</span> = <span class="purple"><span class="blue">Number(</span>edad</span><span class="blue">)</span>;</p>
+		
+					<p class="green negrita">let <span class="purple">total</span> = <span class="purple"> edad <span class="red">+</span> decada</span>;</p>
+
+					<p class="brown negrita">// Resultado: 15. Convierte el dato tipo 'string' de la variable 'edad' y le suma la constante 'decada'.</p>
+				
+				
+					<h4>Number.isInteger()</h4>
+					
+					<p>Se utiliza para <span class="negrita">identificar un número entero</span> o <span class="negrita">convertir un numero decimal en un número entero</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">num</span> = <span class="purple"><span class="blue">Number(</span>edad</span><span class="blue">)</span>;</p>
+		
+					<p class="green negrita">alert(<span class="purple">Number.isInteger(<span class="blue">num</span>)</span>);</p>
+
+					<p class="brown negrita">/* Resultado:</p>
+					
+					<ol class="brown negrita romanos">
+						<li>Si la variable 'num' es un entero:<span class="red"> true</span>.</li>
+						<li>Si la variable 'num' no es un número entero: <span class="red"> false</span>. */</li>
+					</ol>
+				
+				</article>
+				
+				
+				<!-- FUNCIONES PARSEINT Y PARSEFLOAT -->
+				<article>
+				
+					<a name="parse"></a>
+
+					<!-- Título Principal -->
+					<h1>Funciones parse</h1>
+					
+					<h4>parseInt()</h4>
+					
+					<p>Muestra o utiliza la <span class="negrita">parte entera</span> de un número.</p>
+					
+					<p class="green negrita">let <span class="purple">num</span> = <span class="purple">10.5</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">parseInt(<span class="blue">num</span>)</span>);</p>
+
+					<p class="brown negrita">// Resultado: 10</p>
+
+				
+					<h4>parseFloat()</h4>
+					
+					<p>Muestra o utiliza la <span class="negrita">parte entera y decimal</span> de un número.</p>
+					
+					<p class="green negrita">let <span class="purple">num</span> = <span class="purple">15.43</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">parseFloat(<span class="blue">num</span>)</span>);</p>
+
+					<p class="brown negrita">// Resultado: 15.43</p>
+
+				</article>
+				
+				
+				<!-- CONVERSIÓN MINÚSCULAS -->
+				<article>
+				
+					<a name="minusculas"></a>
+
+					<!-- Título Principal -->
+					<h1>Conversión minus</h1>
+					
+					<h4>Explicación <span class="blue">.toLowerCase()</span></h4>
+					
+					<p><span class="negrita">Convierte a minúsculas</span> todo el texto de una variable.</p>
+					
+					<h4>Ejemplo</h4>
+					
+					<p class="green negrita">let <span class="purple">nombre</span> = <span class="purple">"Pepe"</span>;</p>
+					
+					<p class="purple negrita">nombre<span class="green"> = </span> nombre.<span class="blue">toLowerCase()</span>;</p>
+
+					<p class="green negrita">alert(<span class="purple">nombre</span>);</p>
+
+					<p class="brown negrita">// Resultado: pepe</p>
+
+				</article>
+
+
+				<!-- CONVERSIÓN MAYÚSCULAS -->
+				<article>
+				
+					<a name="mayusculas"></a>
+
+					<!-- Título Principal -->
+					<h1>Conversión MAYUS</h1>
+					
+					<h4>Explicación <span class="blue">.toUpperCase()</span></h4>
+					
+					<p><span class="negrita">Convierte a MAYÚSCULAS</span> todo el texto de una variable.</p>
+					
+					<h4>Ejemplo</h4>
+					
+					<p class="green negrita">let <span class="purple">nombre</span> = <span class="purple">"Luis"</span>;</p>
+					
+					<p class="purple negrita">nombre<span class="green"> = </span> nombre.<span class="blue">toUpperCase()</span>;</p>
+
+					<p class="green negrita">alert(<span class="purple">nombre</span>);</p>
+
+					<p class="brown negrita">// Resultado: LUIS</p>
+
+				</article>
+
+
+
+				<!-- FUNCIONES MATH: PI, POTENCIAS y RAÍZ CUADRADA-->
+				<article>
+				
+					<a name="pi-potencias"></a>
+
+					<!-- Título Principal -->
+					<h1>Math: PI, Potencias y Raíz Cuadrada</h1>
+					
+					<h4>Número PI: <span class="purple">Math.PI</span></h4>
+					
+					<p>Muestra o permite utilizar el <span class="negrita">número PI</span>.</p>
+					
+					<p class="green negrita">alert(<span class="blue">"El número PI es "</span> <span class="red">+</span> <span class="purple">Math.PI</span>);</p>
+
+					<p class="brown negrita">// Resultado: El número PI es 3.14159</p>
+
+
+					<h4>Potencias: <span class="purple">Math.pow</span></h4>
+					
+					<p>Calcula la <span class="negrita">potencia de un número o una variable</span> de tipo numérica.</p>
+					
+					<p class="green negrita">let <span class="purple">numero</span> = <span class="purple">2</span>;</p>
+
+					<p class="green negrita">let <span class="purple">potencia2</span> = <span class="blue">Math.pow(<span class="purple">num</span>, 2)</span>;</p>
+
+					<p class="green negrita">let <span class="purple">potencia3</span> = <span class="blue">Math.pow(<span class="purple">num</span>, 3)</span>;</p>
+
+					<p class="brown negrita">// Resultado: potencia2 = 4</p>
+					
+					<p class="brown negrita">// Resultado: potencia3 = 8</p>
+
+
+					<h4>Raíz Cuadrada: <span class="purple">Math.sqrt</span></h4>
+					
+					<p>Calcula la <span class="negrita">raíz cuadrada de un número o una variable</span> de tipo numérica.</p>
+					
+					<p class="green negrita">let <span class="purple">num</span> = <span class="purple">16</span>;</p>
+
+					<p class="green negrita">alert(<span class="purple">Math.sqrt(<span class="blue">num</span>)</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 4</p>
+				
+				</article>
+				
+
+				<!-- FUNCIONES MATH: REDONDEOS -->
+				<article>
+				
+					<a name="redondeos"></a>
+
+					<!-- Título Principal -->
+					<h1>Math: Redondeos</h1>
+					
+					<h4>Entero + cercano: <span class="purple">Math.round</span></h4>
+
+					<p>Realiza el redondeo del número hacía el <span class="negrita">entero más cercano</span>.</p>
+
+					<p class="green negrita">let <span class="purple">num</span> = <span class="purple">2.3</span>;</p>
+
+					<p class="green negrita">let <span class="purple">redondeo</span> = <span class="purple">Math.round(<span class="blue">num</span>)</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">redondeo</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 2</p>
+					
+
+					
+					<h4>Hacía arriba: <span class="purple">Math.ceil</span></h4>
+
+					<p>Realiza el redondeo del número hacía el <span class="negrita">entero de mayor valor</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">num</span> = <span class="purple">2.2</span>;</p>
+
+					<p class="green negrita">let <span class="purple">redondeo</span> = <span class="purple">Math.ceil(<span class="blue">num</span>)</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">redondeo</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 3</p>
+					
+					
+
+					<h4>Hacía abajo: <span class="purple">Math.floor</span></h4>
+
+					<p>Realiza el redondeo del número hacía el <span class="negrita">entero de menor valor</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">num</span> = <span class="purple">2.8</span>;</p>
+
+					<p class="green negrita">let <span class="purple">redondeo</span> = <span class="purple">Math.floor(<span class="blue">num</span>)</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">redondeo</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 2</p>
+
+				</article>
+				
+
+
+				<!-- FUNCIONES MATH: NÚMERO ALEATORIO -->
+				<article>
+				
+					<a name="aleatorio"></a>
+
+					<!-- Título Principal -->
+					<h1>Math: Número Aleatorio</h1>
+					
+					<h4>Explicación <span class="purple">Math.random</span></h4>
+
+					<p class="negrita">Calcula y muestra un número aleatorio entre 0 y 1, <span class="cursiva">excluyendo este último</span>.</p>
+
+					<p class="green negrita">let <span class="purple">aleatorio</span> = <span class="purple">Math.random()</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">aleatorio</span>);</p>
+					
+					<p class="brown negrita">// Resultado: mostraría un resultado entre 0 y 1</p>
+
+
+					<h4>Número Aleatorio entre 0 y 9</h4>
+
+					<p>Se <span class="negrita">multiplica por 10 el valor aleatorio, redondeándolo hacía abajo</span>.</p>
+
+					<p class="green negrita">let <span class="purple">aleatorio</span> = <span class="purple"> <span class="blue">Math.floor(</span>Math.random() <span class="red">* 10</span><span class="blue">)</span></span>;</p>
+
+
+					<h4>Número Aleatorio entre 1 y 10</h4>
+
+					<p>Se <span class="negrita">multiplica por 10 el valor aleatorio, redondeándolo hacía abajo y sumándole 1</span>.</p>
+
+					<p class="cursiva">Se recomienda utilizar el redondeo hacía abajo, sumándole posteriormente 1, para que la probabilidad de que salgan todos los números sea más precisa.</p>
+
+					<p class="green negrita">let <span class="purple">aleatorio</span> = <span class="blue">Math.floor(</span>Math.random() <span class="red">* 10</span><span class="blue">)</span> + <span class="red">1</span>;</p>
+
+
+					<h4>Número Aleatorio entre 1 y 6: Dado</h4>
+
+					<p>Se <span class="negrita">multiplica por 6 el valor aleatorio, redondeándolo hacía abajo y sumándole 1</span>.</p>
+
+					<p class="cursiva">Se recomienda utilizar el redondeo hacía abajo, sumándole posteriormente 1, para que la probabilidad de que salgan todos los números sea más precisa.</p>
+
+					<p class="green negrita">let <span class="purple">aleatorio</span> = <span class="blue">Math.floor(</span>Math.random() <span class="red">* 6</span><span class="blue">)</span> + <span class="red">1</span>;</p>
+
+				</article>
+
+
+				<!-- MÁS FUNCIONES: REDONDEO DECIMALES -->
+				<article>
+				
+					<a name="tofixed"></a>
+
+					<!-- Título Principal -->
+					<h1>Redondeo en Decimales</h1>
+					
+					<h4>Explicación <span class="blue">.toFixed()</span></h4>
+
+					<p>Esta función se utiliza para fijar el <span class="negrita">número de decimales a los que se desea redondear</span>.</p>
+
+					<h4>Ejemplo</h4>
+
+					<p class="green negrita">let <span class="purple">variable</span> = <span class="purple">2.785</span>;</p>
+
+					<p class="purple negrita">variable.<span class="blue">toFixed(<span class="red">2</span>)</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">variable</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 2.79. Dentro de la función, entre paréntesis, se fija el número de decimales que se desea aplicar al redondeo.</p>
+				
+				</article>
+
+
+
+				<!-- MÁS FUNCIONES: NÚMERO DE CARACTERES -->
+				<article>
+				
+					<a name="length"></a>
+
+					<!-- Título Principal -->
+					<h1>Calcular Nº Caracteres</h1>
+					
+					<h4>Explicación <span class="blue">.toLength()</span></h4>
+
+					<p>Esta función se utiliza para calcular <span class="negrita">el número de caracteres que tiene una variable</span>.</p>
+
+					<h4>Ejemplo</h4>
+
+					<p class="green negrita">let <span class="purple">nombre</span> = <span class="purple">"Víctor"</span>;</p>
+
+					<p class="purple negrita">nombre.<span class="blue">toLength()</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">nombre</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 6</p>
+				
+				</article>
+
+
+				<!-- MÁS FUNCIONES: CARACTER POSICIÓN DETERMINADA -->
+				<article>
+				
+					<a name="caracteres"></a>
+
+					<!-- Título Principal -->
+					<h1>Mostrar Caracteres Concretos</h1>
+					
+					<h4 class="blue">.charAt()</h4>
+
+					<p>Esta función se utiliza para mostrar <span class="negrita">el caracter de una posición determinada de una variable con valor de tipo 'string'</span>.</p>
+
+					<p class="cursiva">La primera posición corresponde con el número '0', la segunda posición con el número '1', la tercera posición con el número '2', y así sucesivamente.</p>
+
+					<p class="green negrita">let <span class="purple">nombre</span> = <span class="purple">"Víctor"</span>;</p>
+
+					<p class="purple negrita">nombre.<span class="blue">charAt(<span class="red">2</span>)</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">nombre</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 'c'. Es el caracter que corresponde con el número 2, especificado entre paréntesis dentro de la función.</p>
+
+
+					<h4 class="blue">.substring()</h4>
+
+					<p>Muestra <span class="negrita">los caracteres entre dos posiciones concretas</span>.</p>
+
+
+					<ol class="romanos">
+						<li>El <span class="negrita">primer número de la función se asocia con la posición inicial</span> de la cadena que se mostrará.</li>
+						<li>El <span class="negrita">segundo número de la función se asocia con la posición final</span> de la cadena que se mostrará, no incluyéndose la misma en la muestra.</li>
+						<li>Si tan sólo se indica un número, se devuelven los caracteres desde esa posición hasta el final de la cadena.</li>
+					</ol>
+
+
+					<p class="green negrita">let <span class="purple">nombre</span> = <span class="purple">"Víctor"</span>;</p>
+
+					<p class="purple negrita">nombre.<span class="blue">substring(<span class="red">2, 5</span>)</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">nombre</span>);</p>
+					
+					<p class="brown negrita">// Resultado: "cto". Muestra los caracteres de las posiciones 2, 3 y 4.</p>
+				
+				</article>
+
+
+
+				<!-- MÁS FUNCIONES: POSICONES CONCRETAS -->
+				<article>
+				
+					<a name="posiciones-concretas"></a>
+
+					<!-- Título Principal -->
+					<h1>Mostrar Posiciones Concretas</h1>
+					
+					<h4 class="blue">.indexOf()</h4>
+
+					<p>Muestra en que posición se encuentra el <span class="negrita">primer caracter igual al indicado</span>.</p>
+
+					<p class="green negrita">let <span class="purple">nombre</span> = <span class="purple">"Víctor"</span>;</p>
+
+					<p class="purple negrita">nombre.<span class="blue">indexOf(<span class="red">"o"</span>)</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">nombre</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 4. Muestra la posición del primer caracter 'o' de la variable.</p>
+
+
+					<h4 class="blue">.lastIndexOf()</h4>
+
+					<p>Muestra en que posición se encuentra el <span class="negrita">último caracter igual al indicado</span>.</p>
+
+
+					<p class="green negrita">let <span class="purple">nombre</span> = <span class="purple">"Casa"</span>;</p>
+
+					<p class="purple negrita">nombre.<span class="blue">lastIndexOf(<span class="red">"a"</span>)</span>;</p>
+					
+					<p class="green negrita">alert(<span class="purple">nombre</span>);</p>
+					
+					<p class="brown negrita">// Resultado: 3. Muestra la posición del último caracter 'a' de la variable.</p>
+
+				</article>
+				
+				
+				
+				<!-- ARRAY: EXPLICACIÓN -->
+				<article>
+				
+					<a name="array"></a>
+
+					<!-- Título Principal -->
+					<h1>Array</h1>
+					
+					<p>Es el <span class="negrita">conjunto de valores que puede tomar una variable</span>.</p>
+					
+					<h4>Ejemplos de Tipos de Arrays</h4>
+					
+					<ul>
+						<li class="negrita">Valores 'string': <span class="green negrita">let <span class="purple">nombres</span> = <span class="purple">["Víctor", "Juan"]</span>;</span></li>
+						<li class="negrita">Valores 'numéricos': <span class="green negrita">let <span class="purple">notas</span> = <span class="purple">[2, 3, 4]</span>;</span></li>
+						<li class="negrita">Valores 'booleanos': <span class="green negrita">let <span class="purple">activo</span> = <span class="purple">[true, false]</span>;</span></li>
+						<li class="negrita">Valores mixtos: <span class="green negrita">let <span class="purple">observaciones</span> = <span class="purple">["Bien", 3, 4, true, false]</span>;</span></li>
+					</ul>
+					
+
+					<h4>Posiciones</h4>
+
+					<p>La <span class="negrita">primera posición de un array es la número '0'</span>, la segunda posición es la número '1', la tercera posición es la número '2', y así sucesivamente.</p>
+
+					
+					<h4>Mostrar una Posición Concreta</h4>
+					
+					<p>Se coloca el <span class="negrita">array entre los paréntesis</span>, el cual contendrá la <span class="negrita">posición deseada entre corchetes</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">notas</span> = <span class="purple">[2, 3, 4, 5]</span>;</p>
+
+					<p class="green negrita">document.write(<span class="purple">notas[<span class="red">2</span>]</span>);</p>
+
+					<p class="brown negrita">// Resultado: 4. Número ubicado en la posición '2'</p>
+					
+					
+					<h4>Mostrar todos los valores</h4>
+					
+					<p>Se coloca simplemente el <span class="negrita">array entre los paréntesis</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">notas</span> = <span class="purple">[2, 3, 4, 5]</span>;</p>
+
+					<p class="green negrita">document.write(<span class="purple">notas</span>);</p>
+
+					<p class="brown negrita">// Resultados: 2, 3, 4 y 5</p>
+					
+					
+					<h4>Mostrar número de elementos</h4>
+					
+					<p>Se coloca el <span class="negrita">array entre los paréntesis</span>, seguido de la función <span class="blue negrita">.length</span>.</p>
+					
+					<p class="green negrita">let <span class="purple">notas</span> = <span class="purple">[2, 3, 4, 5]</span>;</p>
+
+					<p class="green negrita">document.write(<span class="purple">notas<span class="blue">.length</span></span>);</p>
+
+					<p class="brown negrita">// Resultado: 4. Número total de valores que contiene el array.</p>
+					
+					
+					<h4>Mostrar último elemento</h4>
+					
+					<p>Se coloca el array entre los paréntesis, acompañado entre corchetes del propio array, la función <span class="blue negrita">.length</span> y <span class="red negrita">restándole 1</span>.</p>
+
+					<p class="green negrita">let <span class="purple">notas</span> = <span class="purple">[2, 3, 4, 5]</span>;</p>
+
+					<p class="green negrita">document.write(<span class="purple">notas[<span class="grey">notas</span><span class="blue">.length</span> <span class="red">- 1</span>]</span>);</p>
+
+					<p class="brown negrita">// Resultado: 5. Muestra el valor del último elemento.</p>
+										
+				</article>
+				
+
+
+				<!-- ARRAY: AÑADIR ELEMENTOS -->
+				<article>
+				
+					<a name="array-anadir"></a>
+
+					<!-- Título Principal -->
+					<h1>Array: Añadir Valores</h1>
+
+					<p class="green negrita centrado">let <span class="purple">notas</span> = <span class="purple">[5, 6, 1, 7, 2, 3]</span>;</p>
+
+
+					<h4>Modificar datos de una posición</h4>
+					
+					<p class="purple negrita">notas[<span class="blue">2</span>] = <span class="red">8</span>;</p>
+
+					<p class="brown negrita">// La posición '2' se sustituye por el número 8.</p>
+					
+					
+					<h4>Añadir un valor al principio</h4>
+					
+					<p>La función <span class="blue negrita">.unshift</span> se utiliza para añadir un valor al principio del array.</p>
+					
+					<p class="purple negrita">notas<span class="blue">.unshift(<span class="red">9</span>)</span>;</p>
+					
+					<p class="cursiva">En el parentesis se podría colocar la función 'prompt' para que el usuario pueda introducir el valor por pantalla.</p>
+					
+					<p class="brown negrita">// Se añadiría el número 9 al principio del array</p>
+					
+					
+					<h4>Añadir un valor al final</h4>
+					
+					<p>La función <span class="blue negrita">.push</span> se utiliza para añadir un valor al final del array.</p>
+
+					<p class="purple negrita">notas<span class="blue">.push(<span class="red">1</span>)</span>;</p>
+					
+					<p class="cursiva">En el parentesis se podría colocar la función 'prompt' para que el usuario pueda introducir el valor por pantalla.</p>
+
+					<p class="brown negrita">// Se añadiría el número 1 al final del array</p>
+					
+				</article>
+				
+				
+				<!-- ARRAY: ELIMINAR ELEMENTOS -->
+				<article>
+				
+					<a name="array-eliminar"></a>
+
+					<!-- Título Principal -->
+					<h1>Array: Eliminar Valores</h1>
+
+					<p class="green negrita centrado">let <span class="purple">notas</span> = <span class="purple">[5, 6, 1, 7, 2, 3]</span>;</p>
+					
+					
+					<h4>Eliminar el primer valor</h4>
+					
+					<p>La función <span class="blue negrita">.shift()</span> se utiliza para <span class="negrita">eliminar el primer valor del array</span>.</p>
+					
+					<p class="purple negrita">notas<span class="blue">.shift()</span>;</p>
+										
+					<p class="brown negrita">// Se eliminaría el número 5.</p>
+					
+					
+					<h4>Eliminar el último valor</h4>
+					
+					<p>La función <span class="blue negrita">.pop()</span> se utiliza para <span class="negrita">eliminar el último valor del array</span>.</p>
+
+					<p class="purple negrita">notas<span class="blue">.pop()</span>;</p>
+					
+					<p class="brown negrita">// Se eliminaría el número 3.</p>
+					
+				</article>
+				
+				
+				
+				<!-- CONDICIONAL SENCILLO -->
+				<article>
+				
+					<a name="condicional-sencillo"></a>
+
+					<!-- Título Principal -->
+					<h1>Condicional Sencillo</h1>
+					
+					<p class="centrado cursiva">No es habitual su uso.</p>
+					
+					<h4>Ejemplo explicativo</h4>
+					
+					<p>Para utilizar un condicional sencillo será necesario el <span class="negrita fondoamarillo">uso de un array</span>, una <span class="negrita fondorosa">variable con su valor correspondiente</span> y <span class="negrita fondonaranja">otra variable cuyo valor será la condición sencilla</span>.</p>
+					
+					<p>Además, <span class="negrita">se requiere una alerta que asocie el array con la variable que contiene la condición</span>.</p>
+
+					<p class="green negrita">let <span class="purple fondoamarillo">hola</span> = <span class="purple">["No está", "Sí está"]</span>;</p>
+
+					<p class="green negrita">let <span class="purple fondorosa">nombre</span> = <span class="blue">prompt(<span class="red">"Introduce un nombre: "</span>)</span>;</p>
+
+					<p class="green negrita">let <span class="purple fondonaranja">solucion</span> = <span class="blue">(<span class="grey">(nombre == "Juan")</span> <span class="red negrita">||</span> <span class="grey">(nombre == "Pepe")</span>)? <span class="blue">1</span>:<span class="red">0</span></span>;</p>
+
+					<p class="green negrita">alert(<span class="purple fondoamarillo">hola[<span class="grey fondonaranja">solucion</span>]</span>);</p>
+
+					
+					<h4>Funcionamiento Condicional</h4>
+					
+					<ul>
+						<li>Lo situado antes de los dos puntos (<span class="negrita">:</span>) es <span class="negrita fondoazul">TRUE</span>.</li>
+						<li>Lo situado después de los dos puntos (<span class="negrita">:</span>) es <span class="negrita fondorojo">FALSE</span>.</li>
+					</ul>
+					
+					<h5>Es decir:</h5>
+					
+					<ol class="romanos">
+						<li>Si el nombre es "Juan" o "Pepe" (<span class="fondoazul">se cumple la condición</span>), se elige lo situado antes de los dos puntos; es decir, la posición '1' ⇒ <span class="negrita">"Si está"</span></li>
+						<li>Si el nombre no es "Juan" ni "Pepe" (<span class="fondorojo">no se cumple la condición</span>), entonces se elige lo situado después de los dos puntos; es decir, la posición '0' del array ⇒ <span class="negrita">"No está"</span></li>
+					</ol>
+					
+					
+					<h4>Sucesión de Condicionales</h4>
+					
+					<p>Se pueden realizar sucesiones de condicionales para elegir más elementos del array, recordando siempre que:</p>
+					
+					<ul>
+						<li>Lo situado antes de los dos puntos (<span class="negrita">:</span>) se seleccionará si se cumple la condición (TRUE).</li>
+						<li>Lo situado después de los dos puntos (<span class="negrita">:</span>) se seleccionará si no se cumple la condición (FALSE).</li>
+					</ul>
+					
+				</article>
+
+
+				<!-- CONDICIONALES: IF / ELSE IF / ELSE -->
+				<article>
+				
+					<a name="condicional-if"></a>
+					
+					<!-- Título Principal -->
+					<h1>IF / ELSE IF / ELSE</h1>
+					
+					<h4>Sintaxis</h4>
+					
+					<p class="sinespacios negrita">if <span class="green">(condición)</span> {</p>
+					<p class="sinespacios blue">código;</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="sinespacios negrita">else if <span class="green">(condición)</span> {</p>
+					<p class="sinespacios blue">código;</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="sinespacios negrita">else {</p>
+					<p class="sinespacios blue">código;</p>
+					<p class="sinespacios negrita">}</p>
+					
+					
+					<h4>Observaciones</h4>
+					
+					<ul>
+						<li>Se puede utilizar <span class="negrita">sólo <span class="fondoamarillo">'if'</span>.</li>
+						<li>Se pueden utilizar <span class="negrita">tantos <span class="fondorosa">'else if'</span> como sean necesarios</span>.</li>
+						<li>Se puede utilizar <span class="negrita"><span class="fondonaranja">'else'</span> combinado simplemente con 'if'</span>, sin necesidad de usar 'else if'.</li>
+						<li>Se pueden <span class="negrita">anidar condicionales</span>.</li>
+					</ul>
+					
+					<h4>Ejemplo</h4>
+					
+					<p class="sinespacios negrita">if <span class="green">(numero == 0)</span> {</p>
+					<p class="sinespacios blue">alert("El número es cero");</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="sinespacios negrita">else {</p>
+					<p class="sinespacios blue">alert("El número es distinto de cero");</p>
+					<p class="sinespacios negrita">}</p>
+					
+					
+					<h4>Explicación del Ejemplo</h4>
+					
+					<ul class="cursiva">
+						<li><span class="negrita">Si (if)</span> la variable 'numero' es 0 se ejecuta la alerta <span class="fondoamarillo">El número es cero</span>.</li>
+						<li><span class="negrita">Si no (else)</span>, se ejecuta la alerta <span class="fondonaranja">El número es distinto de cero</span>.</li>
+					</ul>
+					
+				</article>
+				
+				
+				
+				<!-- BUCLE WHILE -->
+				<article>
+				
+					<a name="bucle-while"></a>
+					
+					<!-- Título Principal -->
+					<h1>Bucle Indeterminado</h1>
+					
+					<p class="centrado negrita">- WHILE (mientras) -</p>
+					
+					<p>Este tipo de bucle permite ejecutar un código mientras se cumpla una <span class="negrita">condición indeterminada</span>.</p>
+					
+					
+					<h4>Ejemplo Funcionamiento</h4>
+					
+					<p class="green negrita">let <span class="purple">numero</span> = <span class="purple">prompt(<span class="blue">"Escribe un número: "</span>)</span>;</p>
+					
+					<p class="green negrita">let <span class="purple">aleatorio</span> = <span class="purple">Math.floor(<span class="blue">Math.random() <span class="red">* 100</span></span>)</span>;</p>
+
+					<p class="sinespacios negrita">while <span class="green">(numero != aleatorio)</span> {</p>
+					<p class="sinespacios grey negrita">document.write(<span class="blue">"No has acertado el número"</span>);</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="sinespacios grey negrita">document.write(<span class="blue">"Has acertado el número"</span>);</p>
+
+					
+					<h4>Explicación del Ejemplo</h4>
+					
+					<ul class="cursiva">
+						<li><span class="negrita">Mientras (While)</span> la variable 'numero' (que se introduce por el prompt) sea distinta de la variable 'aleatorio', se ejecuta la alerta <span class="fondoamarillo">No has acertado el número</span>.</li>
+						<li>Si la variable 'numero' es igual a la variable 'aleatorio', se ejecuta la alerta <span class="fondorosa">Has acertado el número</span>.</li>
+					</ul>
+
+				</article>
+				
+				
+				
+				<!-- BUCLE FOR -->
+				<article>
+				
+					<a name="bucle-for"></a>
+					
+					<!-- Título Principal -->
+					<h1>Bucle Determinado</h1>
+					
+					<p class="centrado negrita">- FOR -</p>
+					
+					<p>Este tipo de bucle permite ejecutar un código mientras se cumpla una <span class="negrita">condición determinada</span>.</p>
+					
+					
+					<h4>Ejemplo Funcionamiento</h4>
+					
+					<p class="green negrita">let <span class="purple">dias</span> = <span class="blue">["L", "M", "X", "J", "V", "S", "D"]</span>;</p>
+					
+					<p class="sinespacios negrita">for <span class="green">(i=0; i &lt; dias.length; i++)</span> {</p>
+					<p class="sinespacios grey negrita">document.write(<span class="purple">dias[<span class="red">i</span>]</span>);</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="sinespacios grey negrita">document.write(<span class="blue">"Se acabó la semana"</span>);</p>
+
+					
+					<h4>Explicación Condición Bucle For</h4>
+										
+					<ul class="cursiva">
+						<li><span class="negrita">Valor inicial:</span> i=0</li>
+						<li><span class="negrita">Condición:</span> i &lt; dias.length</li>
+						<li><span class="negrita">Incremento de la variable:</span> i++</li>
+					</ul>
+					
+					<p class="cursiva">En este ejemplo se mostrarían en el HTML todos los valores, comenzando por el que está en la posición '0' y finalizando por el que está en la posición final.</p>
+
+				</article>
+				
+				
+				
+				<!-- BUCLE FOREACH -->
+				<article>
+				
+					<a name="for-each"></a>
+					
+					<!-- Título Principal -->
+					<h1>Bucle forEach</h1>
+										
+					<p>Este tipo de bucle <span class="negrita">permite ejecutar un código una vez por cada elemento de un array</span>, sin necesidad de declarar una variable de control ni una condición explícita.</p>
+					
+					
+					<h4>Ejemplo Funcionamiento</h4>
+					
+					<p class="green negrita">let <span class="purple">dias</span> = <span class="blue">["L", "M", "X", "J", "V", "S", "D"]</span>;</p>
+					
+					<p class="sinespacios negrita"><span class="purple">dias</span><span class="blue fondoamarillo">.forEach</span> (<span class="fondonaranja">i</span>=>  {</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">i</span>.style.padding = "10px 0";</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">i</span>.style.color = "blue";</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">i</span>.style.fontSize = "1.5em";</p>
+					<p class="sinespacios negrita">});</p>
+					
+					<h4>Explicación Funcionamiento</h4>
+										
+					<ul class="cursiva negrita">
+						<li>Se utiliza el array <span class="purple">dias</span>, seguido del bucle <span class="blue fondoamarillo">forEach</span>.</li>
+						<li>Se asigna una variable que permitirá aplicar código a todos los elementos del array: <span class="fondonaranja">i</span></li>
+						<li>Se introducen las líneas de código que se desean aplicar a todos los elementos del array: <span class="fondonaranja">i</span><span class="grey">.codigo</span></li>
+					</ul>
+					
+					<p class="cursiva">En este ejemplo se modifican varias propiedades de CSS de todos los elementos que componen el array 'dias'.</p>
+
+				</article>
+				
+				
+				<!-- CREACIÓN FUNCIONES -->
+				<article>
+				
+					<a name="creacion-funciones"></a>
+					
+					<!-- Título Principal -->
+					<h1>Creación Funciones</h1>
+					
+					<h4>Sintaxis</h4>
+					
+					<p class="sinespacios negrita">function <span class="green">nombre_funcion()</span> {</p>
+					<p class="sinespacios brown negrita">// Código del Programa</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<h4>Ejemplo</h4>
+					
+					<p class="sinespacios negrita">function <span class="green">fun_cambiar()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple">nombre</span><span class="blue fondoamarillo">.forEach</span> (<span class="fondonaranja">j</span>=>  {</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">j</span>.style.margin = "10px";</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">j</span>.style.border = "1px solid orange";</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">j</span>.style.display = "none";</p>
+					<p class="sinespacios negrita">});</p>
+					<p class="sinespacios negrita">}</p>
+					
+				</article>
+				
+				
+				<!-- EVENTOS EN HTML -->
+				<article>
+				
+					<a name="eventos-html"></a>
+					
+					<!-- Título Principal -->
+					<h1>Eventos en HTML</h1>
+					
+					<p>Se colocan en las etiquetas HTML en las que se quiere ejecutar una función.</p>
+					
+					<h4>Eventos + usados</h4>
+					
+					<ul>
+						<li class="negrita">Ejecutar con un click: <span class="red cursiva">onclick</span></li>
+						<li class="negrita">Ejecutar con doble click: <span class="red cursiva">dblclick</span></li>
+						<li class="negrita">Ejecutar al pasar el cursor por encima del objeto: <span class="red cursiva">onmouseover</span></li>
+						<li class="negrita">Ejecutar al salir del objeto: <span class="red cursiva">onmouseout</span></li>
+					</ul>
+					
+					<h4>Ejemplos</h4>
+					
+					<ul>
+						<li class="negrita">Click: <span class="cursiva green">&lt;button <span class="red">onclick = "funcion1()"</span>&gt; &lt;/button&gt;</span></li>
+						<li class="negrita">Doble Click: <span class="cursiva green">&lt;h4 <span class="red">dblclick = "funcion2()"</span>&gt; &lt;/h4&gt;</span></li>
+						<li class="negrita">Cursor por encima del Objeto: <span class="cursiva green">&lt;p <span class="red">onmouseover = "funcion3()"</span>&gt; &lt;/p&gt;</span></li>
+						<li class="negrita">Al salir del Objeto: <span class="cursiva green">&lt;p <span class="red">onmouseout = "funcion4()"</span>&gt; &lt;/p&gt;</span></li>
+					</ul>
+										
+				</article>
+
+				
+				
+				<!-- CAPTURAR OBJETOS: ID -->
+				<article>
+				
+					<a name="captura-id"></a>
+					
+					<!-- Título Principal -->
+					<h1>Captura por su ID</h1>
+
+					<p class="centrado negrita">- Id -</p>
+
+					<p>Captura un <span class="negrita">objeto por su identificador</span>.</p>
+					
+					<ul class="negrita">
+						<li>Cada objeto tiene una 'id' diferente</li>
+						<li>No puede haber dos objetos con una misma 'id'</li>
+					</ul>
+					
+					<p class="cursiva">Las capturas se realizan en el archivo JavaScript asociado al HTML con el que trabajamos. Las capturas se cargan dentro de un apartado específico.</p>
+
+		
+					<h4>Sintaxis de Carga</h4>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios brown negrita">// Objetos Capturados</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="cursiva">Se recomienda declarar las variables antes de la carga de objetos. De este modo se podrán usar en todo el documento.</p>
+
+				
+					<h4>Ejemplo con ID</h4>
+					
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+					
+					<p class="green negrita">let <span class="purple">nombre</span>,</p>
+					
+					<p class="green negrita">let <span class="purple">dato</span>;</p>
+					
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple">nombre</span> = <span class="blue">document.getElementById("nom")</span>; <span class="brown negrita">// Asociada a la id 'nom' del HTML</span></p>
+					<p class="sinespacios negrita"><span class="purple">dato</span> = <span class="blue">nombre.value</span>; <span class="brown negrita">// Captura el valor de la variable 'id' del HTML</span></p>
+					<p class="sinespacios negrita">}</p>
+				
+					
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_desactivar() {</p>
+					<p class="sinespacios negrita"><span class="purple">nombre</span><span class="blue">.hidden</span> = <span class="red">true</span>;</p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">Esta función desactivaría el objeto capturado.</p>
+				
+				</article>
+
+
+
+				<!-- CAPTURAR OBJETOS: CLASS -->
+				<article>
+				
+					<a name="captura-class"></a>
+					
+					<!-- Título Principal -->
+					<h1>Captura por su Clase</h1>
+
+					<p class="centrado negrita">- ClassName -</p>
+
+					<p>Captura los <span class="negrita">elementos de una clase concreta</span>, creando un array que contará con todos ellos.</p>
+
+					<p class="cursiva">Las capturas se realizan en el archivo JavaScript asociado al HTML con el que trabajamos. Las capturas se cargan dentro de un apartado específico.</p>
+
+		
+					<h4>Sintaxis de Carga</h4>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios brown negrita">// Objetos Capturados</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="cursiva">Se recomienda declarar las variables antes de la carga de objetos. De este modo se podrán usar en todo el documento.</p>
+
+				
+					<h4>Ejemplo con CLASS</h4>
+					
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+					
+					<p class="green negrita">let <span class="purple">imagenes</span>;</p>
+										
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple">imagenes</span> = <span class="blue">document.getElementsByClassName("imag")</span>; <span class="brown negrita">// Asociada a la class 'imag' del HTML</span></p>
+					<p class="sinespacios negrita">}</p>
+				
+					
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_estilos() {</p>
+					<p class="sinespacios negrita">for <span class="green">(i=0; i &lt; imagenes.length; i++)</span> {</p>
+					<p class="sinespacios purple negrita">imagenes[<span class="red">i</span>]<span class="grey">.style.border = "1px solid blue"</span>;</p>
+					<p class="sinespacios negrita">}</p>
+					<p class="sinespacios negrita">}</p>
+
+					<p class="brown cursiva">Esta función pondría a todos los elementos de la clase capturada un border de 1px sólido y de color azul</p>
+
+
+					<h4>Ejemplo Elementos Concretos</h4>
+
+					<p class="sinespacios negrita">function <span class="green">fun_estilos2() {</p>
+					<p class="sinespacios purple negrita">imagenes[<span class="red">2</span>]<span class="grey">.style.border = "1px solid blue"</span>;</p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">Esta función pondría al elemento ubicado en la posición '2' (objeto número 3) de la clase capturada un borde sólido de color azul.</p>
+				
+				</article>
+
+
+
+				<!-- CAPTURAR OBJETOS: ETIQUETA -->
+				<article>
+				
+					<a name="captura-tags"></a>
+					
+					<!-- Título Principal -->
+					<h1>Captura por su Etiqueta</h1>
+
+					<p class="centrado negrita">- TagName -</p>
+					
+					<p>Captura todas las <span class="negrita">etiquetas seleccionadas dentro del HTML</span>.</p>
+
+					<p class="cursiva">Las capturas se realizan en el archivo JavaScript asociado al HTML con el que trabajamos. Las capturas se cargan dentro de un apartado específico.</p>
+
+		
+					<h4>Sintaxis de Carga</h4>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios brown negrita">// Objetos Capturados</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="cursiva">Se recomienda declarar las variables antes de la carga de objetos. De este modo se podrán usar en todo el documento.</p>
+
+				
+					<h4>Ejemplo con TAGS</h4>
+					
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+					
+					<p class="green negrita">let <span class="purple">titulo</span>;</p>
+										
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple">titulo</span> = <span class="blue">document.getElementsByTagName("h4")</span>; <span class="brown negrita">// Asociada a las etiquetas h4 del HTML</span></p>
+					<p class="sinespacios negrita">}</p>
+				
+					
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_color() {</p>
+					<p class="sinespacios purple negrita">titulo<span class="grey">.style.color = "green"</span>;</p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">Esta función pondría a todas las etiquetas 'h4' un color verde.</p>
+				
+				</article>
+
+
+
+				<!-- CAPTURAR OBJETOS: PRIMER ELEMENTO -->
+				<article>
+				
+					<a name="querySelector"></a>
+					
+					<!-- Título Principal -->
+					<h1>Captura querySelector</h1>
+					
+					<p>Captura el <span class="negrita">primer elemento concreto dentro de un objeto o conjunto de objetos ya capturados</span>.</p>
+
+					<p class="cursiva">Las capturas se realizan en el archivo JavaScript asociado al HTML con el que trabajamos. Las capturas se cargan dentro de un apartado específico.</p>
+
+		
+					<h4>Sintaxis de Carga</h4>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios brown negrita">// Objetos Capturados</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="cursiva">Se recomienda declarar las variables antes de la carga de objetos. De este modo se podrán usar en todo el documento.</p>
+
+				
+					<h4>Ejemplo con primer elemento</h4>
+					
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple fondoamarillo">capa_proy</span>;</p>
+
+					<p class="green negrita">let <span class="purple fondorosa">titulo_proy</span>;</p>
+										
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple fondoamarillo">capa_proy</span> = <span class="blue">document.getElementsByClassName("capa1")</span>; <span class="brown negrita">// Asociada a toda la clase 'capa1'</span></p>
+					<p class="sinespacios negrita"><span class="purple fondorosa">titulo_proy</span> = <span class="purple fondoamarillo">capa_proy</span><span class="red">.querySelector("h4")</span>; <span class="brown negrita">// Asociada al primer título 'h4' dentro de la clase 'capa1'</span></p>
+					<p class="sinespacios negrita">}</p>
+				
+				
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_titulo() {</p>
+					<p class="sinespacios purple negrita"><span class="fondorosa">titulo_proy</span><span class="grey">.style.backgroundColor = "lightblue"</span>;</p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">Esta función pondría a la primera etiqueta 'h4' de la clasa 'capa1' un color de fondo lightblue.</p>
+				
+				</article>
+
+
+
+				<!-- CAPTURAR OBJETOS: TODOS LOS ELEMENTOS -->
+				<article>
+				
+					<a name="querySelectorAll"></a>
+					
+					<!-- Título Principal -->
+					<h1>Captura querySelectorAll</h1>
+					
+					<p>Captura <span class="negrita">todos los elementos concretos dentro de un objeto o conjunto de objetos ya capturados</span>.</p>
+
+					<p class="cursiva">Las capturas se realizan en el archivo JavaScript asociado al HTML con el que trabajamos. Las capturas se cargan dentro de un apartado específico.</p>
+
+		
+					<h4>Sintaxis de Carga</h4>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios brown negrita">// Objetos Capturados</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="cursiva">Se recomienda declarar las variables antes de la carga de objetos. De este modo se podrán usar en todo el documento.</p>
+
+				
+					<h4>Ejemplo con todos los elementos</h4>
+					
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple fondoamarillo">capa_proyecto</span>;</p>
+
+					<p class="green negrita">let <span class="purple fondorosa">parrafo_proyecto</span>;</p>
+										
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+					
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple fondoamarillo">capa_proyecto</span> = <span class="blue">document.getElementsByClassName("capa2")</span>; <span class="brown negrita">// Asociada a toda la clase 'capa2'</span></p>
+					<p class="sinespacios negrita"><span class="purple fondorosa">parrafo_proyecto</span> = <span class="purple fondoamarillo">capa_proyecto</span><span class="red">.querySelectorAll("p")</span>; <span class="brown negrita">// Asociada a todos los párrafos dentro de la clase 'capa2'</span></p>
+					<p class="sinespacios negrita">}</p>
+				
+				
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_parrafo() {</p>
+
+					<p class="sinespacios negrita"><span class="purple fondorosa">parrafo_proyecto</span><span class="blue">.forEach</span> (<span class="fondonaranja">h</span>=>  {</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">h</span>.style.fontFamily = "arial";</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">h</span>.style.fontSize = "1.2em";</p>
+					<p class="sinespacios grey negrita"><span class="fondonaranja">h</span>.style.fontWeight = "bold";</p>
+					<p class="sinespacios negrita">});</p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">Esta función pondría a todos los párrafos de la clase 'capa2' varias características asociadas con la letra.</p>
+				
+				</article>
+
+
+				<!-- INNERHTML -->
+				<article>
+				
+					<a name="innerhtml"></a>
+
+					<!-- Título Principal -->
+					<h1>InnerHTML</h1>
+
+					<h4>Sustitución Simple</h4>
+
+					<p>Esta función sustituye un <span class="negrita">objeto por un valor simple</span>.</p>
+
+
+					<h5>Ejemplo Sustitución Simple</h5>
+
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple">nombre</span>;</p>
+
+					<p class="green negrita">let <span class="grey">numeroDNI</span> = <span class="red">89765544-J</span>;</p>
+
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple">nombre</span> = <span class="blue">document.getElementById("capa")</span>; <span class="brown negrita">// Asociada a la id 'capa'</span></p>
+					<p class="sinespacios negrita">}</p>
+
+
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_sustituir() {</p>
+					<p class="green negrita"><span class="purple">nombre</span><span class="blue">.innerHTML</span> = <span	class="grey">numeroDNI</span>; </p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">Esta función sustituiría el objeto 'nombre' por el valor simple 'numeroDNI'.</p>
+
+
+					<h4>Sustitución Objetos</h4>
+
+					<p>En este caso la función <span class="negrita">extrae el HTML de un objeto para copiarlo encima de otro</span>.</p>
+
+
+					<h5>Ejemplo Sustitución Objetos</h5>
+
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple">capa</span>;</p>
+
+					<p class="green negrita">let <span class="grey">capa_imagenes</span>;</p>
+
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple fondoamarillo">capa</span> = <span class="blue">document.getElementById("capa")</span>; <span class="brown negrita">// Asociada a la id 'capa'</span></p>
+
+					<p class="sinespacios negrita"><span class="grey fondorosa">capa_imagenes</span> = <span class="blue">document.getElementById("imagen")</span>; <span class="brown negrita">// Asociada a la id 'imagen'</span></p>
+					<p class="sinespacios negrita">}</p>
+
+
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_sustituir2() {</span></p>
+					<p class="green negrita"><span class="purple fondoamarillo">capa</span><span class="blue">.innerHTML</span> = <span	class="grey fondorosa">capa_imagenes</span><span class="blue">.innerHTML</span>; </p>
+					<p class="sinespacios negrita green">}</span></p>
+
+					<p class="brown cursiva">En este caso la función innerHTML sustituye un objeto por el contenido de otro objeto. No se copian los estilos, sólo la estructura HTML.</p>
+
+				</article>
+
+
+				<!-- CLASSLIST: TOOGLE -->
+				<article>
+				
+					<a name="toggle"></a>
+
+					<!-- Título Principal -->
+					<h1>Toggle</h1>
+
+					<p>Su uso es muy habitual para desplegar menús después de hacer click en un botón. <span class="negrita">Funciona como un interruptor</span>, activando y desactivando propiedades en CSS en un objeto.</p>
+
+
+					<h4>Ejemplo Sintaxis en CSS</h4>
+
+					<p class="brown negrita">/* CARACTERÍSTICAS INICIALES */</p>
+
+					<p class="sinespacios negrita"><span class="fondonaranja">#menu-ul</span> {</p>
+					<p class="sinespacios grey">width: 50%;</p>
+					<p class="sinespacios grey">margin: 0;</p>
+					<p class="sinespacios grey">padding: 0;</p>
+					<p class="sinespacios grey">list-style-image: none;</p>
+					<p class="sinespacios grey">display: none;</p>
+					<p class="sinespacios grey">justify-content: center;</p>
+					<p class="sinespacios negrita green">}</p>
+
+
+					<p class="brown negrita">/* CARACTERÍSTICAS QUE SE ACTIVARÍAN / DESACTIVARÍAN */</p>
+
+					<p class="sinespacios negrita"><span class="fondonaranja">#menu-ul</span><span class="grey fondorosa">.activar</span> {</p>
+					<p class="sinespacios grey">display: flex;</p>
+					<p class="sinespacios grey">position: fixed;</p>
+					<p class="sinespacios grey">top: 0;</p>
+					<p class="sinespacios grey">right: 0;</p>
+					<p class="sinespacios negrita green">}</p>
+
+
+					<h4>Ejemplo JS</h4>
+
+					
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple">menu</span>;</p>
+
+					
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple fondoamarillo">menu</span> = <span class="blue">document.getElementById("<span class="fondonaranja">menu-ul</span>")</span>; <span class="brown negrita">// Asociada a la id 'menu-ul'</span></p>
+					<p class="sinespacios negrita">}</p>
+
+
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_toggle() {</p>
+					<p class="green negrita"><span class="purple fondoamarillo">menu</span><span class="blue">.classList</span><span class="grey fondorosa">.toggle("activar")</span>;</p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">En este caso la función 'classList' acompañada de 'toggle' aporta la posibilidad de activar/desactivar características de CSS (a modo interruptor) de la id 'menu'.</p>
+
+				</article>
+
+
+
+				<!-- CLASSLIST: ADD -->
+				<article>
+				
+					<a name="add"></a>
+
+					<!-- Título Principal -->
+					<h1>Add</h1>
+
+					<p>Se utiliza para <span class="negrita">añadir características CSS a un objeto o grupo de objetos</span>.</p>
+
+
+					<h4>Ejemplo Sintaxis en CSS</h4>
+
+					<p class="brown negrita">/* CARACTERÍSTICAS INICIALES */</p>
+
+					<p class="sinespacios negrita"><span class="fondonaranja">#boton-inicio</span> {</p>
+					<p class="sinespacios grey">width: 200px;</p>
+					<p class="sinespacios grey">margin: 0;</p>
+					<p class="sinespacios grey">padding: 0;</p>
+					<p class="sinespacios negrita green">}</p>
+
+
+					<p class="brown negrita">/* CARACTERÍSTICAS QUE SE AÑADIRÍAN */</p>
+
+					<p class="sinespacios negrita"><span class="fondonaranja">#boton-inicio</span><span class="grey fondorosa">.agregar</span> {</p>
+					<p class="sinespacios grey">color: red;</p>
+					<p class="sinespacios grey">border: 1px dashed blue;</p>
+					<p class="sinespacios grey">border-radius: 10px;</p>
+					<p class="sinespacios negrita green">}</p>
+
+
+					<h4>Ejemplo JS</h4>
+
+	
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple">boton</span>;</p>
+
+					
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple fondoamarillo">boton</span> = <span class="blue">document.getElementById("<span class="fondonaranja">boton-inicio</span>")</span>; <span class="brown negrita">// Asociada a la id 'boton-inicio'</span></p>
+					<p class="sinespacios negrita">}</p>
+
+
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_add() {</p>
+					<p class="green negrita"><span class="purple fondoamarillo">menu</span><span class="blue">.classList</span><span class="grey fondorosa">.add("agregar")</span>;</p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">En este caso la función 'classList' acompañada de 'add' añade características de CSS a la id 'boton-inicio'.</p>
+
+				</article>
+
+
+
+				<!-- CLASSLIST: REMOVE -->
+				<article>
+				
+					<a name="remove"></a>
+
+					<!-- Título Principal -->
+					<h1>Remove</h1>
+
+					<p>Se utiliza para <span class="negrita">eliminar características CSS de un objeto o grupo de objetos</span>.</p>
+
+
+					<h4>Ejemplo Sintaxis en CSS</h4>
+
+					<p class="brown negrita">/* CARACTERÍSTICAS INICIALES */</p>
+
+					<p class="sinespacios negrita"><span class="fondonaranja">#boton-inicio</span> {</p>
+					<p class="sinespacios grey">width: 200px;</p>
+					<p class="sinespacios grey">margin: 0;</p>
+					<p class="sinespacios grey">padding: 0;</p>
+					<p class="sinespacios grey">border: 1px solid orange;</p>
+					<p class="sinespacios grey">border-radius: 10px;</p>
+					<p class="sinespacios negrita green">}</p>
+
+
+					<p class="brown negrita">/* CARACTERÍSTICAS QUE SE ELIMINARÍAN */</p>
+
+					<p class="sinespacios negrita"><span class="fondonaranja">#boton-inicio</span><span class="grey fondorosa">.eliminar</span> {</p>
+					<p class="sinespacios grey">border: 1px solid orange;</p>
+					<p class="sinespacios grey">border-radius: 10px;</p>
+					<p class="sinespacios negrita green">}</p>
+
+
+					<h4>Ejemplo JS</h4>
+
+					
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple">boton</span>;</p>
+
+					
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+					<p class="sinespacios negrita"><span class="purple fondoamarillo">boton</span> = <span class="blue">document.getElementById("<span class="fondonaranja">boton-inicio</span>")</span>; <span class="brown negrita">// Asociada a la id 'boton-inicio'</span></p>
+					<p class="sinespacios negrita">}</p>
+
+
+					<p class="brown negrita">// FUNCION A EJECUTAR</p>
+
+					<p class="sinespacios negrita">function <span class="green">fun_remove() {</p>
+					<p class="green negrita"><span class="purple fondoamarillo">menu</span><span class="blue">.classList</span><span class="grey fondorosa">.remove("eliminar")</span>;</p>
+					<p class="sinespacios negrita green">}</p>
+
+					<p class="brown cursiva">En este caso la función 'classList' acompañada de 'remove' elimina características de CSS de la id 'boton-inicio'.</p>
+
+				</article>
+
+
+
+				<!-- ADDEVENTLISTENER: EJECUCIÓN DE FUNCIONES DESDE JS -->
+				<article>
+				
+					<a name="objetos-capturados"></a>
+
+					<!-- Título Principal -->
+					<h1>addEventListener: Capturados</h1>
+
+					<p class="negrita">Los objetos que ejecutarán las funciones deben estar capturados anteriormente.</p>
+
+
+					<h4>Sintaxis AddEventListener</h4>
+
+
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple">variable</span>;</p>
+
+
+					<p class="brown negrita">// CARGA DE OBJETOS <span class="cursiva">(Se realiza en window.onload)</span></p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="purple">variable</span><span class="blue">.addEventListener(<span class="fondonaranja">"evento"</span>, function() {</span></p>
+					<p class="sinespacios blue">código;</p>
+					<p class="sinespacios negrita blue">});</p>
+					
+					<p class="sinespacios negrita">} <span class="brown negrita">// Asociado al objeto que ejecutará la función.</span></p>
+
+
+					<h4>Ejemplo</h4>
+
+
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="purple">boton</span>;</p>
+
+					<p class="green negrita">let <span class="grey">menu</span>;</p>
+
+
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="purple fondoamarillo">boton</span> = <span class="blue">document.getElementById("boton-menu")</span>; <span class="brown negrita">// Asociada a la id 'boton-menu'</span></p>
+
+
+					<p class="sinespacios negrita"><span class="grey fondoazulclaro">menu</span> = <span class="blue">document.getElementById("menu-ul")</span>; <span class="brown negrita">// Asociada a la id 'menu-ul'</span></p>
+
+
+					<p class="sinespacios negrita"><span class="purple fondoamarillo">boton</span><span class="blue">.addEventListener(<span class="fondonaranja">"click"</span>, function() {</span></p>
+					<p class="sinespacios blue"><span class="grey fondoazulclaro">menu</span>.classList.toggle("activar");</p>
+					<p class="sinespacios negrita blue">});</p>
+					<p class="sinespacios negrita">} <span class="brown negrita">// Asociado al objeto que ejecutará la función.</span></p>
+
+					<p class="brown cursiva">En este ejemplo, el objeto capturado 'boton-menu' activa una función con un 'click' sin tener que realizar esta configuración en el archivo HTML.</p>
+
+				</article>
+
+
+				<!-- ADDEVENTLISTENER: CUALQUIER OBJETO -->
+				<article>
+				
+					<a name="cualquier-objeto"></a>
+
+					<!-- Título Principal -->
+					<h1>addEventListener: Cualquier Objeto</h1>
+
+					<p><span class="negrita">Los objetos no deben estar capturados con anterioridad</span>. Su uso no es habitual ya que se aplicaría una función desde cualquier objeto de la página.</p>
+
+					<h4>Sintaxis</h4>
+
+					<p class="brown negrita">// CARGA DE OBJETOS <span class="cursiva">(se realiza en window.onload)</span></p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="grey">document</span><span class="blue">.addEventListener(<span class="fondonaranja">"evento"</span>, function(<span class="fondoamarillo">event</span>) {</span></p>
+					<p class="sinespacios blue"><span class="fondoamarillo">event</span><span class="fondorosa">.target</span>.<span class="cursiva">código</span>;</p>
+					<p class="sinespacios negrita blue">});</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="sinespacios negrita">} <span class="brown negrita">// La inclusión de la función 'target' permite detectar cualquier objeto de la página para ejecutar en él la función indicada.</span></p>
+
+
+					<h4>Ejemplo actuación en el propio objeto</h4>
+
+					<p class="brown negrita">// CARGA DE OBJETOS</span></p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="grey">document</span><span class="blue">.addEventListener(<span class="fondonaranja">"dblclick"</span>, function(<span class="fondoamarillo">e</span>) {</span></p>
+					<p class="sinespacios blue"><span class="fondoamarillo">e</span><span class="fondorosa">.target</span><span class="cursiva">.style.border = "1px solid black"</span>;</p>
+					<p class="sinespacios negrita blue">});</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="brown cursiva">En este ejemplo, se activa una función que añade un borde sólido de color negro en el objeto sobre el que se ha hecho doble-click.</p>
+
+
+					<h4>Ejemplo actuación objeto capturado</h4>
+
+					<p class="brown negrita">// DECLARACIÓN DE VARIABLES</p>
+
+					<p class="green negrita">let <span class="grey fondoamarillo">menu</span>;</p>
+
+
+					<p class="brown negrita">// CARGA DE OBJETOS</span></p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="grey fondoamarillo">menu</span> = <span class="blue">document.getElementById("menu-ul")</span>; <span class="brown negrita">// Asociada a la id 'menu-ul'</span></p>
+
+					<p class="sinespacios negrita"><span class="grey">document</span><span class="blue">.addEventListener(<span class="fondonaranja">"click"</span>, function() {</span></p>
+					<p class="sinespacios blue"><span class="grey fondoamarillo">menu</span><span class="cursiva">.style.backgroundColor = "lightyellow"</span>;</p>
+					<p class="sinespacios negrita blue">});</p>
+					<p class="sinespacios negrita">}</p>
+					
+					<p class="brown cursiva">En este ejemplo, se activa una función cuando se hace click en cualquier objeto, que añade un color de fondo amarillo claro a la id capturada 'menu-ul'.</p>
+
+				</article>
+
+
+				<!-- ADDEVENTLISTENER: PULSACIÓN TECLAS-->
+				<article>
+				
+					<a name="pulsacion-tecla"></a>
+
+					<!-- Título Principal -->
+					<h1>addEventListener: Teclas</h1>
+
+					<h4>Sintaxis Tecla Simple</h4>
+
+					<p class="brown negrita">// CARGA DE OBJETOS <span class="cursiva">(se realiza en window.onload)</span></p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="grey">document</span><span class="blue">.addEventListener(<span class="fondonaranja">"keydown"</span>, function(<span class="fondoamarillo">e</span>) {</span></p>
+					<p class="sinespacios negrita red">if (<span class="fondoamarillo">e</span><span class="fondorosa">.key</span> == <span class="fondoazulclaro">"tecla"</span><span class="cursiva"></span>) {</p>
+
+					<p class="sinespacios cursiva red">función a ejecutar;</p>
+					<p class="sinespacios negrita red">}</p>
+					<p class="sinespacios negrita blue">});</p>
+
+					<p class="sinespacios negrita">}</p>
+
+
+					<h4>Ejemplo Pulsación Tecla Simple</h4>
+
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="grey">document</span><span class="blue">.addEventListener(<span class="fondonaranja">"keydown"</span>, function(<span class="fondoamarillo">e</span>) {</span></p>
+					<p class="sinespacios negrita red">if (<span class="fondoamarillo">e</span><span class="fondorosa">.key</span> == <span class="fondoazulclaro">"Enter"</span><span class="cursiva"></span>) {</p>
+
+					<p class="sinespacios cursiva red">fun_buscar();</p>
+					<p class="sinespacios negrita red">}</p>
+					<p class="sinespacios negrita blue">});</p>
+
+					<p class="sinespacios negrita">}</p>
+
+					<p class="brown cursiva">En este ejemplo, se activa la función fun_buscar() cuando se pulsa la tecla 'Enter'.</p>
+
+
+					<h4>Sintaxis Teclas Combinadas</h4>
+
+					<p>Cuando hablamos de sintaxis de tecla compuesta nos referimos a la pulsación de una combinación de teclas que deben accionarse conjuntamente para ejecutar una función. <span class="negrita cursiva">Las teclas más habituales para combinar en una pulsación compuesta son Control, Alt y Shift</span>.</p>
+
+					<ul class="negrita cursiva">
+						<li>Tecla Control: <span class="cursiva fondocoral">ctrlKey</span></li>
+						<li>Tecla Alt: <span class="cursiva fondocoral">altKey</span></li>
+						<li>Tecla Shift: <span class="cursiva fondocoral">shiftKey</span></li>
+					</ul>
+
+					<p class="brown negrita">// CARGA DE OBJETOS <span class="cursiva">(se realiza en window.onload)</span></p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="grey">document</span><span class="blue">.addEventListener(<span class="fondonaranja">"keydown"</span>, function(<span class="fondoamarillo">e</span>) {</span></p>
+					<p class="sinespacios negrita red">if (<span class="fondoamarillo">e</span><span class="fondocoral">.ctrlKey</span> && <span class="fondoamarillo">e</span><span class="fondorosa">.key</span> == <span class="fondoazulclaro">"tecla"</span><span class="cursiva"></span>) {</p>
+
+					<p class="sinespacios cursiva red">función a ejecutar;</p>
+					<p class="sinespacios negrita red">}</p>
+					<p class="sinespacios negrita blue">});</p>
+
+					<p class="sinespacios negrita">}</p>
+
+
+					<h4>Ejemplo Pulsación Combinada</h4>
+
+					<p class="brown negrita">// CARGA DE OBJETOS</p>
+
+					<p class="sinespacios negrita">window.onload = <span class="green">function()</span> {</p>
+
+					<p class="sinespacios negrita"><span class="grey">document</span><span class="blue">.addEventListener(<span class="fondonaranja">"keydown"</span>, function(<span class="fondoamarillo">e</span>) {</span></p>
+					<p class="sinespacios negrita red">if (<span class="fondoamarillo">e</span><span class="fondocoral">.ctrlKey</span> && <span class="fondoamarillo">e</span><span class="fondorosa">.key</span> == <span class="fondoazulclaro">"z"</span><span class="cursiva"></span>) {</p>
+
+					<p class="sinespacios cursiva red">fun_reset();</p>
+					<p class="sinespacios negrita red">}</p>
+					<p class="sinespacios negrita blue">});</p>
+
+					<p class="sinespacios negrita">}</p>
+
+					<p class="brown cursiva">En este ejemplo, se activa la función fun_reset() cuando se pulsan las teclas 'Ctrl' + 'Enter'.</p>
+
+				</article>
+
+
+				<!-- ADDEVENTLISTENER: EVENTOS MÁS USADOS -->
+				<article>
+				
+					<a name="eventos-add"></a>
+
+					<!-- Título Principal -->
+					<h1>Eventos + Usados en JS</h1>
+
+					<p>Los eventos más usados para ejecutar funciones desde JavaScript son los siguientes:</p>
+
+					<ul class="cursiva">
+						<li><span class="negrita">clik:</span> un click.</li>
+						<li><span class="negrita">dblclik:</span> doble-click.</li>
+						<li><span class="negrita">mousemove:</span> el cursor pasa por un objeto.</li>
+						<li><span class="negrita">mouseout:</span> el cursor sale de un objeto.</li>
+						<li><span class="negrita">keydown:</span> el usuario presiona una tecla.</li>
+					</ul>
+
+				</article>
+
+
+				<!-- EXTACCIÓN DE TAMAÑOS: TAMAÑO VENTANA -->
+				<article>
+				
+					<a name="tamano-ventana"></a>
+
+					<!-- Título Principal -->
+					<h1>Extracción Tamaño Ventana</h1>
+
+					<p>Esta función es útil para ejecutar código si el tamaño de la ventana del navegador es uno determinado. También se podría utilizar para saber el dato exacto en cualquier momento.</p>
+
+					<h4>Ancho de la Ventana</h4>
+
+					<p class="negrita purple">window.innerWidth</p>
+
+
+					<h4>Alto de la Ventana</h4>
+
+					<p class="negrita purple">window.innerHeight</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="sinespacios negrita">function <span class="green">fun_ventana()</span> {</p>
+					
+					<p class="sinespacios negrita blue">if <span class="purple">(window.innerWidth &lt; 768)</span> {</p>
+					<p class="sinespacios cursiva blue">capa.style.display = "none";</p>
+					<p class="sinespacios negrita blue">}</p>
+
+					<p class="sinespacios negrita blue">else {</p>
+					<p class="sinespacios cursiva blue">capa.style.display = "block";</p>
+					<p class="sinespacios negrita blue">}</p>
+
+					<p class="sinespacios negrita">}</p>
+
+
+					<p class="brown cursiva">En este ejemplo, se ejecuta un código distinto si el tamaño de la ventana es menor o mayor a 768px.</p>
+
+				</article>
+
+
+
+				<!-- EXTACCIÓN DE TAMAÑOS: TAMAÑO ETIQUETAS -->
+				<article>
+				
+					<a name="tamano-etiqueta"></a>
+
+					<!-- Título Principal -->
+					<h1>Extracción Tamaño Etiquetas</h1>
+
+					<p>Para la extracción del tamaño de un objeto o etiqueta se utiliza <span class="purple negrita">window.getComputedStyle()</span>, función que <span class="negrita cursiva">devuelve todos los estilos computados del navegador para un elemento</span>.</p> 
+
+					<p>Gracias al uso de esta función se puede acceder al valor de propiedades tales como width, height, margin, padding,...</p>
+					
+					<h4>Ancho de una Etiqueta</h4>
+
+					<p class="negrita purple">window.getComputedStyle(<span class="cursiva fondoamarillo">etiqueta</span>).<span class="fondorosa">width</span></p>
+
+					<h4>Alto de una Etiqueta</h4>
+
+					<p class="negrita purple">window.getComputedStyle(<span class="cursiva fondoamarillo">etiqueta</span>).<span class="fondorosa">height</span></p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="sinespacios negrita">function <span class="green">fun_etiqueta()</span> {</p>
+					
+					<p class="sinespacios cursiva blue">parrafo.innerHTML = window.getComputedStyle(<span class="cursiva fondoamarillo">capa</span>).<span class="fondorosa">width</span>;</p>
+
+					<p class="sinespacios negrita">}</p>
+
+
+					<p class="brown cursiva">En este ejemplo, se sustituye el objeto con nombre de variable 'parrafo' por el valor del ancho de la variable 'capa'.</p>
+
+				</article>
+
+
+				<!-- ÁREAS VISIBLES -->
+				<article>
+				
+					<a name="intersection"></a>
+
+					<!-- Título Principal -->
+					<h1>ÁREAS VISIBLES</h1>
+					
+					<p><span class="negrita purple">IntersectionObserver()</span> permite ejecutar una función cuando un elemento sale del área visible.</p>
+					
+					<p>Para su uso adecuado es necesario incorporar la propiedad <span class="negrita purple">.isIntersecting</span>, que indica si el elemento está o no visible; y la función <span class="negrita purple">.observe()</span> que inicia la observación de un elemento.</p>
+					
+					
+					<h4>Ejemplo</h4>
+
+					<p class="sinespacios negrita">function <span class="green">fun_observar()</span> {</p>
+					
+					<p class="sinespacios negrita"><span class="cursiva">let</span> <span class="red">observar</span> = <span class="cursiva purple">new</span> <span class="purple">IntersectionObserver(<span class="fondoamarillo">(entries) => {</span></span></p>
+					
+					<p class="sinespacios negrita purple"><span class="fondoamarillo">entries.forEach(<span class="fondorosa">v</span> => {</span></p>
+					
+					<p class="sinespacios cursiva brown">/* Si la capa NO es visible, mostramos el menú */</p>
+					
+					<p class="sinespacios negrita blue fondo"><span class="fondoamarillo">if (<span class="fondorosa">!v</span><span class="purple">.isIntersecting</span>) {</span></p>
+					
+					<p class="sinespacios cursiva blue"><span class="fondoamarillo">menu.classList.add("visible");</span>     <span class="brown">// Añade la clase CSS "visible" al menú</span></p>
+					
+					<p class="sinespacios cursiva blue"><span class="fondoamarillo">ancla.style.display = "block";</span>     <span class="brown">// Muestra el icono del ancla</span></p>
+					
+					<p class="sinespacios negrita blue"><span class="fondoamarillo">} </span></p>
+					
+					<p class="sinespacios negrita blue"><span class="fondoamarillo">else {</span></p>
+					
+					<p class="sinespacios cursiva blue"><span class="fondoamarillo">menu.classList.remove("visible");</span>  <span class="brown">// Quita la clase "visible" del menú</span></p>
+					
+					<p class="sinespacios cursiva blue"><span class="fondoamarillo">ancla.style.display = "none";</span>      <span class="brown">// Oculta el icono del ancla</span></p>
+					
+					<p class="sinespacios negrita blue"><span class="fondoamarillo">}</span></p>
+					
+					<p class="sinespacios negrita purple"><span class="fondoamarillo">}</span>);</p>
+					
+					<p class="sinespacios negrita purple">});</p>
+					
+					<p class="sinespacios cursiva brown">// Empieza a observar el elemento con id o variable "repositorio"</p>
+					
+					<p class="sinespacios negrita"><span class="red">observar</span><span class="purple">.observe(<span class="grey">repositorio</span>);</span></p>
+					
+					<p class="sinespacios negrita">}</p>
+											
+				</article>
+
+
+				<!-- Capa de NO HAY COINCIDENCIAS para el Buscador -->
+				<div id="nocoincide" onclick="fun_buscador_reset()">
+
+					<h3>NO HAY COINCIDENCIAS EN LA BÚSQUEDA</h3>
+
+					<img src="img/javascript.png" alt="logo JavaScript">	
+
+				</div>
+
+			</section>
+
+
+			<!-- BOTÓN VOLVER PARTE SUPERIOR -->
+			
+			<img id="volver" src="img/volver.png"></a>
+
+		</div>
+
+	
+		<!-- PIE DE PÁGINA -->
+		<footer>
+
+			<div class="f1">
+
+				<img src="img/logoies.jpg" class="footermin">
+
+			</div>
+			
+			<div class="f2">
+
+				<p>Copyright @ 2025 - Víctor Álvarez</p>
+
+			</div>
+
+		</footer>
+
+	</body>
+
+</html>

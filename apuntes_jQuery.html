@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="author" content="Víctor">
+		<meta name="description" content="Apuntes CSS">
+		<meta name="keywords" content="javascript, apuntes, funciones, capturas, jQuery">
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilo-apuntes-jQuery.css">
+		
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="js/javascript_jQuery.js"></script>
+
+		<title>Apuntes jQuery - Víctor Álvarez</title>
+
+	</head>
+
+	<body>
+
+		<!-- IMAGEN CABECERA -->
+		<header>
+
+			<img id="img-cab" src="img/cabecera_jQuery.jpg" alt="imagen de cabecera apuntes javascript">
+			
+			<div id="ham" onclick="fun_hamburguesa()">
+				
+				<img id="img-ham" src="img/hamburguesa.png" onclick="fun_css()" title="Haz click para desplegar el menú">
+						
+			</div>
+
+		</header>
+
+
+		<!-- CAPA PRINCIPAL -->
+		<div id="principal">
+
+			<!-- MENÚ VERTÍCAL -->
+			<aside id="aside">
+			
+				<!-- Menú Botones: Apuntes -->
+				<div id="menu-prin">
+
+					<h4 id="ham-cerrar" onclick="fun_hamburguesa()" title="Haz click para cerrar menú Hamburguesa">CERRAR MENÚ</h4>
+				
+					<h4 id="proy-apun" onclick="fun_botones()" title="Haz click para acceder a los Apuntes">APUNTES</h4>
+					
+					<!-- Capa con Botones de Apuntes -->
+					<div id="botones">
+
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes HTML"><a href="apuntes_html.html">APUNTES HMTL</a></h4>
+
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes de Formularios"><a href="apuntes_formularios.html">FORMULARIOS</a></h4>
+
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes de CSS"><a href="apuntes_css.html">APUNTES CSS</a></h4>
+						
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes de JS"><a href="apuntes_js.html">APUNTES JS</a></h4>
+						
+						<h4 class="apuntes" title="Haz click para acceder a los Apuntes de jQuery"><a href="#">APUNTES JQUERY</a></h4>
+						
+					</div>
+					
+				</div>
+				
+
+				<!-- Menús Contenido -->	
+				<div id="menus">
+					
+					<!-- Menú Introducción -->
+					<h4 class="boton-menu-inic" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_inic()">INTRODUCCIÓN</h4>
+					
+					<ul id="menu-iniciacion">
+						<a href="#intro" onclick="fun_buscador_reset()"><li>Introducción</li></a>
+						<a href="#captura-objetos" onclick="fun_buscador_reset()"><li>Captura Objetos</li></a>
+						<a href="#captura-valores" onclick="fun_buscador_reset()"><li>Captura Valores</li></a>
+						<a href="#eventos" onclick="fun_buscador_reset()"><li>Eventos</li></a>
+						<a href="#ejecucion" onclick="fun_buscador_reset()"><li>Ejecución Elemento (this)</li></a>
+					</ul>
+					
+					<!-------------- FUNCIONES -------------->
+					<h4 class="boton-presen">FUNCIONES</h4>
+
+					<!-- Menú Funciones más usadas -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_funciones()">MÁS USADAS</h4>
+					
+					<ul id="menu-usadas">
+						<a href="#hide" onclick="fun_buscador_reset()"><li>Ocultar</li></a>
+						<a href="#show" onclick="fun_buscador_reset()"><li>Mostrar</li></a>
+						<a href="#fadein" onclick="fun_buscador_reset()"><li>Aparecer</li></a>
+						<a href="#fadeout" onclick="fun_buscador_reset()"><li>Desaparecer</li></a>
+						<a href="#delay" onclick="fun_buscador_reset()"><li>Inicio retardado</li></a>
+					</ul>
+					
+					
+					<!-- Menú Añadir Texto -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_texto()">AÑADIR TEXTO</h4>
+					
+					<ul id="menu-anadir-texto">
+						<a href="#prepend" onclick="fun_buscador_reset()"><li>Antes</li></a>
+						<a href="#append" onclick="fun_buscador_reset()"><li>Después</li></a>
+					</ul>
+					
+					
+					<!-- Menú Añadir Contenido -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_contenido()">AÑADIR CONTENIDO</h4>
+					
+					<ul id="menu-anadir-contenido">
+						<a href="#before" onclick="fun_buscador_reset()"><li>Antes</li></a>
+						<a href="#after" onclick="fun_buscador_reset()"><li>Después</li></a>
+					</ul>
+					
+					
+					<!-- Menú Sustituir Texto -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_sustituir()">SUSTITUIR TEXTO</h4>
+					
+					<ul id="menu-sustituir">
+						<a href="#text" onclick="fun_buscador_reset()"><li>Texto Plano</li></a>
+						<a href="#html" onclick="fun_buscador_reset()"><li>Texto con Estilo</li></a>
+					</ul>
+					
+					
+					<!-- Menú Clases -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_clases()">CLASES</h4>
+					
+					<ul id="menu-clases">
+						<a href="#addclass" onclick="fun_buscador_reset()"><li>Añadir Clase</li></a>
+						<a href="#removeclass" onclick="fun_buscador_reset()"><li>Eliminar Clase</li></a>
+					</ul>
+					
+					
+					<!-- Menú Eliminar -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_eliminar()">ELIMINAR</h4>
+					
+					<ul id="menu-eliminar">
+						<a href="#empty" onclick="fun_buscador_reset()"><li>Eliminar Contenido Interno</li></a>
+						<a href="#remove" onclick="fun_buscador_reset()"><li>Eliminar Elementos</li></a>
+					</ul>
+					
+					
+					<!-- Menú Funciones Deslizador -->
+					<h4 class="boton-con-menu" title="Pincha aquí para desplegar/plegar el menú" onclick="fun_slide()">DESLIZADORES</h4>
+					
+					<ul id="menu-deslizadores">
+						<a href="#slideup" onclick="fun_buscador_reset()"><li>Slide UP</li></a>
+						<a href="#slidedown" onclick="fun_buscador_reset()"><li>Slide DOWN</li></a>
+						<a href="#slidetoggle" onclick="fun_buscador_reset()"><li>Interruptor</li></a>
+					</ul>
+
+
+					<!-- FUNCIÓN CSS -->
+					<a href="#css" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">CSS</h4></a>
+					
+					
+					<!-- FUNCIÓN ANIMATE -->
+					<a href="#animate" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">ANIMATE</h4></a>
+
+
+					<!-- FUNCIÓN ANIMATE PARA ANCLA -->
+					<a href="#animate-ancla" onclick="fun_buscador_reset()"><h4 class="boton-sin-menu" title="Pincha aquí para ver el contenido">ENLACE DE ANCLA</h4></a>
+
+
+					<div class="ultimo"></div>
+					
+				</div>
+					
+			</aside>
+
+
+			<!-- BUSCADOR -->
+				
+			<div id="capa-buscador">
+
+				<h4 id="busc-bot" onclick="fun_sacar_buscador()" title="Pulsa 'Ctrl + b' para abrir/cerrar el Buscador de Prácticas">BUSCADOR</h4>
+
+
+				<div id="busc-prac">
+					
+					<label for="buscador">BUSCADOR</label>
+						
+					<input id="buscador" name="buscador" type="text">
+						
+					<div id="botones-buscador">
+						
+						<button id="buscar" onclick="fun_buscador()" title="Pulsa 'Enter' para buscar">BUSCAR</button>
+						
+						<button id="reset" onclick="fun_buscador_reset()" title="Pulsa 'Ctrl + z' para resetear">RESET</button>
+						
+					</div>
+		
+				</div>
+				
+			</div>
+
+
+			<!-- SECCIÓN CON APUNTES -->
+			<section>
+				
+				<!-- INTRODUCCIÓN -->
+				<article>
+
+					<a name="intro"></a>
+					
+					<!-- Título Principal -->
+					<h1>Introducción</h1>
+
+					<!-- Implementación -->
+					<h4>Implementación</h4>
+
+					<p><span class="negrita">jQuery es una librería de JavaScript</span> rápida, ligera y muy utilizada para simplificar la gestión de eventos y animaciones.</p>
+
+					<p>Para poder utilizar jQuery en una página web, es necesario incluir la librería mediante una de las siguientes opciones:</p>
+					
+					<ul class="sinespaciosfinal cursiva listanumerada">
+						<li><span class="negrita">Descargar el archivo</span> y ponerlo en el servidor.</li>
+						<li><span class="negrita">Acceder al servidor externo</span> que contiene la librería <span class="negrita fondorosa">(Opción Recomendada)</span>.</li>
+					</ul>
+
+					<p><span class="negrita green">Las librerías son archivos</span> en <span class="negrita blue">formato .js</span>, que se ejecutan en el Cliente.</p>
+
+
+					<!-- Etiqueta Script -->
+					<h4>Etiqueta Script</h4>
+
+					<ul>
+						<li>Enlaza con un archivo de código JavaScript.</li>
+						<li>Los <span class="negrita">enlaces</span> a los <span class="green negrita">archivos de las librerías</span> <span class="negrita blue">.js</span> <span class="negrita">se escriben en el <span class="cursiva purple">&lt;head&gt; &lt;/head&gt;</span>, debajo del link que contiene el CSS.</span></li>
+						<li>La <span class="negrita red">ruta del archivo</span> con la <span class="green negrita">librería</span> <span class="negrita blue">.js</span> se coloca en el <span class="negrita red">atributo src</span>.</li>
+					</ul>
+
+					<p id="tag-script"> &lt;script <span class="red">src="https://code.jquery.com/jquery-3.7.1.js"</span>&gt; &lt;/script&gt; </p>
+
+				
+					<!-- Colocación en el HEAD -->
+					<h4>Colocación HEAD</h4>
+					
+					<ol class="listanumerada">
+						<li>Link con la ruta de la <span class="negrita">Hoja de Estilos (CSS)</span>.</li>
+						<li>Script con el enlace a la <span class="negrita">Librería jQuery</span>.</li>
+						<li>Script con la ruta del <span class="negrita">archivo JavaScript</span>.</li>
+					</ol>
+
+				</article>
+				
+				
+				<!-- CAPTURA DE OBJETOS -->
+				<article>
+
+					<a name="captura-objetos"></a>
+					
+					<h1>Captura de Objetos</h1>
+					
+					<!-- Capturar y Cargar -->
+					<h4>¿Cómo se capturan objetos?</h4>
+
+					<p>Los objetos capturados para ejecutar funciones en ellos mismos <span class="negrita">se cargan en el archivo JS que se está utilizando en la página</span>.</p>
+					
+					<ul>
+						<li>Capturador y Cargador de Objetos <span class="negrita">window.onload</span>.</li>
+						<li class="negrita">Capturador y Cargador de jQuery.</li>
+						<li><span class="negrita">Funciones</span> del archivo JS.</li>
+					</ul>
+					
+					<h4>Sintaxis jQuery</h4>
+					
+					<p class="negrita"><span class="green">$(".capas h4")</span><span class="blue">.show()</span>;</p>
+					
+					<p class="brown cursiva">Se utiliza el símbolo $ que se completa entre parentesis con la 'id', 'clase' o 'etiqueta del objeto' que se desea capturar. Tras la captura se ejecutan las funciones deseadas.</p>
+
+					
+					<h4>Capturador <span class="grey">window.onload</span></h4>
+					
+					<p class="sinespaciosprimero negrita grey">window.onload = function() {</p>
+					<p class="sinespacios negrita"><span class="green">$("#principal")</span><span class="blue">.hide()</span>;</p>
+					<p class="sinespaciosfinal negrita grey">}</p>
+				
+				
+					<h4>Capturador jQuery</h4>
+					
+					<p class="sinespaciosprimero negrita grey">$(document).ready (function() {</p>
+					<p class="sinespacios negrita"><span class="green">$("#principal")</span><span class="blue">.hide()</span>;</p>
+					<p class="sinespaciosfinal negrita grey">});</p>	
+					
+					
+					<h4>Captura en una Función</h4>
+					
+					<p class="sinespaciosprimero negrita grey">function fun_slide() {</p>
+					<p class="sinespacios negrita"><span class="green">$("h4")</span><span class="blue">.slideUp(3000)</span>;</p>
+					<p class="sinespaciosfinal negrita grey">}</p>	
+						
+				</article>
+				
+				
+				<!-- CAPTURA DE VALORES -->
+				<article>
+
+					<a name="captura-valores"></a>
+					
+					<h1>Captura de Valores</h1>
+				
+					<h4>Capturar Valor de un Atributo</h4>
+					
+					<ul>
+						<li>El atributo tiene que estar en la etiqueta HTML.</li>
+						<li>Uso habitual: coger/modificar datos.</li>
+					</ul>
+					
+					<p class="negrita"><span class="green">$("#capa")</span><span class="blue">.attr(<span class="red">"width"</span>)</span>;</p>
+					
+					
+					<h4>Capturar Valor de un INPUT</h4>
+					
+					<p class="negrita"><span class="green">$("input")</span><span class="blue">.val()</span>;</p>
+	
+				</article>
+				
+				
+				<!-- EVENTOS MÁS USADOS -->
+				<article>
+
+					<a name="eventos"></a>
+					
+					<h1>Eventos más usados</h1>
+									
+					<ul class="negrita">
+						<li>Un click: <span class="red cursiva">click</span></li>
+						<li>Doble-Click: <span class="red cursiva">dblclick</span></li>
+						<li>Interruptor: <span class="red cursiva">toggle</span></li>
+						<li>Cursor entra en el objeto: <span class="red cursiva">mouseover</span></li>
+						<li>Cursor sale del objeto: <span class="red cursiva">mouseout</span></li>
+						<li>Ejecución de código una vez cargado el contenido de la página: <span class="red cursiva">ready</span></li>
+						<li>Asignación de eventos a elementos HTML: <span class="red cursiva">on</span></li>
+					</ul>
+	
+				</article>
+				
+				
+				<!-- EJECUCIÓN ELEMENTO -->
+				<article>
+
+					<a name="ejecucion"></a>
+					
+					<h1>Ejecución Elemento: <span class="cursiva">this</span></h1>	
+					
+					<p>Para <span class="negrita">ejecutar una función en un elemento concreto</span> esta debe cargarse bien en el <span class="negrita grey">window.onload</span> o en el <span class="negrita grey">capturador jQuery</span>.</p>
+
+					<p class="sinespaciosprimero negrita grey">$(<span class="fondoamarillo">"p"</span>)<span class="fondorosa">.click</span> (function() {</p>
+					<p class="sinespacios negrita"><span class="green">$(<span class="fondonaranja">this</span>)</span><span class="blue">.css({"color": "blue"})</span>;</p>
+					<p class="sinespaciosfinal negrita grey">});</p>
+
+					<ul>
+						<li>Tipo de <span class="negrita">Objetos a Capturar:</span> <span class="grey fondoamarillo negrita">"p"</span></li>
+						<li><span class="negrita">Evento</span> que ejecuta una función: <span class="grey fondorosa negrita">.click</span></li>
+						<li><span class="negrita">Elemento concreto</span> en el que se quiere ejecutar la función: <span class="green fondonaranja negrita">this</span></li>
+						<li><span class="negrita">Función a ejecutar:</span> <span class="blue negrita">.css({"color": "blue"})</span></li>
+					</ul>
+
+				</article>
+				
+				
+				<!-- OCULTAR (HIDE) -->
+				<article>
+
+					<a name="hide"></a>
+					
+					<h1>Ocultar: <span class="cursiva">hide()</span></h1>
+
+					<p>Esta función se utiliza para ocultar un objeto.</p>
+					
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.hide()</span>;</p>
+
+				</article>
+				
+				
+				<!-- MOSTRAR (SHOW) -->
+				<article>
+
+					<a name="show"></a>
+					
+					<h1>Mostrar: <span class="cursiva">show()</span></h1>
+
+					<p>Esta función se utiliza para mostrar un objeto.</p>
+					
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.show()</span>;</p>
+
+				</article>
+				
+				
+				<!-- FADEIN -->
+				<article>
+
+					<a name="fadein"></a>
+					
+					<h1>Aparición Gradual: <span class="cursiva">fadeIn()</span></h1>
+
+					<p>Esta función se utiliza para hacer aparecer de manera gradual un objeto.</p>
+					
+					<p class="negrita"><span class="green">$("#principal")</span><span class="fondorosa">.hide()</span><span class="blue">.fadeIn(<span class="red">3000</span>)</span>;</p>
+
+					<ul class="">
+						<li>Para su funcionamiento <span class="negrita fondorosa">es necesario ocultar primero el objeto</span> para que se genere el efecto de aparición.</li>
+						<li>Se establece dentro de los paréntesis el <span class="negrita">tiempo de duración del efecto en milisegundos (<span class="red">ms</span>)</span>.</li>
+					</ul>
+				
+				</article>
+				
+				
+				<!-- FADEOUT -->
+				<article>
+
+					<a name="fadeout"></a>
+					
+					<h1>Desaparición Gradual: <span class="cursiva">fadeOut()</span></h1>
+
+					<p>Esta función se utiliza para hacer desaparecer de manera gradual un objeto.</p>
+					
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.fadeOut(<span class="red">3000</span>)</span>;</p>
+
+					<p>Se establece dentro de los paréntesis el <span class="negrita">tiempo de duración del efecto en milisegundos (<span class="red">ms</span>)</span>.</p>
+				
+				</article>
+				
+				
+				<!-- DELAY -->
+				<article>
+
+					<a name="delay"></a>
+					
+					<h1>Inicio retardado: <span class="cursiva">delay()</span></h1>
+
+					<p>Esta función <span class="negrita">se utiliza combinada con otra función para demorar su inicio</span> durante un tiempo determinado en milisegundos (<span class="red negrita">ms</span>).</p>
+					
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.delay(5000)</span><span class="fondorosa">.fadeOut(<span class="red">3000</span>)</span>;</p>
+				
+				</article>
+
+
+				<!-- AÑADIR TEXTO: PRINCIPIO -->
+				<article>
+
+					<a name="prepend"></a>
+					
+					<h1>Añadir texto al principio de un elemento: <span class="cursiva">prepend()</span></h1>
+
+					<p>Esta función permite añadir tanto texto plano como con estilos dentro de un elemento, ubicando el <span class="negrita">texto al principio del elemento o elementos</span>.</p>
+					
+
+					<h4>Ejemplo con Texto Plano</h4>
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.prepend(<span class="red cursiva">"Texto añadido al principio del elemento"</span>)</span>;</p>
+
+
+					<p class="brown cursiva">En este ejemplo se añadiría dentro de la capa con id 'principal' un texto plano (sin estilo) que se ubicaría al inicio de la misma.</p>
+
+
+					<h4>Ejemplo de Texto con Estilo</h4>
+
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.prepend(<span class="red">"&lt;h1&gt; <span class="cursiva">Texto añadido con estilo al principio del elemento</span> &lt;/h1&gt"</span>)</span>;</p>
+
+					<p class="brown cursiva">En este ejemplo se añadiría dentro de la capa con id 'principal' un texto con estilo que se ubicaría al inicio de la misma.</p>
+				
+				</article>
+
+
+				<!-- AÑADIR TEXTO: FINAL -->
+				<article>
+
+					<a name="append"></a>
+					
+					<h1>Añadir texto al final de un elemento: <span class="cursiva">append()</span></h1>
+
+					<p>Esta función permite añadir tanto texto plano como con estilos dentro de un elemento, ubicando el <span class="negrita">texto al final del elemento o elementos</span>.</p>
+					
+
+					<h4>Ejemplo con Texto Plano</h4>
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.append(<span class="red cursiva">"Texto añadido al final del elemento"</span>)</span>;</p>
+
+					<p class="brown cursiva">En este ejemplo se añadiría dentro de la capa con id 'principal' un texto plano (sin estilo) que se ubicaría al final de la misma.</p>
+
+
+					<h4>Ejemplo de Texto con Estilo</h4>
+
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.append(<span class="red">"&lt;h1 class="titulos"&gt; <span class="cursiva">Texto añadido con estilo al final del elemento</span> &lt;/h1&gt"</span>)</span>;</p>
+
+					<p class="brown cursiva">En este ejemplo se añadiría dentro de la capa con id 'principal' un texto con estilo que se ubicaría al final de la misma.</p>
+				
+				</article>
+
+
+				<!-- AÑADIR CONTENIDO: BEFORE (ANTES) -->
+				<article>
+
+					<a name="before"></a>
+					
+					<h1>Añadir contenido antes de un elemento: <span class="cursiva">before()</span></h1>
+
+					<p>Esta función permite <span class="negrita">añadir contenido antes de un elemento</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.before(<span class="red">"&lt;div id='antes'&gt; <span class="cursiva"> Capa añadida antes de la indicada </span> &lt;/div&gt"</span>)</span>;</p>
+
+					<p class="brown cursiva">En este ejemplo se añadiría antes de la capa con id 'principal' otra cuya id sería 'antes' y que llevaría como contenido el texto "Capa añadida antes de la indicada".</p>
+				
+				</article>
+
+
+				<!-- AÑADIR CONTENIDO: AFTER (DESPUÉS) -->
+				<article>
+
+					<a name="after"></a>
+					
+					<h1>Añadir contenido después de un elemento: <span class="cursiva">after()</span></h1>
+
+					<p>Esta función permite <span class="negrita">añadir contenido después de un elemento</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="negrita"><span class="green">$("#principal")</span><span class="blue">.after(<span class="red">"&lt;div id='despues'&gt; <span class="cursiva"> Capa añadida después de la indicada </span> &lt;/div&gt"</span>)</span>;</p>
+
+					<p class="brown cursiva">En este ejemplo se añadiría después de la capa con id 'principal' otra cuya id sería 'despues' y que llevaría como contenido el texto "Capa añadida después de la indicada".</p>
+
+				</article>
+
+
+
+				<!-- SUSTITUIR TEXTO: TEXTO PLANO -->
+				<article>
+
+					<a name="text"></a>
+					
+					<h1>Sustituir contenido por texto plano: <span class="cursiva">text()</span></h1>
+
+					<p>Esta función permite <span class="negrita">sustituir contenido de un elemento por texto plano</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="sinespaciosprimero negrita grey">$(<span class="fondoamarillo">"p"</span>)<span class="fondorosa">.click</span> (function() {</p>
+					<p class="negrita"><span class="green">$(this)</span><span class="blue">.text(<span class="red cursiva">"Este texto sustituye el contenido del elemento indicado"</span>)</span>;</p>
+					<p class="sinespaciosfinal negrita grey">});</p>
+
+					<p class="brown cursiva">En este ejemplo se sustituye el contenido de la etiqueta 'p' que es seleccionada con un click, por un texto plano (sin estilo).</p>
+
+				</article>
+
+
+				<!-- SUSTITUIR TEXTO: TEXTO CON ESTILO -->
+				<article>
+
+					<a name="html"></a>
+					
+					<h1>Sustituir contenido por texto con estilo: <span class="cursiva">html()</span></h1>
+
+					<p>Esta función permite <span class="negrita">sustituir contenido de un elemento por texto con estilo</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="sinespaciosprimero negrita grey">$(<span class="fondoamarillo">"p"</span>)<span class="fondorosa">.click</span> (function() {</p>
+					<p class="negrita"><span class="green">$(this)</span><span class="blue">.html(<span class="red">"&lt;span class='parrafo-principal'&gt; <span class="cursiva">Este texto sustituye el contenido del elemento indicado</span> &lt;/span&gt;"</span>)</span>;</p>
+					<p class="sinespaciosfinal negrita grey">});</p>
+
+					<p class="brown cursiva">En este ejemplo se sustituye el contenido de la etiqueta 'p' que es seleccionada con un click, por un texto con estilo.</p>
+
+				</article>
+
+
+				<!-- AÑADIR UNA CLASE A UN ELEMENTO -->
+				<article>
+
+					<a name="addclass"></a>
+					
+					<h1>Añadir una clase a un elemento: <span class="cursiva">addClass()</span></h1>
+
+					<p>Esta función permite <span class="negrita">añadir una clase a un elemento</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="sinespaciosprimero negrita grey">$(<span class="fondoamarillo">"p"</span>)<span class="fondorosa">.click</span> (function() {</p>
+					<p class="negrita"><span class="green">$(this)</span><span class="blue">.addClass(<span class="cursiva red">"negritas"</span>)</span>;</p>
+					<p class="sinespaciosfinal negrita grey">});</p>
+
+					<p class="brown cursiva">En este ejemplo se añade una clase a un elemento concreto de un párrafo seleccionado con un click.</p>
+
+				</article>
+
+
+				<!-- ELIMINAR UNA CLASE A UN ELEMENTO -->
+				<article>
+
+					<a name="removeclass"></a>
+					
+					<h1>Elimina una clase a un elemento: <span class="cursiva">removeClass()</span></h1>
+
+					<p>Esta función permite <span class="negrita">eliminar una clase a un elemento</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="sinespaciosprimero negrita grey">$(<span class="fondoamarillo">"h1"</span>)<span class="fondorosa">.click</span> (function() {</p>
+					<p class="negrita"><span class="green">$(this)</span><span class="blue">.removeClass(<span class="cursiva red">"cursivas"</span>)</span>;</p>
+					<p class="sinespaciosfinal negrita grey">});</p>
+
+					<p class="brown cursiva">En este ejemplo se elimina una clase a un elemento concreto de un título h1 seleccionado con un click.</p>
+
+				</article>
+
+
+				<!-- ELIMINAR CONTENIDO INTERNO DE UN ELEMENTO -->
+				<article>
+
+					<a name="empty"></a>
+					
+					<h1>Eliminar contenido de un elemento: <span class="cursiva">empty()</span></h1>
+
+					<p>Esta función permite <span class="negrita">eliminar el contenido interno de un elemento</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="negrita"><span class="green">$("#capa")</span><span class="blue">.empty()</span>;</p>
+
+					<p class="brown cursiva">En este ejemplo se elimina el contenido interno del elemento con la id 'capa'.</p>
+
+				</article>
+
+
+				<!-- ELIMINAR UN ELEMENTO -->
+				<article>
+
+					<a name="remove"></a>
+					
+					<h1>Eliminar un elemento: <span class="cursiva">remove()</span></h1>
+
+					<p>Esta función permite <span class="negrita">eliminar un elemento</span>.</p>
+
+					<ul>
+						<li><span class="negrita">Eliminación de Elementos 'Tags' o 'Id':</span> desde cualquier cargador de objetos.</li>
+						<li><span class="negrita">Eliminación de Elementos Concretos de una Clase:</span> desde el cargador de jQuery <span class="cursiva">($(document).ready())</span>.</li>
+					</ul>
+
+
+					<h4>Ejemplo para eliminar un elemento que sea una etiqueta o una id</h4>
+
+					<p class="negrita"><span class="green">$("#explicacion")</span><span class="blue">.remove()</span>;</p>
+
+					<p class="brown cursiva">En este ejemplo se elimina el elemento con la id 'explicacion'. Estos elementos se pueden eliminar tanto desde una función, como desde el cargador de jQuery ($(document).ready()) e incluso desde el cargador nativo de JavaScript (window.onload).</p>
+
+						
+					<h4>Ejemplo para eliminar un elemento concreto de una clase</h4>
+
+					<p class="negrita"><span class="fondoamarillo">$(document).ready (function() {</span></p>
+
+					<p class="negrita purple">$(document).on (<span class="fondoamarillo">"click"</span>, <span class="fondorosa">".principales"</span>, function() {</p>
+					
+					<p class="sinespacios negrita"><span class="green">$(<span class="fondonaranja">this</span>)</span><span class="blue fondoazulclaro">.remove()</span></p>
+
+					<p class="negrita purple">});</p>
+
+					<p class="negrita"><span class="fondoamarillo">});</span></p>
+
+					<p class="brown cursiva">Para eliminar un elemento concreto de una clase, esta se debe realizar cargando dicha función desde el cargador de jQuery ($(document).ready()).</p>
+
+				</article>
+
+
+				<!-- SLIDE UP -->
+				<article>
+
+					<a name="slideup"></a>
+					
+					<h1>Efecto persiana subiendo: <span class="cursiva">slideUp()</span></h1>
+
+					<p>Esta función permite <span class="negrita">añadir un efecto que simula una persiana subiendo</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="negrita"><span class="green">$("#contenido")</span><span class="blue">.slideUp(4000)</span>;</p>
+
+					<p>Se establece dentro de los paréntesis el <span class="negrita">tiempo de duración del efecto en milisegundos (<span class="red">ms</span>)</span>.</p>
+
+				</article>
+
+
+				<!-- SLIDE DOWN -->
+				<article>
+
+					<a name="slidedown"></a>
+					
+					<h1>Efecto persiana bajando: <span class="cursiva">slideDown()</span></h1>
+
+					<p>Esta función permite <span class="negrita">añadir un efecto que simula una persiana bajando</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="negrita"><span class="green">$("#contenido")</span><span class="blue">.slideDown(3500)</span>;</p>
+
+					<p>Se establece dentro de los paréntesis el <span class="negrita">tiempo de duración del efecto en milisegundos (<span class="red">ms</span>)</span>.</p>
+					
+				</article>
+
+
+				<!-- SLIDE DOWN -->
+				<article>
+
+					<a name="slidetoggle"></a>
+					
+					<h1>Efecto persiana con interruptor: <span class="cursiva">slideToggle()</span></h1>
+
+					<p>Esta función permite <span class="negrita">añadir un efecto que simula una persiana que sube o baja tras activarse un evento</span>.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="negrita"><span class="green">$("#contenido")</span><span class="blue">.slideToggle(2500)</span>;</p>
+
+					<p>Se establece dentro de los paréntesis el <span class="negrita">tiempo de duración del efecto en milisegundos (<span class="red">ms</span>)</span>.</p>
+					
+				</article>
+
+
+				<!-- CSS -->
+				<article>
+
+					<a name="css"></a>
+					
+					<h1>Añadir propiedades CSS: <span class="cursiva">css()</span></h1>
+
+					<p>Esta función se utiliza para <span class="negrita">añadir propiedades de CSS a un elemento</span>.</p>
+
+					<h4>Añadir una propiedad</h4>
+
+					<p class="negrita"><span class="green">$("#capa")</span><span class="blue">.css(<span class="fondoamarillo cursiva">{"color": "green"}</span>)</span>;</p>
+
+
+					<h4>Añadir varias propiedades</h4>
+
+					<p class="negrita"><span class="green">$("#capa")</span><span class="blue">.css(<span class="fondoamarillo cursiva">{"color": "green", "border": "1px solid black"}</span>)</span>;</p>
+
+				</article>
+
+
+
+				<!-- ANIMATE -->
+				<article>
+
+					<a name="animate"></a>
+					
+					<h1>Animación de un elemento: <span class="cursiva">animate()</span></h1>
+
+					<p>Esta función permite <span class="negrita">generar un efecto utilizando un reducido número de propiedades de CSS</span>. La función 'animate' se debe implementar a través del cargador de jQuery.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="sinespaciosprimero negrita purple">$(document).ready (function() {</p>
+
+					<p class="sinespaciosprimero negrita grey">$(<span class="fondoamarillo">"#visor img"</span>)<span class="fondorosa">.mouseover</span> (function() {</p>
+					<p class="sinespaciosprimero negrita"><span class="green">$(<span class="fondonaranja">this</span>)</span><span class="blue fondoazulclaro">.css({"border": "0px solid red"})</span><span class="blue">.animate({</span></p>
+					<p class="sinespacios blue">opacity: 0.5,</p>
+					<p class="sinespacios blue">width: "100px",</p>
+					<p class="sinespacios blue"><span class="negrita">}</span>, 700<span class="negrita">);</span></p>
+					<p class="sinespaciosfinal negrita blue"><span class="fondoazulclaro">});</span></p>
+					<p class="sinespaciosfinal negrita grey">});</p>
+
+					<p class="sinespaciosfinal negrita purple">});</p>
+
+					<p class="brown cursiva">En este ejemplo se establece una animación que activa determinadas características de CSS, cuando el cursor del ratón pasa por encima de una imagen que pertenece a la id 'visor'. La duración de la animación es de 700 milisegundos.</p>
+					
+				</article>
+
+
+				<!-- ANIMATE: ENLACE DE ANCLA -->
+				<article>
+
+					<a name="animate-ancla"></a>
+					
+					<h1>Enlace de ancla: <span class="cursiva">animate({scrollTop: 0})</span></h1>
+
+					<p>La función animate junto con la <span class="negrita">propiedad scrollTop</span> permite realizar una <span class="negrita">función de ancla al inicio de la página</span>, generando un efecto de subida progresivo.</p>
+
+
+					<h4>Ejemplo</h4>
+
+					<p class="sinespaciosprimero negrita purple">$(document).ready (function() {</p>
+
+					<p class="sinespaciosprimero negrita grey">$(<span class="fondoamarillo">"#ancla"</span>)<span class="fondorosa">.on</span> ("click", function() {</p>
+					<p class="sinespaciosprimero negrita"><span class="green">$(<span class="fondonaranja">html</span>)</span><span class="blue">.animate({</span></p>
+					<p class="sinespacios blue"><span class="fondoazulclaro">scrollTop: 0</span></p>
+					<p class="sinespacios blue"><span class="negrita">}</span>, 600<span class="negrita">);</span></p>
+					<p class="sinespaciosfinal negrita blue"><span class="fondoazulclaro">});</span></p>
+					<p class="sinespaciosfinal negrita grey">});</p>
+
+					<p class="sinespaciosfinal negrita purple">});</p>
+
+					<p class="brown cursiva">En este ejemplo se establece una animación que realiza un ancla al incio de la página ('html'). La duración de la animacion es de 600 milisegundos.</p>
+
+				</article>
+				
+
+				<!-- Capa de NO HAY COINCIDENCIAS para el Buscador -->
+				<div id="nocoincide" onclick="fun_buscador_reset()">
+
+					<h3>NO HAY COINCIDENCIAS EN LA BÚSQUEDA</h3>
+
+					<img src="img/jQuery.png" alt="logo jQuery">	
+
+				</div>
+
+
+			</section>
+
+			<!-- BOTÓN VOLVER PARTE SUPERIOR -->
+		
+			<img id="ancla" src="img/volver.png">			
+
+		</div>
+
+		
+		<!-- PIE DE PÁGINA -->
+		<footer>
+
+			<div class="f1">
+
+				<img src="img/logoies.jpg" class="footermin">
+
+			</div>
+			
+			<div class="f2">
+
+				<p>Copyright @ 2025 - Víctor Álvarez</p>
+
+			</div>
+
+		</footer>
+
+	</body>
+
+</html>

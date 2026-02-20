@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="author" content="Víctor">
+		<meta name="description" content="Apuntes sobre Formularios en HTML">
+		<meta name="keywords" content="css, formularios, html">
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilo-apuntes-form.css">
+		
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="js/javascript_form.js"></script>
+
+		<title>Apuntes Formularios - Víctor Álvarez</title>
+
+	</head>
+
+	<body>
+
+		<!-- IMAGEN CABECERA -->
+		<header>
+
+			<img id="cab" src="img/cabecera_form.jpg" alt="imagen de cabecera apuntes formularios">
+			
+			<div id="ham" onclick="fun_css()" title="Haz click para desplegar el menú">
+			
+				<img src="img/hamburguesa.png">
+				
+			</div>
+
+		</header>
+
+
+		<!-- CAPA PRINCIPAL -->
+		<div id="principal">
+
+			<aside id="aside">
+			
+				<!-- Botón Cerrar Menú (Sólo en desplegable) -->
+				<h4 id="cerrar" onclick="fun_css()" title="Haz click para cerrar el menú">CERRAR MENÚ</h4>
+			
+				<!-- Botón Proyectos - Apuntes (Sólo en desplegable) -->
+				<h2 id="proy-apun" onclick="fun_pro()" title="Haz click para acceder a los Proyectos y Apuntes">APUNTES</h2>
+				
+				
+				<!-- Menú con Botones de Proyectos y Apuntes -->
+				<div id="botones">
+
+					<a href="apuntes_html.html"><h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de HTML">APUNTES HMTL</h4></a>
+
+					<a href="#"><h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de Formularios">FORMULARIOS</h4></a>
+
+					<a href="apuntes_css.html"><h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de CSS">APUNTES CSS</h4></a>
+
+					<a href="apuntes_js.html"><h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de JavaScript">APUNTES JS</h4></a>
+					
+					<a href="apuntes_jQuery.html"><h4 class="apuntes botonp" title="Haz click para acceder a los Apuntes de jQuery">APUNTES JQUERY</h4></a>
+				
+				</div>
+				
+				
+				<!-- Menú Form -->
+				<h4 class="catvert espacio-menu" onclick="fun_form()" title="Haz click para expander/comprimir el menú">Etiqueta FORM</h4>
+
+				<ul id="form">
+					<a href="#get" onclick="fun_buscador_reset()"><li>Método - Get</li></a>
+					<a href="#post" onclick="fun_buscador_reset()"><li>Método - Post</li></a>
+					<a href="#action" onclick="fun_buscador_reset()"><li>Action</li></a>
+				</ul>
+
+
+				<!-- Menú Input -->
+				<h4 class="catvert" onclick="fun_input()" title="Haz click para expander/comprimir el menú">Etiqueta INPUNT</h4>
+
+				<!-- Capa con Menu Inputs y Atributos -->
+				<div id="input">
+
+					<ul>
+						<a href="#name" onclick="fun_buscador_reset()"><li>Name</li></a>
+						<a href="#value" onclick="fun_buscador_reset()"><li>Value</li></a>
+					</ul>
+
+
+					<!-- Menú Type -->
+					<h4 class="type" onclick="fun_type()" title="Haz click para expander/comprimir el menú">Type | Parámetros</h4>
+
+					<ul id="type">
+						<a href="#text" onclick="fun_buscador_reset()"><li>Texto</li></a>
+						<a href="#number" onclick="fun_buscador_reset()"><li>Numérico</li></a>
+						<a href="#pass" onclick="fun_buscador_reset()"><li>Password</li></a>
+						<a href="#sub" onclick="fun_buscador_reset()"><li>Botón Enviar</li></a>
+						<a href="#res" onclick="fun_buscador_reset()"><li>Botón Resetear</li></a>
+						<a href="#but" onclick="fun_buscador_reset()"><li>Botón Personalizado</li></a>
+						<a href="#color" onclick="fun_buscador_reset()"><li>Color</li></a>
+						<a href="#file" onclick="fun_buscador_reset()"><li>Adjuntar</li></a>
+						<a href="#tel" onclick="fun_buscador_reset()"><li>Teléfono</li></a>
+						<a href="#mail" onclick="fun_buscador_reset()"><li>E-mail</li></a>
+						<a href="#web" onclick="fun_buscador_reset()"><li>URL</li></a>
+						<a href="#date" onclick="fun_buscador_reset()"><li>Fecha</li></a>
+						<a href="#time" onclick="fun_buscador_reset()"><li>Hora</li></a>
+						<a href="#dtl" onclick="fun_buscador_reset()"><li>Fecha y Hora</li></a>
+						<a href="#month" onclick="fun_buscador_reset()"><li>Mes</li></a>
+						<a href="#range" onclick="fun_buscador_reset()"><li>Deslizador</li></a>
+						<a href="#check" onclick="fun_buscador_reset()"><li>Selección Múltiple</li></a>
+						<a href="#rad" onclick="fun_buscador_reset()"><li>Selección Única</li></a>
+					</ul>
+
+
+					<!-- Menú Otros -->
+					<h4 class="type" onclick="fun_otros()" title="Haz click para expander/comprimir el menú">INPUT - Otros</h4>
+
+					<ul id="otros">
+						<a href="#place" onclick="fun_buscador_reset()"><li>Placeholder (ayuda)</li></a>
+						<a href="#max" onclick="fun_buscador_reset()"><li>Maxlength</li></a>
+						<a href="#req" onclick="fun_buscador_reset()"><li>Required</li></a>
+						<a href="#dis" onclick="fun_buscador_reset()"><li>Disabled</li></a>
+						<a href="#hid" onclick="fun_buscador_reset()"><li>Hidden (ocultar)</li></a>
+						<a href="#read" onclick="fun_buscador_reset()"><li>Readonly</li>
+						<a href="#tab" onclick="fun_buscador_reset()"><li>Tabindex</li></a>
+						<a href="#step" onclick="fun_buscador_reset()"><li>Step (decimales)</li></a>
+						<a href="#checked" onclick="fun_buscador_reset()"><li>Checked</li></a>
+					</ul>
+					
+				</div>
+
+
+				<!-- Menú Select -->
+				<h4 class="catvert" onclick="fun_select()" title="Haz click para expander/comprimir el menú">Etiqueta SELECT</h4>
+
+				<ul id="select">
+					<a href="#name2" onclick="fun_buscador_reset()"><li>Name</li></a>
+					<a href="#size" onclick="fun_buscador_reset()"><li>Size</li></a>
+					<a href="#mul" onclick="fun_buscador_reset()"><li>Multiple</li></a>
+				</ul>
+
+
+				<!-- Menú Option -->
+				<h4 class="catvert" onclick="fun_option()" title="Haz click para expander/comprimir el menú">Etiqueta OPTION</h4>
+
+				<ul id="option">
+					<a href="#value2" onclick="fun_buscador_reset()"><li>Value</li></a>
+					<a href="#selected" onclick="fun_buscador_reset()"><li>Selected</li></a>
+				</ul>
+
+
+				<!-- Menú Textarea -->
+				<h4 class="catvert" onclick="fun_textarea()" title="Haz click para expander/comprimir el menú">Etiqueta TEXTAREA</h4>
+				
+				<ul id="textarea">
+					<a href="#name3" onclick="fun_buscador_reset()"><li>Name</li></a>
+					<a href="#otros" onclick="fun_buscador_reset()"><li>Otros Atributos</li></a>
+				</ul>
+				
+				
+				<!-- Botón Label -->
+				<a href="#label" onclick="fun_buscador_reset()"><h4 class="catvert2" title="Haz click para ver la información">Etiqueta LABEL</h4></a>
+				
+				
+				<!-- Botón Fieldset -->
+				<a href="#fieldset" onclick="fun_buscador_reset()"><h4 class="catvert2" title="Haz click para ver la información">Etiqueta FIELDSET</h4></a>
+				
+				
+				<!-- Menú Pseudo-Clases -->
+				<h4 class="catvert3" onclick="fun_pseudo()" title="Haz click para expander/comprimir el menú">PSEUDO-CLASES</h4>
+				
+				<ul id="pseudo">
+					<a href="#valid" onclick="fun_buscador_reset()"><li>Valid</li></a>
+					<a href="#invalid" onclick="fun_buscador_reset()"><li>Invalid</li></a>
+					<a href="#focus" onclick="fun_buscador_reset()"><li>Focus</li></a>
+					<a href="#required" onclick="fun_buscador_reset()"><li>Required</li></a>
+				</ul>
+
+			</aside>
+
+
+			<!-- BUSCADOR -->
+				
+			<div id="capa-buscador">
+
+				<h4 id="busc-bot" onclick="fun_sacar_buscador()" title="Pulsa 'Ctrl + b' para abrir/cerrar el Buscador de Prácticas">BUSCADOR</h4>
+
+
+				<div id="busc-prac">
+					
+					<label for="buscador">BUSCADOR ETIQUETAS <br>Y/O ATRIBUTOS</label>
+						
+					<input id="buscador" name="buscador" type="text">
+						
+					<div id="botones-buscador">
+						
+						<button id="buscar" onclick="fun_buscador()" title="Pulsa 'Enter' para buscar">BUSCAR</button>
+						
+						<button id="reset" onclick="fun_buscador_reset()" title="Pulsa 'Ctrl + z' para resetear">RESET</button>
+						
+					</div>
+		
+				</div>
+				
+			</div>
+			
+			
+			<!-- SECCIÓN CON EXPLICACIONES -->
+			<section>
+				
+				<!-- ETIQUETA FORM -->
+				<article>
+
+					<a name="formularios"></a>
+
+					<h2 class="h2article">Etiqueta FORM</h2>
+
+					<p class="explicacion2"><span class="introduccion">La etiqueta 'form' se utiliza para crear formularios que permiten al usuario enviar información a un servidor.</span></p>
+
+					<!-- Method - Get -->
+					<a name="get"></a>
+
+					<h4>Atributo Method <br><span class="negrita4">Parámetro "get"</span></h4>
+
+					<p>
+						<span class="etiqueta">&lt; form </span><span class="propiedades">method="get" </span><span class="etiqueta">&gt;</span> <br><span class="etiqueta">&lt;/ form &gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: indica como se envían datos al servidor. <span class="negrita3">No es habitual su uso</span> ya que la información queda expuesta a cualquier usuario. Se recomienda sólo para consultas en un buscador.</p>
+
+
+					<!-- Method - Post -->
+					<a name="post"></a>
+
+					<h4>Atributo Method <br><span class="negrita4">Parámetro "post"</span></h4>
+
+					<p>
+						<span class="etiqueta">&lt; form </span><span class="propiedades">method="post" </span><span class="etiqueta">&gt;</span> <br><span class="etiqueta">&lt;/ form &gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: indica como se envían datos al servidor. <span class="negrita3">Su uso es el más habitual</span> ya que la información se procesa de una manera más segura a través de los protocolos HTTP o HTTPS (encriptado).</p>
+
+
+					<!-- Action -->
+					<a name="action"></a>
+
+					<h4>Atributos <br>Action y Enctype</h4>
+
+					<p>
+						<span class="etiqueta">&lt; form </span><span class="propiedades">method="post" action="php/formulario.php" enctype="multipart/form-data" </span><span class="etiqueta">&gt;</span> <br><span class="etiqueta">&lt;/ form &gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: estos atributo se utilizan cuando el método elegido para el envío del formulario es <span class="negrita3">POST</span>. El parámetro 'action' lleva consigo la <span class="negrita3">ruta del archivo php</span> con la configuración de envío al servidor.</p>
+
+				</article>
+
+
+				<!-- ETIQUETA INPUT -->
+				<article>
+
+					<a name="input"></a>
+
+					<h2 class="h2article">Etiqueta INPUT</h2>
+
+					<p class="explicacion2"><span class="introduccion">La etiqueta 'input' se utiliza dentro de un formulario para que el usuario ingrese o seleccione datos que luego serán enviados al servidor.</span></p>
+
+					<p class="explicacion2"><span class="introduccion">Se personaliza con el atributo 'type', que define el tipo de dato a capturar.</span></p>
+
+					<p class="explicacion2"><span class="introduccion">Siempre debe llevar el atributo 'name', que será la clave con la que se enviará la información.</span></p>
+
+
+					<!-- Name -->
+					<a name="name"></a>
+
+					<h4>Atributo Name</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="edad" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: es el nombre del campo, el cual se utiliza como <span class="negrita3">clave para enviar la información al servidor</span>.</p>
+
+
+					<!-- Value -->
+					<a name="value"></a>
+
+					<h4>Atributo Value</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="edad" type="number" value="27" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para introducir un <span class="negrita3">valor inicial</span> a un campo.</p>
+
+				</article>
+
+
+				<!-- TYPE -->
+				<article>
+
+					<a name="type"></a>
+
+					<h2 class="h2article">INPUT | Type</h2>
+
+
+					<!-- Text -->
+					<a name="text"></a>
+
+					<h4>Parámetro: text</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="text" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: tipo de campo de texto básico.</p>
+
+
+					<!-- Number -->
+					<a name="number"></a>
+
+					<h4>Parámetro: number</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="edad" type="number" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: tipo de campo numérico.</p>
+					
+
+					<!-- Password -->
+					<a name="pass"></a>
+
+					<h4>Parámetro: password</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="pass" type="password" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: tipo de campo para contraseñas. Se muestra con asteriscos.</p>
+
+
+					<!-- Submit -->
+					<a name="sub"></a>
+
+					<h4>Parámetro: submit</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="envio" type="submit" value="Enviar" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: botón para enviar el formulario. No es necesario complementarlo con el atributo 'name'. El atributo 'value' define el texto que aparece en el botón.</p>
+
+
+					<!-- Reset -->
+					<a name="res"></a>
+
+					<h4>Parámetro: reset</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="borrar" type="reset" value="Borrar" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: botón para resetear el formulario. No es necesario complementarlo con el atributo 'name'. El atributo 'value' define el texto que aparece en el botón.</p>
+
+
+					<!-- Button -->
+					<a name="but"></a>
+
+					<h4>Parámetro: button</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="boton" type="button" value="Descarga" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para crear un botón genérico. Su función se define con JavaScript. No es necesario complementarlo con el atributo 'name'. El atributo 'value' define el texto que aparece en el botón.</p>
+
+				</article>
+
+
+				<article>
+
+					<h2 class="h2article">Type: Especiales</h2>
+
+
+					<!-- Color -->
+					<a name="color"></a>
+
+					<h4>Parámetro: color</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="color" type="color" value="#FFF000" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para mostrar un selector de colores que permite la elección de un color al usuario.</p>
+
+					<p class="explicacion">El atributo value selecciona un color predeterminado que se enviará al servidor en el caso de que el usuario no seleccione ninguno.</p>
+
+					
+					<!-- Adjuntar archivo -->
+					<a name="file"></a>
+					
+					<h4>Parámetro: file</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="adjuntar" type="file" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para permitir a los usuarios adjuntar archivos.</p>
+
+
+					<!-- Teléfono -->
+					<a name="tel"></a>
+
+					<h4>Parámetro: tel</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="telefono" type="tel" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: es un campo específico para el número de teléfono.</p>
+					
+
+					<!-- E-mail -->
+					<a name="mail"></a>
+
+					<h4>Parámetro: email</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="email" type="email" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: campo para correos electrónicos, que incluso valida su formato.</p>
+
+					
+					<!-- URL-->
+					<a name="web"></a>
+
+					<h4>Parámetro: url</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="web" type="url" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: campo para introducir direcciones web. A la hora de incluir las direcciones se necesita poner los protocolos HTTP o HTTPS.</p>
+
+
+					<!-- Date -->
+					<a name="date"></a>
+
+					<h4>Parámetro: date</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="fecha" type="date" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: campo para introducir una fecha a través de un calendario emergente.</p>
+
+
+					<!-- Time -->
+					<a name="time"></a>
+
+					<h4>Parámetro: time</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="hora" type="time" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: campo para introducir la hora a través de un menú emergente.</p>
+
+
+					<!-- DTL -->
+					<a name="dtl"></a>
+
+					<h4>Parámetro: datetime-local</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="fecha-hora" type="datetime-local" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: campo para introducir tanto la fecha como la hora.</p>
+
+
+					<!-- Month -->
+					<a name="month"></a>
+
+					<h4>Parámetro: month</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="mes" type="month" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: campo para introducir el mes, acompañado de un año a seleccionar.</p>
+
+				</article>
+
+
+				<article>
+
+					<h2 class="h2article">Type: Selecciones</h2>
+
+					<!-- Range -->
+					<a name="range"></a>
+
+					<h4>Parámetro: range</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="volumen" type="range" min="0" max="100" step="5" value="50" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: es un parámetro que sirve para crear un deslizador (slider) que permite al usuario seleccionar un valor numérico dentro de un rango definido.</p>
+
+					<p class="explicacion">Se puede complementar con otros atributos para aportarle otras características.</p>
+
+					<ul>
+						<li><span class="negrita2">min</span>: valor mínimo del rango</li>
+						<li><span class="negrita2">max</span>: valor máximo del rango</li>
+						<li><span class="negrita2">value</span>: valor inicial el rango</li>
+						<li><span class="negrita2">step</span>: incremento al mover el deslizador</li>
+					</ul>
+
+
+					<!-- Checkbox -->
+					<a name="check"></a>
+
+					<h4>Parámetro: checkbox</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="check" type="checkbox" value="opcion1" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: Se utiliza para crear una <span class="negrita3">casilla de verificación que permite al usuario seleccionar o deseleccionar una o varias opciones</span> dentro de un formulario.</p>
+
+					<p class="explicacion">Si hay varias opciones no es necesario utilizar el mismo 'name', pero es una buena práctica hacerlo para enviar al servidor los datos seleccionados en un solo array.</p>
+
+					<p class="explicacion">El atributo 'value' asigna un valor diferente a cada opción.</p>
+
+
+					<!-- Radio -->
+					<a name="rad"></a>
+
+					<h4>Parámetro: radio</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="opciones" type="radio" value="opcion1" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="opciones" type="radio" value="opcion2" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: Se utiliza para crear <span class="negrita3">botones circulares con diferentes opciones para el usuario</span>. <span class="negrita3">Sólamente se puede seleccionar una alternativa</span>.</p>
+
+					<p class="explicacion"><span class="negrita3">Requiere que todas las opciones compartan el mismo 'name'</span>. Cada opción tiene un 'value' diferente.</p>
+
+				</article>
+
+
+				<!-- OTROS INPUT -->
+				<article>
+
+					<a name="input-otros"></a>
+
+					<h2 class="h2article">INPUT | Otros</h2>
+
+
+					<!-- Placeholder -->
+					<a name="place"></a>
+
+					<h4>Atributo placeholder</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="text" placeholder="Víctor" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para mostrar una <span class="negrita3">ayuda visual</span> para el relleno de los campos.</p>
+
+
+					<!-- Maxlength -->
+					<a name="max"></a>
+
+					<h4>Atributo maxlength</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="text" maxlength="255" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para <span class="negrita3">fijar un número máximo de caracteres a rellenar en un campo</span>.</p>
+
+
+					<!-- Required -->
+					<a name="req"></a>
+
+					<h4>Atributo required</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="text" required </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para indicar que un <span class="negrita3">campo es de relleno obligatorio</span>.</p>
+
+
+					<!-- Disabled -->
+					<a name="dis"></a>
+
+					<h4>Atributo disabled</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="text" disabled </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para deshabilitar un campo. El campo se mostrara a los usuarios, pero no permitirá su modificación.</p>
+
+
+					<!-- Hidden -->
+					<a name="hid"></a>
+
+					<h4>Atributo hidden</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="text" hidden </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para <span class="negrita3">ocultar un campo</span>. El campo no se mostrará a los usuarios.</p>
+
+
+					<!-- Readonly -->
+					<a name="read"></a>
+
+					<h4>Atributo readonly</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="text" readonly </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: es un campo de sólo lectura que no permite modificación por parte del usuario.</p>
+
+
+					<!-- Tabindex -->
+					<a name="tab"></a>
+
+					<h4>Atributo tabindex</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="text" tabindex="1" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se incorpora para establecer una <span class="negrita3">prioridad en el relleno de campos cuando se utiliza el tabulador para saltar entre los mismos</span>. Facilita la navegación al usuario a la hora de completar aquellos campos que bien son requeridos o tienen mayor importancia.</p>
+
+
+					<!-- Decimales -->
+					<a name="step"></a>
+
+					<h4>Atributo step</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="number" step="0.01" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para <span class="negrita3">añadir decimales</span> cuando en el atributo type su parámetro es 'number'.</p>
+
+					<p class="explicacion">La <span class="negrita3">posición del '1'</span> después del punto, muestra el <span class="negrita3">número de decimales</span> que se aplicarán.</p>
+
+					
+					<!-- Casilla marcada -->
+					<a name="checked"></a>					
+					<h4>Atributo checked</h4>
+
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">name="nombre" type="checkbox" checked </span><span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para marcar una de las opciones en los <span class="negrita3">parámetros 'radio' o 'checkbox'</span> del atributo type.</p>
+
+
+				</article>
+
+
+				<!-- Etiqueta SELECT -->
+				<article>
+
+					<a name="sel"></a>
+
+					<h2 class="h2article">Etiqueta SELECT</h2>
+
+					<p class="explicacion2"><span class="introduccion">Se utiliza dentro de un formulario para crear un menú desplegable que permite al usuario seleccionar una o varias opciones.</span></p>
+
+					<p class="explicacion2"><span class="introduccion">Es necesario complementarla con la etiqueta 'option', la cual introducirá dentro de 'select' las diferentes opciones de selección.</span></p>
+
+					
+					<!-- Name -->
+					<a name="name2"></a>
+
+					<h4>Atributo Name</h4>
+
+					<p>
+						<span class="etiqueta">&lt; select </span><span class="propiedades">name="fruta" </span><span class="etiqueta">&gt;</span> 
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="manzana" </span> <span class="etiqueta">&gt;</span>  Manzana <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="naranja" </span> <span class="etiqueta">&gt;</span>  Naranja <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt;/ select &gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para nombrar el campo que se enviará al servidor junto con los valores seleccionados por el usuario.</p>
+
+
+					<!-- Size -->
+					<a name="size"></a>
+
+					<h4>Atributo Size</h4>
+
+					<p>
+						<span class="etiqueta">&lt; select </span><span class="propiedades">name="profesiones" size="2" </span><span class="etiqueta">&gt;</span> 
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="informatico" </span> <span class="etiqueta">&gt;</span>  Informático <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="mecanico" </span> <span class="etiqueta">&gt;</span>  Mecánico <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="taxista" </span> <span class="etiqueta">&gt;</span>  Taxista <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt;/ select &gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para <span class="negrita3">desplegar en pantalla el número de opciones que se indiquen en su configuración</span>.</p>
+
+
+					<!-- Multiple -->
+					<a name="mul"></a>
+
+					<h4>Atributo Multiple</h4>
+
+					<p>
+						<span class="etiqueta">&lt; select </span><span class="propiedades">name="asignatura" multiple </span><span class="etiqueta">&gt;</span> 
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="matematicas" </span> <span class="etiqueta">&gt;</span>  Matemáticas <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="ingles" </span> <span class="etiqueta">&gt;</span>  Inglés <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt;/ select &gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: <span class="negrita3">permite seleccionar varias opciones</span> de lista desplegable.</p>
+
+				</article>
+
+
+
+				<!-- OPTION-->
+				<article>
+
+					<a name="opt"></a>
+
+					<h2 class="h2article">Etiqueta OPTION</h2>
+
+					<p class="explicacion2"><span class="introduccion">Se utiliza dentro de la etiqueta 'Select' para mostrar diferentes opciones en la lista desplegable.</span></p>
+
+
+					<!-- VALUE -->
+					<a name="value2"></a>
+
+					<h4>Atributo Value</h4>
+
+					<p>
+						<span class="etiqueta">&lt; select </span><span class="propiedades">name="animales" </span><span class="etiqueta">&gt;</span> 
+					</p>
+					
+					<p>
+					 	<span class="etiqueta">&lt; option </span><span class="propiedades"> value="perro" </span> <span class="etiqueta">&gt;</span>  Perro <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="gato" </span> <span class="etiqueta">&gt;</span>  Gato <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt;/ select &gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: permite asignar valores a las diferentes opciones de la lista desplegable.</p>
+
+
+					<!-- SELECTED -->
+					<a name="selected"></a>
+
+					<h4>Atributo Selected</h4>
+
+					<p>
+						<span class="etiqueta">&lt; select </span><span class="propiedades">name="comida" </span><span class="etiqueta">&gt;</span> 
+					<p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="macarrones" </span> <span class="etiqueta">&gt;</span>  Macarrones <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; option </span><span class="propiedades"> value="paella" selected </span> <span class="etiqueta">&gt;</span>  Paella <span class="etiqueta">&lt;/ option &gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt;/ select &gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para seleccionar un valor predefinido de la lista desplegable.</p>
+
+				</article>
+
+				
+				<!-- ÁREA DE TEXTO-->
+				<article>
+
+					<a name="textarea"></a>
+
+					<h2 class="h2article">Etiqueta TEXTAREA</h2>
+
+					<p class="explicacion2"><span class="introduccion">Se utiliza para crear un campo de texto multilínea, es decir, una caja en la que el usuario puede escribir varias líneas de texto, como si fuera un pequeño editor.</span></p>
+
+
+					<!-- Name -->
+					
+					<a name="name3"></a>
+					<h4>Atributo Name</h4>
+
+					<p>
+						<span class="etiqueta">&lt; textarea </span><span class="propiedades">name="observaciones" </span><span class="etiqueta">&gt;</span> <br><span class="etiqueta">&lt;/ textarea </span> <span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para nombrar el campo de texto que se enviará al servidor junto con el texto escrito por el usuario.</p>
+
+
+					<!-- Otros Atributos -->
+					
+					<a name="otros"></a>
+					<h4>Otros Atributos</h4>
+
+					<p>
+						<span class="etiqueta">&lt; textarea </span><span class="propiedades">name="observaciones" placeholder="Escribe aquí tu comentario" maxlength="255" tabindex="25" required  </span><span class="etiqueta">&gt;</span> <br><span class="etiqueta">&lt;/ textarea </span> <span class="etiqueta">&gt;</span>
+					</p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: puede utilizar atributos como <span class="negrita3">'placeholder'</span>, <span class="negrita3">'maxlength'</span>, <span class="negrita3">'tabindex'</span> o <span class="negrita3">'required'</span>.</p>
+
+				</article>
+				
+				
+				<!-- ETIQUETA LABEL-->
+				<article>
+
+					<a name="label"></a>
+
+					<h2 class="h2article">Etiqueta LABEL</h2>
+
+					<p class="explicacion2"><span class="introduccion">Se utiliza para etiquetar elementos de formulario, como campos de entrada 'input', menús desplegables 'select' o áreas de texto 'textarea'.</span></p> 
+					
+					<p class="explicacion2"><span class="introduccion">El parámetro del atributo 'for' debe coincidir con el parámetro del atributo 'id' de las etiquetas 'input', 'select' o 'textarea'.</span></p>
+
+					<p class="explicacion2"><span class="introduccion">Su principal función es asociar un texto descriptivo a un elemento del formulario, mejorando así la accesibilidad y la experiencia del usuario.</span></p>
+
+
+					<p>
+						<span class="etiqueta">&lt; label </span><span class="propiedades"></span> <span class="propiedades">for="nombre-apellidos"</span> <span class="etiqueta">&gt;</span> Nombre y Apellidos:<span class="etiqueta">&lt;/ label </span> <span class="etiqueta">&gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; input </span><span class="propiedades">id="nombre-apellidos" name="nombre-apellidos" type="text" </span><span class="etiqueta">&gt;</span>
+					</p>
+
+				</article>
+				
+				
+				<!-- Etiquetas FIELDSET y LEGEND -->
+				<article>
+				
+					<a name="fieldset"></a>
+
+					<h2 class="h2article">Etiqueta FIELDSET</h2>
+
+					<p class="explicacion2"><span class="introduccion">Se utiliza para crear una capa especial dentro de un formulario, que permite incluir un titulo en el interior de un borde si se incorpora antes de su cierre la etiqueta 'legend'.</span></p> 
+					
+					<p>
+						<span class="etiqueta">&lt; fieldset </span><span class="propiedades"></span> <span class="etiqueta">&gt;</span>
+					</p>
+					
+					<p>
+						<span class="etiqueta">&lt; legend </span><span class="etiqueta">&gt;</span>Datos Personales<span class="etiqueta">&lt;/ legend </span><span class="etiqueta">&gt;</span>
+					</p>
+						
+					<p>
+						<span class="etiqueta">&lt;/ fieldset </span> <span class="etiqueta">&gt;</span>
+					</p>
+				
+				</article>
+				
+				
+				<!-- PSEUDOCLASES -->
+				<article>
+				
+					<a name="pseudoclase"></a>
+
+					<h2 class="h2article">Pseudo-Clases</h2>
+					
+					<p class="explicacion2"><span class="introduccion">Se pueden utilizar en las etiquetas 'input', 'select' y 'textarea'.</span></p>
+
+
+					<!-- Valid -->
+					<a name="valid"></a>
+					<h4>Valid</h4>
+
+					<p><span class="etiqueta"> input</span><span class="pseudoclase">:valid</span> <span class="propiedades">{ color: white; background-color: blue; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para aplicar propiedades a campos válidos.</p>
+
+
+					<!-- Invalid -->
+					<a name="invalid"></a>
+					<h4>Invalid</h4>
+
+					<p><span class="etiqueta"> input</span><span class="pseudoclase">:invalid</span> <span class="propiedades">{ color: white; background-color: blue; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para aplicar propiedades a campos inválidos.</p>
+					
+					
+					<!-- Focus -->
+					<a name="focus"></a>
+					<h4>Focus</h4>
+
+					<p><span class="etiqueta"> input</span><span class="pseudoclase">:focus</span> <span class="propiedades">{ color: white; background-color: blue; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para aplicar propiedades a campos pulsados.</p>
+					
+					
+					<!-- Required -->
+					<a name="required"></a>
+					<h4>Required</h4>
+
+					<p><span class="etiqueta"> input</span><span class="pseudoclase">:required</span> <span class="propiedades">{ color: white; background-color: blue; }</span></p>
+
+					<p class="explicacion"><span class="negrita">Explicación</span>: se utiliza para aplicar propiedades a campos requeridos.</p>
+				
+				</article>
+
+
+				<!-- Capa de NO HAY COINCIDENCIAS para el Buscador -->
+				<div id="nocoincide" onclick="fun_buscador_reset()">
+
+					<h3>NO HAY COINCIDENCIAS EN LA BÚSQUEDA</h3>
+
+					<img src="img/form.png" alt="logo formularios">	
+
+				</div>
+
+			</section>
+
+
+			<!-- BOTÓN VOLVER PARTE SUPERIOR -->
+		
+			<img id ="arriba" src="img/volver.png">
+
+		</div>
+
+		
+		<!-- PIE DE PÁGINA -->
+		<footer>
+
+			<div class="f1">
+
+				<img src="img/logoies.jpg" class="footermin">
+
+			</div>
+			
+			<div class="f2">
+
+				<p>Copyright @ 2025 Víctor Álvarez</p>
+
+			</div>
+
+		</footer>
+
+	</body>
+
+</html>

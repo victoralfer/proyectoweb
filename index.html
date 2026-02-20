@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="author" content="Víctor">
+		<meta name="description" content="Página Web con el Proyecto del Ciclo Formativo de Grado Superior ASIR de Víctor Álvarez Fernández.">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8">
+
+
+		<!-- Enlace con Fuente Fjala de Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+
+		<!-- Enlace con Fuente Anton de Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+
+		<!-- 1º: Enlace a Hoja de Estilo CSS -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	
+		<!-- 2º: Enlace web a jQuery -->
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	
+	
+		<!-- 3º: Enlace a JavaScript -->
+		<script type="text/javascript" src="js/javascript.js"></script>
+		
+
+		<title>Proyecto CFGS ASIR - Víctor Álvarez</title>
+
+	</head>
+
+	<body >
+		
+		<!-- CABECERA -->
+		<header>
+		
+			<img src="img/cabecera.jpg" alt="Imagen de Cabecera" title="Cabecera">
+			
+			<div class="ham" onclick="fun_ham()">
+			
+				<img id="icono_ham" src="img/hamburguesa.png" title="Pincha y despliega el menú">
+				
+			</div>
+		
+		</header>
+		
+		
+		<!-- CAPA PRINCIPAL -->
+		<div id="contenido">
+		
+			<!-- MENÚ VERTICAL -->
+			<aside id="apuntes">
+
+				<h2 class="cerrar-menu" onclick="fun_ham()" title="Haz click para cerrar el menú">CERRAR MENÚ</h2>
+			
+				<h3>MENÚ</h3>
+
+				<!-- INICIO -->
+				<div class="enlaces-apuntes">
+				
+					<h4 onclick="fun_principal()" title="Haz click para ir a la Página Principal">Inicio</h4>
+					
+				</div>
+			
+
+				<!-- Apuntes -->
+				<div class="enlaces-apuntes">
+				
+					<h4 onclick="fun_men_1()" title="Haz click para comprimir/expandir">Apuntes</h4>
+					
+					<ul id="menu-1" class="menu-apuntes">
+						<a href="apuntes_html.html" target="_blank"><li>Apuntes HTML</li></a>
+						<a href="apuntes_css.html" target="_blank"><li>Apuntes CSS</li></a>
+						<a href="apuntes_formularios.html" target="_blank"><li>Apuntes Formularios</li></a>
+						<a href="apuntes_js.html" target="_blank"><li>Apuntes JavaScript</li></a>
+						<a href="apuntes_jQuery.html" target="_blank"><li>Apuntes jQuery</li></a>
+						<a href="https://github.com/victoralfer" target="_blank"><li>Repositorio GitHub</li></a>
+					</ul>
+					
+				</div>
+				
+	
+				<!-- Otros -->
+				<div class="otros">
+				
+					<h4 onclick="fun_men_3()" title="Haz click para expandir/comprimir">Otros Documentos</h4>
+					
+					<ul id="menu-3" class="menu-otros">
+						<a href="docs/colores_sentimientos.pdf" target="_blank"><li>Combinación de Colores</li></a>
+						<a href="docs/lista-eventos-js-html.pdf" target="_blank"><li>Lista de Eventos</li></a>
+						<a href="docs/propiedades-css-js.pdf" target="_blank"><li>Propiedades CSS en JS</li></a>
+						<a href="docs/addEventListener-eventos.pdf" target="_blank"><li>Escucha de Eventos</li></a>
+					</ul>
+					
+				</div>
+
+
+				<!-- Menú WordPress -->
+
+				<div class="menu-wordpress">
+
+					<h5>Información WordPress</h5>
+
+					<img src="img/logo-wordpress.png" onclick="fun_wp()" title="Pincha aquí para obtener información de WordPress">
+
+				</div>
+
+				
+				<!-- Logos Entidades -->
+				<div class="logos">
+				
+					<h5>Organismos y Entidades</h5>
+
+					<a href="https://iespenanovo.com//" target="_blank"><img src="img/logoies.jpg" alt="logo IES Lois Peña Novo"></a>
+
+					<a href="https://educacioneciencia.xunta.gal/portada" target="_blank"><img src="img/logo-xunta-galicia.jpg" alt="logo Xunta de Galicia"></a>
+
+					<a href="https://www.educacionfpydeportes.gob.es/" target="_blank"><img src="img/ministerio.jpg" alt="logo Ministerio Educación y Formación Profesional"></a>
+			
+				</div>
+				
+			</aside>
+			
+
+
+			<!-- CAPA PRINCIPAL -->
+			<section id="principal">
+			
+				<div id="imagen-principal">
+				
+					<div id="imagen-imagen">
+					
+						<img src="img/diseno-web.png" alt="Imagen Diseño Web">
+				
+					</div>
+				
+					<h1>Bienvenid@s</h1>
+				
+				</div>
+
+				<div>
+
+					<p class="bienvenido-i">Esta web nace como un <span class="negrita">proyecto personal y técnico desarrollado en el marco del Ciclo Formativo de Grado Superior en Administración de Sistemas Informáticos en Red (ASIR)</span>. Su objetivo principal es ayudar a estudiantes del ciclo, y en especial a quienes se preparan para presentarse a las pruebas libres, una modalidad que exige un alto nivel de autonomía, organización y constancia.</p>
+
+					<p class="bienvenido">Por un lado, aquí encontrarás <span class="negrita">apuntes, esquemas y recursos orientados a facilitar la comprensión de los distintos módulos del ciclo</span> y servir como apoyo durante el estudio y la preparación de los exámenes.</p>
+
+					<p class="bienvenido">Pero este proyecto va más allá del contenido. <span class="verde">La propia web forma parte del aprendizaje práctico, ya que todo el proceso de creación, despliegue y mantenimiento se ha planteado como un entorno real de trabajo, similar al que puede encontrarse en un contexto profesional</span>.</p>
+
+					<p class="bienvenido">Para ello, se ha realizado:</p>
+
+					<ul class="lista-bienvenido">
+						<li>La elección y montaje del hardware adecuado.</li>
+						<li>La implantación de distintos sistemas operativos, como Windows 11 y Debian 13.</li>
+						<li>El uso de virtualización mediante Hyper-V, no solo como laboratorio, sino como entorno funcional.</li>
+						<li>La configuración de carpetas compartidas mediante SAMBA/CIFS.</li>
+						<li>La instalación y configuración de un servidor Apache.</li>
+						<li>La configuración de red necesaria para permitir el acceso a los contenidos desde Internet.</li>
+						<li>La automatización de tareas de mantenimiento, como copias de seguridad, limpieza de contenido innecesario y gestión básica del sistema.</li>
+					</ul>
+
+					<p class="bienvenido">Además, <span class="verde">esta página ha sido diseñada y desarrollada utilizando tecnologías web estándar, como HTML5, CSS3, JavaScript y jQuery</span>, aplicando buenas prácticas de estructuración, diseño y funcionalidad.</p>
+
+					<p class="bienvenido-f">De este modo, el proyecto no solo busca compartir apuntes, sino reflejar y poner en práctica los conocimientos reales que se trabajan en ASIR, demostrando que aprender no es solo estudiar teoría, sino también diseñar, implementar, documentar y mantener sistemas funcionales.</p>
+
+				</div>
+
+
+				<!-- CAPA BOTONES APUNTES -->
+				<div id="botones-apuntes">
+
+					<h3>Lenguaje de Marcas - Implantación de Aplicaciones Web</h3>
+
+					<div class="boton">
+
+						<a href="apuntes_html.html" target="_blank"><img src="img/html5-512.png" alt="Icono HTML5" title="Pulsa aquí y accede a los Apuntes de HMTL5"></a>
+					
+					</div>
+
+
+					<div class="boton">
+
+						<a href="apuntes_css.html" target="_blank"><img src="img/css3-512.png" alt="Icono CSS3" title="Pulsa aquí y accede a los Apuntes de CSS3"></a>
+					
+					</div>
+
+
+					<div class="boton">
+
+						<a href="apuntes_formularios.html" target="_blank"><img src="img/form-512.png" alt="Icono Formularios" title="Pulsa aquí y accede a los Apuntes de Formularios"></a>
+					
+					</div>
+
+
+					<div class="boton">
+
+						<a href="apuntes_js.html" target="_blank"><img src="img/javascript-512.png" alt="Icono JavaScript" title="Pulsa aquí y accede a los Apuntes de JavaScript"></a>
+					
+					</div>
+
+					<div class="boton">
+
+						<a href="apuntes_jQuery.html" target="_blank"><img src="img/jquery-512.png" alt="Icono jQuery" title="Pulsa aquí y accede a los Apuntes de jQuery"></a>
+					
+					</div>
+
+					<div class="boton boton-wordpress">
+
+						<img src="img/logo-wordpress.png" onclick="fun_wp()" title="Pincha aquí para obtener información de WordPress">
+					
+					</div>
+
+				</div>
+
+				
+				<!-- Links de Interés -->
+				<div class="elinks">
+				
+					<h3>Enlaces de Interés</h3>
+				
+					<!-- Link 1 -->
+					<div class="link">
+				
+						<a href="https://www.google.com/search?q=color+hex&oq=color+hex&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQRRg7GLEDGIAEMgYIAhBFGDsyBggDEEUYOzIGCAQQRRhAMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAE0gEINDIyMmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank"><img src="img/icono-rgb.png" alt="icono rgba" title="Pincha Aquí para Seleccionar Colores"></a>
+					
+					</div>
+
+					<!-- Link 2 -->
+					<div class="link">
+						
+						<a href="https://fonts.google.com/" target="_blank"><img src="img/icono-google-fonts.png" alt="icono google fonts" title="Pincha Aquí para Acceder a Google Fonts"></a>
+					
+					</div>
+					
+					<!-- Link 3 -->
+					<div class="link">
+						
+						<a href="https://www.mclibre.org/consultar/htmlcss/css/css-bordes.html" target="_blank"><img src="img/icono-bordes.png" alt="icono tipos de bordes" title="Pincha Aquí para Obtener Información sobre Tipos de Bordes en CSS"></a>
+					
+					</div>
+					
+					<!-- Link 4 -->
+					<div class="link">
+						
+						<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank"><img src="img/icono-flex.png" alt="icono flexbox" title="Pincha Aquí para Obtener Información sobre FlexBox"></a>
+					
+					</div>
+
+					<!-- Link 5 -->
+					<div class="link">
+						
+						<a href="https://jquery.com/" target="_blank"><img src="img/jquery-512.png" alt="icono flexbox" title="Pincha Aquí para Obtener Información y Descargar jQuery"></a>
+					
+					</div>
+
+					<!-- Link 6 -->
+					<div class="link">
+						
+						<a href="https://www.jose-aguilar.com/blog/funciones-utiles-para-utilizar-en-jquery/" target="_blank"><img src="img/jquery-fun.png" alt="icono flexbox" title="Pincha Aquí para Obtener Información sobre más funciones de jQuery"></a>
+					
+					</div>
+
+					<!-- Link 7 -->
+					<div class="link">
+				
+						<a href="https://www.chatgpt.com" target="_blank"><img src="img/icono-chatgpt.png" alt="icono chatgpt" title="Pincha Aquí para Acceder a ChatGPT"></a>
+					
+					</div>
+
+
+					<!-- Link 8 -->
+					<div class="link">
+				
+						<a href="https://www.canva.com/" target="_blank"><img src="img/canva.png" alt="icono canva" title="Pincha Aquí para Acceder a Canva"></a>
+					
+					</div>
+
+
+					<!-- Link 9 -->
+					<div class="link">
+				
+						<a href="https://www.photopea.com//" target="_blank"><img src="img/logo-photopea.png" alt="icono photopea" title="Pincha Aquí para Acceder a Photopea"></a>
+					
+					</div>
+				
+				</div>
+				
+				
+				<div id="frase">
+					
+					<h4>“Da vida a la web con HTML, CSS y JavaScript.”</h4>
+				
+				</div>
+
+				
+				
+				<!-- Programas -->
+				
+				<div id="programas">
+				
+					<h3>Programas / Aplicaciones para Descargar</h3>
+				
+					<!-- NotePad++ -->
+					<div class="programa">
+				
+						<a href="programas/npp.8.8.2.Installer.x64.exe" target="_blank"><img src="img/icono-notepad.png" alt="icono notepad" title="Pincha Aquí para descargar NotePad++"></a>
+					
+					</div>
+					
+					<!-- SublimeText -->
+					<div class="programa">
+				
+						<a href="programas/sublime_text_build_4200_x64_setup.exe" target="_blank"><img src="img/icono-sublimetext.png" alt="icono sublimetext" title="Pincha Aquí para descargar Sublime Text"></a>
+					
+					</div>
+					
+					
+					<!-- FileZilla -->
+					<div class="programa">
+				
+						<a href="programas/FileZilla_3.69.3_win64-setup.exe" target="_blank"><img src="img/icono-filezilla.png" alt="icono sublimetext" title="Pincha Aquí para descargar FileZilla"></a>
+					
+					</div>
+					
+					
+					<!-- XAMPP -->
+					<div class="programa">
+				
+						<a href="https://www.apachefriends.org/es/download.html" target="_blank"><img src="img/logo-xampp.png" alt="icono xampp" title="Pincha Aquí para descargar XAMPP"></a>
+					
+					</div>
+					
+					
+					<!-- WordPress -->
+					<div class="programa">
+				
+						<a href="https://es.wordpress.org/download/" target="_blank"><img src="img/logo-wordpress.png" alt="icono wordpress" title="Pincha Aquí para descargar WordPress"></a>
+					
+					</div>
+					
+				</div>
+	
+			</section>
+
+
+
+			<!-- SECCIÓN FORMULARIO -->
+
+			<section id="section2">
+
+				<div id="capa-titulo-form">
+				
+					<div id="imagen-form">
+					
+						<img src="img/diseno-web-form.png" alt="Imagen Diseño Web">
+				
+					</div>
+				
+					<h1>Formulario de Contacto</h1>
+				
+				</div>
+
+				<form id="formulario" method="post" enctype="multipart/form-data">
+
+					<label for="nombre-apellidos">Nombre y Apellidos (*):</label>
+
+					<input name="nombre-apellidos" id="nombre-apellidos" type="text" placeholder="Jose García González" required tabindex="1">
+
+					<label for="correo">Correo Electrónico (*):</label>
+
+					<input name="correo" id="correo" type="email" placeholder="prueba@gmail.com" required tabindex="2">
+
+					<label for="adjuntar">Adjuntar Archivo:</label>
+
+					<input name="adjuntar" id="adjuntar" type="file">
+
+					<label for="area-texto">Comentarios (*):</label>
+
+					<textarea name="area-texto" id="area-texto" required tabindex="3"></textarea>
+
+					<div class="botones-form">
+
+						<input name="envio" id="envio" type="submit" value="Enviar" tabindex="4">
+
+						<input name="borrar" id="borrar" type="reset" value="Borrar" tabindex="5">
+					
+					</div>
+
+				</form>
+
+
+				<!-- Capa donde se ubicará el mensaje de enviado / no enviado -->
+				<div id="mensaje"></div>
+
+				<!-- Script que permite insertar en el HTML el mensaje de enviado / no enviado -->
+
+				<!-- Es necesario quitar el atributo 'action' en la etiqueta form -->
+				<script>
+					document.getElementById("formulario").addEventListener('submit', function(e){
+					    e.preventDefault(); // Evita que se recargue la página
+
+					    let formData = new FormData(this);
+					    fetch('php/formulario.php', {
+					        method: 'POST',
+					        body: formData
+					    })
+					    .then(response => response.text())
+					    .then(data => {
+					        document.getElementById("mensaje").innerHTML = data;
+					        // Opcional: limpiar formulario
+					        this.reset();
+					    })
+					    .catch(err => console.error(err));
+					});
+				</script>
+
+			</section>
+
+
+
+			<!-- SECCIÓN WORDPRESS -->
+
+			<section id="section3">
+
+				<div id="capa-titulo-wp">
+				
+					<div id="imagen-wp">
+					
+						<img src="img/diseno-web-wp.png" alt="Imagen Diseño Web WordPress">
+				
+					</div>
+				
+					<h1>WordPress</h1>
+				
+				</div>
+
+				<article>
+
+					<!-- ¿Qué es WordPress? -->
+
+					<p id="wp-p-1">WordPress es un <span class="negrita">sistema de gestión de contenidos (CMS)</span> que <span class="verde cursiva negrita">permite crear y administrar sitios web de manera fácil</span> y sin conocimientos técnicos.</p>
+
+					<p id="wp-p-2">Desde su lanzamiento en 2003, se ha convertido en la <span class="negrita">plataforma más popular para la creación de sitios en línea</span>. Gracias a su sistema sencillo e intuitivo, puedes crear desde un blog personal hasta la web más compleja.</p>
+
+					<p id="wp-p-3">Además, WordPress cuenta con una <span class="negrita">amplia variedad de temas y plantillas que permiten personalizar el diseño de un sitio web sin necesidad de escribir código</span>. Estos temas se adaptan a distintos tipos de proyectos, desde tiendas en línea hasta portafolios profesionales, lo que brinda una gran flexibilidad a los usuarios. También es posible modificar colores, tipografías y estructuras para lograr un resultado totalmente único.</p>
+
+					<p id="wp-p-4"><span class="negrita">Una de las mayores ventajas de WordPress es su ecosistema de plugins, pequeñas herramientas que amplían las funciones del sitio</span>. Con ellos se pueden añadir formularios de contacto, optimizar el posicionamiento en buscadores (SEO), integrar redes sociales, gestionar reservas o incluso crear una tienda virtual completa con WooCommerce. Esta capacidad de expansión ha sido clave en su éxito y en su adopción por millones de usuarios en todo el mundo.</p>
+
+					<p id="wp-p-5">Por último, WordPress cuenta con una <span class="negrita">gran comunidad activa que ofrece soporte, tutoriales y recursos gratuitos</span>. Gracias a esta comunidad, el sistema se mantiene constantemente actualizado y seguro. Tanto principiantes como desarrolladores experimentados pueden encontrar ayuda fácilmente y participar en foros, eventos o contribuciones al código abierto, fortaleciendo así la evolución continua de la plataforma.</p>
+
+				</article>
+
+				
+				<!-- WordPress -->
+
+				<h3 id="titw">WordPress: Instalación, Configuración y Uso</h3>
+				
+				<div id="wordpress">
+				
+					<div id="contenido-wordpress">
+				
+						<iframe src="https://www.youtube.com/embed/dJ6ileb0Rh0" title="Vídeo de YouTube de Instalación y Uso de WordPress" width="100%" height="auto" style="aspect-ratio: 16/9; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					</div>
+
+				</div>
+
+
+				<!-- WordPress: Enlaces y Vídeos de Interés -->
+
+
+				<h3 id="tit-w-e" onclick="fun_enlaces_wp()">WordPress: Enlaces de Interés</h3>
+				
+				<div id="wordpress-enlaces">
+				
+					<div id="contenido-wordpress-enlaces">
+
+						<!-- WordPress Slider -->
+						<div class="wp-link">
+					
+							<a href="https://www.webempresa.com/wordpress/que-es-wordpress.html" target="_blank"><img src="img/wp/wp-que-es.png" alt="logo wordpress que és" title="Pincha Aquí y obten más información sobre WordPress"></a>
+						
+						</div>
+					
+						
+						<!-- WordPress Temas Hijos-->
+						<div class="wp-link">
+					
+							<a href="https://www.webempresa.com/blog/crear-temas-hijo-child-themes-en-wordpress.html" target="_blank"><img src="img/wp/temas-hijos.png" alt="logo wordpress temas hijos" title="Pincha Aquí para más información sobre los Temas Hijos"></a>
+						
+						</div>
+
+
+						<!-- WordPress Slider -->
+						<div class="wp-link">
+					
+							<a href="https://www.youtube.com/watch?v=6UjiD0VEEQ4" target="_blank"><img src="img/wp/slider.png" alt="logo wordpress slider" title="Pincha Aquí y obten más información para crear un Slider"></a>
+						
+						</div>
+
+
+						<!-- WordPress Hooks -->
+						<div class="wp-link">
+					
+							<a href="https://www.youtube.com/watch?time_continue=2&v=y8XlhU4zh2U&embeds_referring_euri=https%3A%2F%2Fwww.webempresa.com%2F" target="_blank"><img id="hooks" src="img/wp/hooks.png" alt="logo wordpress hooks" title="Pincha Aquí y obten más información para utilizar Hooks"></a>
+						
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<!-- WordPress: Temas y Plugins -->
+
+				<h3 id="tit-w-t" onclick="fun_themes_wp()">WordPress: Temas y Plugins</h3>
+				
+				<div id="wordpress-themes-plugins">
+				
+					<div id="contenido-wordpress-themes">
+					
+						<!-- WordPress Temas -->
+						<div class="wp-link">
+					
+							<a href="https://wordpress.org/themes/" target="_blank"><img src="img/logo-wordpress-temas.png" alt="logo wordpress temas" title="Pincha Aquí para descargar Temas de WordPress"></a>
+						
+						</div>
+
+
+						<!-- WordPress Child Themes -->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/child-theme-configurator/" target="_blank"><img id="childthemes" src="img//plugins/child-logo.png" alt="logo plugin child themes configurator" title="Pincha Aquí para descargar el Plugin Child Themes Configurator (Creación Temas Hijos)"></a>
+						
+						</div>
+
+
+						<!-- WordPress AIOS-->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/all-in-one-wp-security-and-firewall/" target="_blank"><img src="img//plugins/aios-logo.png" alt="logo plugin aios" title="Pincha Aquí para descargar el Plugin AIOS (Seguridad)"></a>
+						
+						</div>
+
+
+						<!-- WordPress WPScan-->
+						<div class="wp-link">
+					
+							<a href="https://wordpress.org/plugins/wpscan/" target="_blank"><img src="img/plugins/wpscan-logo.png" alt="logo wpscan" title="Pincha Aquí para descargar el Plugin WPScan (Escaneo de Vulnerabilidades)"></a>
+						
+						</div>
+
+
+						<!-- WordPress UPDRAFTPLUS -->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/updraftplus/" target="_blank"><img src="img//plugins/updraftplus-logo.png" alt="logo plugin updraftplus" title="Pincha Aquí para descargar el Plugin UpdraftPlus (Backup)"></a>
+						
+						</div>
+
+
+						<!-- WordPress All in One Migration -->
+						<div class="wp-link">
+					
+							<a href="programas/all-in-one-wp-migration-unlimited-main.zip" target="_blank"><img src="img//plugins/logo-migration.png" alt="logo plugin all in one migration unlimited" title="Pincha Aquí para descargar el Plugin All in One Migration (Migrar un WordPress de un hosting)"></a>
+						
+						</div>
+
+
+						<!-- WordPress Cookies -->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/complianz-gdpr/" target="_blank"><img src="img//plugins/complianz-logo.png" alt="logo plugin complianz" title="Pincha Aquí para descargar el Plugin Complianz (Cookies)"></a>
+						
+						</div>
+
+
+						<!-- WordPress Slider -->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/smart-slider-3/" target="_blank"><img src="img//plugins/slider-logo.png" alt="logo plugin smart slider 3" title="Pincha Aquí para descargar el Plugin Smart Slider 3 (Creación de Pasadores de Imágenes)"></a>
+						
+						</div>
+
+
+						<!-- WordPress Optimizador Imágenes -->
+						<div class="wp-link">
+					
+							<a href="https://wordpress.org/plugins/ewww-image-optimizer/" target="_blank"><img src="img//plugins/ewww-logo.png" alt="logo plugin ewww image optimizer" title="Pincha Aquí para descargar el Plugin EWWW Image Optimizer (Optimizador de Imágenes)"></a>
+						
+						</div>
+
+
+						<!-- WordPress WP Super Caché-->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/wp-super-cache/" target="_blank"><img src="img//plugins/wpcache-logo.png" alt="logo plugin wp super caché" title="Pincha Aquí para descargar el Plugin WP Super Cache (Caché)"></a>
+						
+						</div>
+
+
+						<!-- WordPress Formularios -->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/forminator/" target="_blank"><img id="forminator" src="img//plugins/forminator-logo.png" alt="logo plugin forminator" title="Pincha Aquí para descargar el Plugin Forminator (Creador de Formularios)"></a>
+						
+						</div>
+
+
+						<!-- WordPress OneTap -->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/accessibility-onetap/" target="_blank"><img src="img//plugins/onetap-logo.png" alt="logo plugin onetap" title="Pincha Aquí para descargar el Plugin OneTap (Accesibilidad)"></a>
+						
+						</div>
+
+
+						<!-- WordPress Botones Sociales -->
+						<div class="wp-link">
+					
+							<a href="https://wordpress.org/plugins/sassy-social-share/" target="_blank"><img src="img//plugins/sassy.png" alt="logo plugin sassy social share" title="Pincha Aquí para descargar el Plugin Sassy Social Share (Botones Redes Sociales)"></a>
+						
+						</div>
+
+
+						<!-- WordPress YouTube-->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/youtube-embed-plus/" target="_blank"><img id="embed" src="img//plugins/embed-logo.png" alt="logo plugin embed plus youtube" title="Pincha Aquí para descargar el Plugin Embed Plus for YouTube (Insertar Vídeos YouTube)"></a>
+						
+						</div>
+
+
+						<!-- WordPress YoastSEO -->
+						<div class="wp-link">
+					
+							<a href="https://es.wordpress.org/plugins/wordpress-seo/" target="_blank"><img src="img//plugins/yoast-logo.png" alt="logo plugin yoastseo" title="Pincha Aquí para descargar el Plugin YoastSEO (SEO)"></a>
+						
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+		
+		</div>
+
+		
+		<!-- FOOTER -->
+		<footer>
+
+			<ul id="menu-footer">
+				<li onclick="fun_principal()">Inicio</li>
+				<li onclick="fun_wp()">WordPress</li>
+				<li onclick="fun_formulario()">Contacto</li>
+			</ul>
+		
+			<div class="footimg">
+				
+				<img src="img/logoies.jpg" alt="logo IES Lois Peña Novo" title="Logo IES Lois Peña Novo">
+				
+			</div>
+
+			<div class="copy">
+			
+				<h5>Copyright @ 2025 - Víctor Álvarez</h5>
+				
+			</div>
+
+
+			<!-- ANCLA -->
+			<div class="contenedor-ancla">
+
+				<img id="ancla" src="img/flecha-sup.png" alt="ancla">
+
+			</div>
+
+		
+		</footer>
+		
+	</body>
+
+</html>

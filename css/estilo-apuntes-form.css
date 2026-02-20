@@ -1,0 +1,961 @@
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* --------------- HOJA DE ESTILOS --------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+
+body {
+	font-family: arial;
+}
+
+/* CABECERA */
+header {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 10px 0;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+}
+
+	#cab {
+		width: 90%;
+	}
+	
+	#ham {
+		width: 10%;
+		display: flex;
+		justify-content: center;
+	}
+	
+		#ham img {
+			width: 70%;
+		}
+		
+		#ham:hover {
+			cursor: pointer;
+		}
+
+
+
+/* ----- ENLACES ----- */
+
+/* Quitar subyrado a los enlaces */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+/* ----- PÁRRAFOS ----- */
+
+/* Espaciado entre líneas en párrafos normales */
+p {
+	line-height: 25px;
+}
+
+
+/* CONTENEDOR PRINCIPAL: Incluye los contenedores 'aside' y 'section' */
+
+#principal {
+	width: 100%;
+	max-width: 1400px;
+	margin: 30px auto;
+	box-sizing: border-box;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+}
+
+
+/* --------------------------------- */
+/* --------- MENÚ VERTICAL --------- */
+/* --------------------------------- */
+
+	/* ---- Categorías Botones ---- */
+	
+	/* Botón Cerrar */
+	#cerrar {
+		color: black;
+		font-size: 0.9em;
+		border-radius: 10px;
+		border: 4px double black;
+	}
+	
+		/* Hover Botón Cerrar */
+		#cerrar:hover {
+			background-color: rgba(26, 104, 163, 0.1);
+		}
+
+	.espacio-menu {
+		margin: 15px 5px 0 5px;
+	}
+	
+	/* Botón Proyectos - Apuntes */
+	#aside h2 {
+		margin: 5px;
+		padding: 10px 0;
+		background-color: black;
+		color: white;
+		font-size: 1em;
+		text-align: center;
+		border: 2px dashed transparent;	
+	}
+	
+		/* Hover Botón Proyectos - Apuntes */
+		#aside h2:hover {
+			cursor: pointer;
+			background-color: white;
+			color: black;
+			border: 2px dashed black;	
+		}
+	
+
+	/* Formato Botones: Proyectos y Apuntes */
+	.botonp {
+		padding: 10px 0;
+		color: white;
+		font-family: arial;
+		text-align: center;
+	}
+
+	/* Botón Proyectos */
+	.proy {
+		background-color: #173159;
+	}
+
+	/* Botones Apuntes */
+	.apuntes {
+		background-color: #2c4e85;
+	}
+
+		/* Hover Botones de Proyectos y Apuntes */
+		.proy:hover, .apuntes:hover {
+			background-color: black;
+		}
+
+
+	/* Separador Menú Vertical */
+	aside hr {
+		width: 80%;
+		margin-bottom: 7px;
+	}
+
+
+	/* Formatos Títulos Menú Vertical */
+	aside h4 {
+		margin: 5px;
+		padding: 10px 0;
+		color: white;
+		font-family: arial;
+		text-align: center;	
+		border-radius: 10px;
+	}
+		
+		/* Hover Títulos Menú Vertical */
+		aside h4:hover {
+			cursor: pointer;
+			opacity: 0.8;
+		}
+
+	/* Títulos Menú Vertical: Etiquetas */
+	.catvert {
+		background-color: rgba(26, 104, 163, 1);
+		text-shadow: 2px 2px 2px black;
+	}
+	
+		/* Títulos Menús de Atributos */
+		.type {
+			margin: 5px 15px;
+			padding: 4px 0;
+			background-color: rgba(26, 104, 163, 0.5);
+			border-radius: 0px;
+			border: 1px dashed transparent;
+		}
+		
+			/* Hover Títulos Menús de Atributos */
+			.type:hover {
+				border: 1px dashed;
+			}
+	
+	/* Títulos Menú Vertical: Etiqueta Label y Fieldset */
+	.catvert2 {
+		background-color: rgba(26, 104, 163, 0.8);
+		text-shadow: 2px 2px 2px black;
+	}
+	
+	/* Títulos Menú Vertical: Pseudo-Clases */
+	.catvert3 {
+		background-color: red;
+		text-shadow: 2px 2px 2px black;
+	}
+	
+		/* Hover Títulos Menú Vertical: Pseudo-Clases */
+		.type:hover {
+			color: black;
+		}
+
+
+	/* Lista Menú Vertical */
+	aside ul {
+		margin: 5px 0;
+		padding: 0 20px;
+		list-style-type: none;
+	}
+
+	/* Elementos Menú Vertical */
+	aside ul li {
+		margin: 5px 0;
+		padding: 4px;
+		font-family: arial;
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+
+	/* Hover Elementos Menú Vertical */
+	aside ul li:hover {
+		background-color: rgba(245, 243, 225, 0.9);
+		border-radius: 5px;
+	}
+
+
+/* --------------------------- */
+/* -------- ÁRTÍCULOS -------- */
+/* --------------------------- */
+
+/* El contenedor 'section' contiene los contenedores 'article' */
+section {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px 10px;
+	justify-content: space-between;
+}
+
+/* Artículos */
+article {
+	width: 100%;
+	background-color: rgba(245, 243, 225, 0.2);
+	border-radius: 0 0 20px 20px;
+}
+
+/* Hover Artículos */
+article:hover {
+	background-color: rgba(245, 243, 225, 0.5);
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px black;
+	cursor: url("../img/form-cursor.png"), auto;
+}
+
+/* Imagen Sintaxis Selectores */
+.imgsintaxis {
+	width: 100%;
+}
+
+/* Asterisco del Selector Universal */
+.bg {
+	padding-left: 30px;
+	background-image: url("../img/asterisco.png");
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+/* Imagen Box-Model */
+.imgboxmodel {
+	width: 100%;
+	margin: 10px 0 0 0;
+}
+
+/* Títulos Principales de los Artículos */
+.h2article {
+	font-family: arial;
+	color: white;
+	background-color: rgba(26, 104, 163, 0.7);
+	text-shadow: 2px 2px 2px black;
+	text-align: center;
+	margin: 0 auto;
+	padding: 15px;
+	border: 1px solid black;
+	border-radius: 20px 20px 0 0;
+}
+
+/* Títulos Internos */
+section h4 {
+	margin: 15px 15px 0 15px;
+	font-family: arial;
+	text-align: center;
+	line-height: 23px;
+	padding: 5px;
+	background-color: rgba(245, 243, 225, 0.9);
+	border: 1px solid;
+	border-radius: 12px;
+}
+
+/* Títulos Internos más pequeños */
+section h5 {
+	text-align: center;
+	font-family: arial;
+	margin: 15px 15px 0 15px;
+	text-decoration: underline;
+}
+
+	/* Títulos Internos más pequeños - Alineados izquierda */
+	.alinearizquierda {
+		text-align: left;
+		margin-left: 20px;
+	}
+
+/* Párrafos */
+p {
+	margin: 15px;
+	
+	font-family: arial;
+}
+
+/* Separadores */
+hr {
+	width: 25%;
+	margin-bottom: 15px;
+}
+
+/* LISTAS ORDENADAS Y DESORDENADAS DE LOS ARTÍCULOS */
+
+/* Tipo de Numeración Listas Ordenadas */
+ol {
+	list-style-type: lower-roman;
+}
+
+/* Tipo de Viñeta Listas Desordenadas */
+article ul {
+	list-style-type: square;
+	text-align: left;
+}
+
+/* Formato de Elementos de las Listas Ordenadas y Desordenadas */
+ol li, article ul li {
+	font-family: arial;
+	font-style: italic;
+	margin-right: 15px;
+	margin-left: 20px;
+	margin-bottom: 8px;
+}
+
+/* Viñeta de Subelementos */
+ul ul li {
+	list-style-type: circle;
+}
+
+
+
+/* ----- SPANs ----- */
+
+	.introduccion {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+
+	/* span para media querys */
+	.mq {
+		font-weight: bold;
+		color: #eb7d34;
+	}
+
+	/* span para identificadores */
+	.cont {
+		font-weight: bold;
+		color: #5c104f;
+	}
+
+	/* span para clases */
+	.clase {
+		font-weight: bold;
+		color: purple;
+	}
+
+	/* span para etiquetas */
+	.etiqueta {
+		font-weight: bold;
+		font-style: italic;
+		color: red;
+	}
+
+	/* span para propiedades */
+	.propiedades {
+		font-style: italic;
+		color: blue;
+	}
+
+	/* span para pseudo-clases */
+	.pseudoclase {
+		font-weight: bold;
+	}
+
+	/* span para resaltados */
+	.resaltado {
+		font-weight: bold;
+		background-color: yellow;
+	}
+
+	/* span para negrita y subrayado */
+	.negrita {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	/* span negrita */
+	.negrita2 {
+		font-weight: bold;
+	}
+
+	.negrita3 {
+		font-weight: bold;
+		color: blue;
+	}
+	
+	.negrita4 {
+		font-weight: bold;
+		font-style: italic;
+		color: brown;
+	}
+
+
+
+/* FORMATO EXPLICACIÓN DE LOS EJEMPLOS */
+.explicacion {
+	margin: 0 15px 15px 15px;
+	text-align: justify;
+	line-height: 25px;
+	text-indent: 20px;
+	font-family: arial;
+	font-style: italic;
+}
+
+/* FORMATO EXPLICACIÓN ETIQUETAS */
+.explicacion2 {
+	margin: 15px;
+	text-align: justify;
+	line-height: 25px;
+	text-indent: 20px;
+	font-family: arial;
+	font-size: 0.85em;
+	color: green;
+}
+
+
+/* IMÁGENES ALINEACIÓN EN FLEXBOX */
+.alineacion {
+	text-align: center;
+}
+
+	/* Imagen Justify-Content y Aligns*/
+	.alineacion img {
+		width: 95%;
+		border-radius: 20px;
+	}
+	
+
+/* IMAGEN FLEX-BOX y WRAP*/
+.flexboxex, .wrap {
+	margin-top: 10px;
+}
+
+	/* HOVER IMAGEN FLEX-BOX*/
+	.flexboxex:hover {
+		box-shadow: 2px 2px 2px #1d3d70;
+		cursor: zoom-in;
+	}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0;
+	border-radius: 0 0 10px 10px;
+	background-color: pink;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-evenly;
+	align-items: center;
+	order: 6;
+}
+
+	/* Capa Logos Footer */
+	.f1 {
+		width: 30%;
+		margin: 10px;
+		padding: 0;
+		display: flex;
+		align-items: center;
+	}
+
+		/* Imagen Capa Logos Footer */
+		.f1 img {
+			max-width: 80px;
+			margin: 0;
+			padding: 0;
+		}
+
+
+	/* Capa Copyright Footer */
+	.f2 {
+		width: 70%;
+		margin: 10px;
+		padding: 0;
+	}
+
+		/* Texto Copyright Footer */
+		.f2 p {
+			margin: 0;
+			padding: 0;
+			font-size: 0.8em;
+			font-weight: bold;
+			font-style: italic;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-end;
+		}
+
+
+/* ---- BOTÓN VOLVER ARRIBA ---- */
+
+#arriba {
+	width: 50px;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	opacity: 0.2;
+	z-index: 6;
+}
+
+	#arriba:hover {
+		cursor: pointer;
+		opacity: 0.8;
+		transition: opacity 0.5s ease-out;
+	}
+
+
+
+/***************************************/
+/***************************************/
+/************** TOGGLE *****************/
+/***************************************/
+/***************************************/
+
+/* --- MENÚ COMPLETO -- */
+#aside {
+	z-index: 3;
+	position: fixed;
+	right: -100%;							/* Se fija una posición negativa */		
+	transform: translateX(100%);			/* Se utiliza la propiedad transform con movimiento horizontal */
+	transition: transform 0.8s ease-out;
+	/* Se utiliza la propiedad transition
+		- 1º/ Se indica la propiedad a transicionar: transform
+		- 2º/ Se indica el tiempo de la transición (0.8s)
+		- 3º/ Con 'ease-out' indica que la animacion se desacelera
+	*/	
+}
+
+	#aside.activo {
+		width: 50%;
+		max-width: 250px;
+		height: 100%;
+		padding: 5px;
+		background-color: white;
+		border-radius: 0 0 0 20px;
+		box-shadow: -2px 2px 4px rgba(26, 104, 163, 0.7);
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		transform: translateX(0);		/* Fija la nueva posición tras la transformación */
+		overflow-y: auto;				/* Poner scroll a contenido que sobresalga */
+	}
+
+
+/* Botones Proyectos y Apuntes */
+#botones {
+	display: none;
+}
+
+	#botones.activo {
+		display: block;
+	}
+
+/* Menú Formularios */
+#form {
+	display: none;
+}
+
+	#form.activar {
+		display: block;
+	}
+	
+/* Menú Inputs */	
+#input {
+	display: none;
+}
+
+	#input.activar {
+		display: block;
+	}
+
+/* Menú Type */	
+#type {
+	display: none;
+}
+
+	#type.activar {
+		display: block;
+	}
+
+/* Menú Otros */	
+#otros {
+	display: none;
+}
+
+	#otros.activar {
+		display: block;
+	}
+
+/* Menú Select */	
+#select {
+	display: none;
+}
+
+	#select.activar {
+		display: block;
+	}
+
+/* Menú Option */	
+#option {
+	display: none;
+}
+
+	#option.activar {
+		display: block;
+	}
+
+/* Menú Textarea */	
+#textarea {
+	display: none;
+}
+
+	#textarea.activar {
+		display: block;
+	}
+
+/* Menú Pseudo-Clases */	
+#pseudo {
+	display: none;
+}
+
+	#pseudo.activar {
+		display: block;
+	}
+
+
+
+	/**************************************/
+	/**************************************/
+	/************** BUSCADOR **************/
+	/**************************************/
+	/**************************************/
+
+	#capa-buscador {
+		max-width: 350px;					/* Tamaño máximo */
+		height: 250px;
+		margin: 0;
+		padding: 0;
+		background-color: white;
+		border-radius: 20px 0 0 20px;
+		box-sizing: border-box;
+		overflow: hidden;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: center;
+		order: 3;
+		position: fixed;
+		top: 40%;
+		right: 0;
+		z-index: 1000;
+		transform: translateX(90%);
+		transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+	}
+
+		/* Toogle para sacar el Buscador */
+		#capa-buscador.activar {
+			right: 0;
+			transform: translateX(0);
+			box-shadow: 2px 2px 4px black;
+		}
+
+
+		/* Botón Buscador */
+		#busc-bot {
+			width: 10%;
+			height: 100%;
+			margin: 0;
+			padding: 35px 0 25px 0;
+			box-sizing: border-box;
+			background-color: orange;
+			border-radius: 20px 0 0 20px;
+			writing-mode: vertical-lr;			/* Pone en Vertical (izda-dcha) el texto */
+			text-orientation: upright;			/* Cambiar orientación */
+			letter-spacing: 8px;
+			font-weight: bold;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+			/* Hover Botón Buscador */
+			#busc-bot:hover {
+				cursor: pointer;
+				background-color: black;
+				color: lightblue;
+			}
+
+
+		/* Buscador */
+		#busc-prac {
+			width: 90%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 40px 10px;
+		}
+
+
+			/* Label del Buscador */
+			#busc-prac label {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				color: green;
+				font-size: 1.3em;
+				font-weight: bold;
+				text-align: center;
+				text-decoration: 1px 1px 2px black;
+			}
+			
+				/* Hover Botón del Buscador */
+				#busc-prac label:hover {
+					cursor: pointer;
+				}
+			
+			/* Input del Buscador */
+			#busc-prac input {
+				width: 320px;
+				margin: 0 20px;
+				padding: 10px;
+				font-size: 1em;
+			}
+			
+				/* Input del Buscador */
+				#busc-prac input:focus {
+					background-color: rgba(255, 247, 189, 0.5);
+				}
+			
+			
+			/* Capa Botones del Buscador */
+			#botones-buscador {
+				width: 100%;
+				display: flex;
+				flex-flow: row;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+			}
+			
+				/* Botón del Buscador */
+				#botones-buscador button {
+					width: 120px;
+					margin: 0;
+					padding: 10px 0;
+					background-color: white;
+					font-size: 1em;
+				}
+				
+					/* Hover Botón Buscar */
+					#buscar:hover {
+						cursor: pointer;
+						background-color: rgba(227, 255, 246, 1);
+					}
+
+					/* Hover Botón Reset */
+					#reset:hover {
+						cursor: pointer;
+						background-color: rgba(206, 237, 199, 1);
+					}		
+			
+			
+		/* NO HAY COINCIDENCIAS EN BÚSQUEDA */
+		
+		/* Capa del Mensaje de 'NO COINCIDE' */
+		#nocoincide {
+			width: 100%;
+			margin: 20px;
+			padding: 30px;
+			display: none;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 30px;
+		}
+		
+			/* Título - Capa del Mensaje de 'NO COINCIDE' */
+			#nocoincide h3 {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				font-size: 1.6em;
+				color: blue;
+				text-align: center;
+			}
+		
+			/* Imange - Capa del Mensaje de 'NO COINCIDE' */
+			#nocoincide img {
+				width: 280px;
+			}
+		
+			/* Hover NO COINCIDE */
+			#nocoincide:hover {
+				background-color: rgba(255, 246, 66, 0.5);
+				border-radius: 20px;
+				box-shadow: 5px 5px 10px;
+			}
+
+
+
+
+/* ---------------------- */
+/* ---------------------- */
+/* ----- RESPONSIVE ----- */
+/* ---- MOBILE FIRST ---- */
+/* ---------------------- */
+/* ---------------------- */
+
+/* Dispositivos Mayores que un Móvil */
+@media (min-width: 567px) {
+
+	/* Tamaño Imagen Capa Logos Footer */
+	.f1 img {
+		max-width: 100px;
+	}
+
+}
+
+
+/* Dispostivos mayores que una tablet */
+/* 2 columnas sin menú vertical */
+
+@media (min-width: 768px) {
+
+	#aside {
+		max-width: 250px;
+		margin: 0 auto;
+	}
+
+	/* Tamaño Section */
+	section {
+		width: 100%;
+	}
+
+		/* Tamaño de los Artículos - Section */
+		article {
+			width: 49%;
+		}
+
+		/* Tamaño Imagen Capa Logos Footer */
+		.f1 img {
+			max-width: 120px;
+		}
+
+		/* Ampliar Letra Copyright */
+		.f2 p {
+			font-size: 0.9em;
+		}
+
+}
+
+
+/* Dispostivos mayores que un escritorio */
+
+@media (min-width: 992px) {
+
+	/* Poner Cabecera en Estático */
+	header {
+		position: static;
+	}
+	
+	/* Tamaño Imagen Cabecera */
+	#cab {
+		width: 100%;
+	}
+	
+	/* Desactivar Hamburguesa */
+	#ham {
+		display: none;
+	}
+	
+	/* Desactivar Botón Cerrar */
+	#cerrar {
+		display: none;
+	}
+	
+	/* Desactivar Botón Proyectos y Apuntes */
+	#proy-apun {
+		display: none;
+	}
+	
+	/* Activar Botones de Proyectos y Apuntes */
+	#botones {
+		display: block;
+	}
+	
+
+	/* Activar Menú de Navegación Vertical */
+	#aside {
+		width: 20%;
+		height: fit-content;
+		max-height: calc(100vh - 40px);
+		display: block;
+		position: sticky;
+		top: 15px;
+		left: 15px;
+		overflow-y: auto;
+		transform: none;
+		transition: none;
+	}
+
+	/* Tamaño Section */
+	section {
+		width: 80%;
+	}
+
+}
+
+
+/* Grandes Escritorios */
+
+@media (min-width: 1400px) {
+	
+
+	
+}

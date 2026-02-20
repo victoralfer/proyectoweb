@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="author" content="Víctor">
+		<meta name="description" content="Apuntes de HTML">
+		<meta name="keywords" content="apuntes, html">
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilo-apuntes-html.css">
+		
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="js/javascript_html.js"></script>
+
+		<title>Apuntes HTML - Víctor Álvarez</title>
+
+	</head>
+
+	<body>
+
+		<a id="subir"></a>
+
+		<!-- CABECERA -->
+		<header>
+
+			<div class="ham-cerrar" onclick="fun_css()">
+			
+				<img id="img-ham" src="img/hamburguesa.png" title="Haz click para abrir el menú">
+							
+			</div>
+
+			<img id="img-cab" src="img/cabecera_html.jpg">
+
+		</header>
+
+		<!-- CONTENIDO -->	
+
+		<div id="total">
+
+			<!-- Menú -->
+			<div id="menu">
+
+				<h2 onclick="fun_css()" title="Haz click para cerrar el menú">CERRAR MENÚ</h2>
+			
+				<h2 class="proy-apun" onclick="fun_pro()" title="Haz click para acceder a los Proyectos y Apuntes">APUNTES</h2>
+
+				<div id="menu-prin">
+
+					<a href="#"><h4 class="apuntes">APUNTES HMTL</h4></a>
+
+					<a href="apuntes_formularios.html"><h4 class="apuntes">FORMULARIOS</h4></a>
+
+					<a href="apuntes_css.html"><h4 class="apuntes">APUNTES CSS</h4></a>
+
+					<a href="apuntes_js.html"><h4 class="apuntes">APUNTES JS</h4></a>
+					
+					<a href="apuntes_jQuery.html"><h4 class="apuntes">APUNTES JQUERY</h4></a>
+					
+				</div>
+				
+				<div id="menus">
+
+					<h4 class="et">ETIQUETAS Y ATRIBUTOS</h4>
+
+					<h3 class="head-body" onclick="fun_menu_head()" title="Haz click y despliega el menú">HEAD</h3>
+
+					<ul id="head">
+						<a href="#hd" onclick="fun_buscador_reset()"><li>Head</li></a>
+						<a href="#meta" onclick="fun_buscador_reset()"><li>Meta</li></a>
+						<a href="#link" onclick="fun_buscador_reset()"><li>Link</li></a>
+						<a href="#style" onclick="fun_buscador_reset()"><li>Style</li></a>
+						<a href="#script" onclick="fun_buscador_reset()"><li>Script</li></a>
+					</ul>
+
+					<h3 class="head-body" onclick="fun_menu_body()" title="Haz click y pliega el menú">BODY</h3>
+
+					<ul id="body">
+						<a href="#bdy" onclick="fun_buscador_reset()"><li>Body</li></a>
+						<a href="#h" onclick="fun_buscador_reset()"><li>Títulos</li></a>
+						<a href="#p" onclick="fun_buscador_reset()"><li>Párrafo</li></a>
+						<a href="#pre" onclick="fun_buscador_reset()"><li>Preformateado</li></a>
+						<a href="#mar" onclick="fun_buscador_reset()"><li>Marquesina</li></a>
+						<a href="#br" onclick="fun_buscador_reset()"><li>Salto de Línea</li></a>
+						<a href="#hr" onclick="fun_buscador_reset()"><li>Separador</li></a>
+					</ul>
+
+					<h3 onclick="fun_menu_formato()" title="Haz click y despliega el menú">FORMATO</h3>
+
+					<ul id="formato">
+						<a href="#font" onclick="fun_buscador_reset()"><li>Font</li></a>
+						<a href="#res" onclick="fun_buscador_reset()"><li>Resaltados</li></a>
+					</ul>
+
+					<h3 onclick="fun_menu_listas()" title="Haz click y despliega el menú">LISTAS</h3>
+
+					<ul id="listas">
+						<a href="#ul" onclick="fun_buscador_reset()"><li>Desordenadas</li></a>
+						<a href="#ol" onclick="fun_buscador_reset()"><li>Ordenadas</li></a>
+					</ul>
+
+					<h3 onclick="fun_menu_tablas()" title="Haz click y despliega el menú">TABLAS</h3>
+
+					<ul id="tablas">
+						<a href="#table" onclick="fun_buscador_reset()"><li>Table</li></a>
+						<a href="#cap" onclick="fun_buscador_reset()"><li>Título</li></a>
+						<a href="#tr" onclick="fun_buscador_reset()"><li>Filas</li></a>
+						<a href="#td" onclick="fun_buscador_reset()"><li>Celdas</li></a>
+					</ul>
+
+					<h3 onclick="fun_menu_otras()" title="Haz click y despliega el menú">OTRAS</h3>
+
+					<ul id="otras">
+						<a href="#enla" onclick="fun_buscador_reset()"><li>Enlaces</li></a>
+						<a href="#conte" onclick="fun_buscador_reset()"><li>Capas</li></a>
+						<a href="#imag" onclick="fun_buscador_reset()"><li>Imágenes</li></a>
+						<a href="#sp" onclick="fun_buscador_reset()"><li>Span</li></a>
+						<a href="#vd" onclick="fun_buscador_reset()"><li>Video</li></a>
+						<a href="#au" onclick="fun_buscador_reset()"><li>Audio</li></a>
+					</ul>
+
+					<h3 onclick="fun_menu_varios()" title="Haz click y despliega el menú">VARIOS</h3>
+
+					<ul id="varios">
+						<a href="#cod" onclick="fun_buscador_reset()"><li>Códigos</li></a>
+						<a href="#idclass" onclick="fun_buscador_reset()"><li>Id y Class</li></a>
+					</ul>
+					
+				</div>
+
+			</div>
+
+
+			<!-- BUSCADOR -->
+				
+			<div id="capa-buscador">
+
+				<h4 id="busc-bot" onclick="fun_sacar_buscador()" title="Pulsa 'Ctrl + b' para abrir/cerrar el Buscador de Prácticas">BUSCADOR</h4>
+
+
+				<div id="busc-prac">
+					
+					<label for="buscador">BUSCADOR EQTIQUETAS <br>Y/O ATRIBUTOS</label>
+						
+					<input id="buscador" name="buscador" type="text">
+						
+					<div id="botones-buscador">
+						
+						<button id="buscar" onclick="fun_buscador()" title="Pulsa 'Enter' para buscar">BUSCAR</button>
+						
+						<button id="reset" onclick="fun_buscador_reset()" title="Pulsa 'Ctrl + z' para resetear">RESET</button>
+						
+					</div>
+		
+				</div>
+				
+			</div>
+
+
+			<!-- Contenido Apuntes -->
+			<div id="principal">
+			
+				<table>
+
+					<tr>
+						<td colspan="3" class="tipo-tit" id="hd">HTML 5</td>
+					</tr>
+
+					<!---------------------------------->
+					<!--------- ETIQUETA HEAD ---------->
+					<!---------------------------------->
+										
+					<!-- FILA TÍTULO ETIQUETA HEAD -->
+					<tr>
+						<td colspan="3" class="tipo hb" id="hd">Etiqueta HEAD (Metadatos y Recursos no mostrados)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Es la sección del documento donde se colocan metadatos y recursos que no se muestran directamente en la página, pero que son esenciales para el navegador y los motores de búsqueda.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Etiqueta</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ETIQUETAS + ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">&lt;meta&gt;</td>
+						<td class="significado">Metadatos</td>
+						<td class="ejemplo">&lt;meta charset="utf-8"&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">&lt;title&gt;&lt;/title&gt;</td>
+						<td class="significado">Título de la Página</td>
+						<td class="ejemplo">&lt;title&gt;TÍTULO WEB&lt;/title&gt;</td>
+					</tr>
+
+
+					<tr>
+						<td class="etiqueta">&lt;link&gt;</td>
+						<td class="significado">Añadir Familia de Fuente de Google Fonts</td>
+						<td class="ejemplo">&lt;link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" &gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">&lt;link&gt;</td>
+						<td class="significado">Link de Hoja de Estilos</td>
+						<td class="ejemplo">&lt;link rel="stylesheet" type="text/css" href="css/estilo.css"&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">&lt;style&gt;&lt;/style&gt;</td>
+						<td class="significado">Estilo de la Página</td>
+						<td class="ejemplo">&lt;style&gt;p { align: center;}&lt;/style&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">&lt;script&gt;&lt;/script&gt;</td>
+						<td class="significado">Dinamismo (JavaScript)</td>
+						<td class="ejemplo">&lt;script type="text/javascript" src="js/dinamismo.js"&gt;&lt;/script&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!--------- ETIQUETAS META --------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA META -->
+					<tr>
+						<td colspan="3" class="tipo" id="meta">Etiquetas META (Metadatos)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubican en la etiqueta HEAD</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Sirven para proporcionar metadatos sobre una página web. Estos datos no se muestran en la página, pero los usan los navegadores, motores de búsqueda, redes sociales y otros servicios.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Etiqueta + Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ETIQUETAS + ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">&lt;meta charset=""&gt;</td>
+						<td class="significado">Código de Caracteres</td>
+						<td class="ejemplo">&lt;meta charset="utf-8"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;meta name="author" content=""&gt;</td>
+						<td class="significado">Autor de la Web</td>
+						<td class="ejemplo">&lt;meta name="author" content="Víctor"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;meta name="description" content=""&gt;</td>
+						<td class="significado">Descripción de la Web</td>
+						<td class="ejemplo">&lt;meta name="description" content="Esta página web..."&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;meta name="keywords" content=""&gt;</td>
+						<td class="significado">Palabras Clave</td>
+						<td class="ejemplo">&lt;meta name="keywords" content="tag1, tag2"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;meta name="robots" content=""&gt;</td>
+						<td class="significado">Con Indexeo y Búsqueda</td>
+						<td class="ejemplo">&lt;meta name="robots" content="index,follow"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;meta name="robots" content=""&gt;</td>
+						<td class="significado">Sin Indexeo ni Búsqueda</td>
+						<td class="ejemplo">&lt;meta name="robots" content="noindex,nofollow"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;meta name="viewport" content=""&gt;</td>
+						<td class="significado">Ver Responsive en Móviles</td>
+						<td class="ejemplo">&lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+
+					<!---------------------------------->
+					<!--------- ETIQUETA LINK ---------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA META -->
+					<tr>
+						<td colspan="3" class="tipo" id="link">Etiquetas LINK (Vincular Recursos)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta HEAD</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa en HTML para vincular recursos externos al documento, como hojas de estilo CSS, íconos o fuentes.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Etiqueta + Atributos</th>
+						<th>Significado</th>
+						<th>Ejemplo vinculación archivo (CSS)</th>
+					</tr>
+					
+					<!-- FILAS ETIQUETAS + ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">&lt;link rel="" type="" href=""&gt;</td>
+						<td class="significado">Insertar Hoja de Estilos</td>
+						<td class="ejemplo">&lt;link rel="stylesheet" type="text/css" href="css/estilo.css"&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+
+					<!---------------------------------->
+					<!--------- ETIQUETA STYLE --------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA META -->
+					<tr>
+						<td colspan="3" class="tipo" id="style">Etiqueta STYLE (Estilo)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta HEAD</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa en HTML para escribir CSS interno, es decir, para incluir reglas de estilo directamente dentro del documento HTML. <span>SE RECOMIENDA EL USO DE HOJAS DE ESTILO.</span></td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo añadir propiedades</th>
+					</tr>
+					
+					<!-- FILAS ETIQUETAS + ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">&lt;style&gt;&lt;/style&gt;</td>
+						<td class="significado">Inserción de estilo en una página</td>
+						<td class="ejemplo">&lt;style&gt;  p { background-color: blue; }   &lt;/style&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!-------- ETIQUETA SCRIPT --------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA META -->
+					<tr>
+						<td colspan="3" class="tipo" id="script">Etiqueta SCRIPT (Dinamismo)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta HEAD</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa en HTML para añadir dinamismo a la página a través de JavaScript.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo vinculación archivo (JS)</th>
+					</tr>
+					
+					<!-- FILAS ETIQUETAS + ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">&lt;script&gt;&lt;/script&gt;</td>
+						<td class="significado">Inserción de dinamismo en una página</td>
+						<td class="ejemplo">&lt;script type="text/javascript" src="js/dinamismo.js"&gt;&lt;/script&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!--------- ETIQUETA BODY ---------->
+					<!---------------------------------->
+					
+					
+					<!-- FILA TÍTULO ETIQUETA BODY -->					
+					<tr>
+						<td colspan="3" class="tipo hb" id="bdy">Etiqueta BODY (Cuerpo de la Página)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Define el contenido principal visible de una página web. Es todo lo que aparece en el navegador (texto, imágenes, botones, formularios...)</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">bgcolor</td>
+						<td class="significado">Color de Fondo</td>
+						<td class="ejemplo">&lt;body bgcolor="purple"&gt;&lt;/body&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">background</td>
+						<td class="significado">Imagen de Fondo</td>
+						<td class="ejemplo">&lt;body background="img/pantera_rosa.png"&gt;&lt;/body&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!------- ETIQUETAS TÍTULOS -------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA H (1 al 6) -->
+					<tr>
+						<td colspan="3" class="tipo" id="h">Etiquetas H (Titulos / Encabezados)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubican en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usan para definir encabezados o titulos jerárquicos en una página web. Hay seis tamaños disponibles (del 1 al 6), organizados de mayor a menor. Pueden utilizar atributos de identificación como 'id' o 'class'; de estilos como 'style' o de alineación como 'align', aunque se recomienda en estos dos últimos casos utilizar CSS.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Etiqueta</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">&lt;h1&gt;&lt;/h1&gt;</td>
+						<td class="significado">Titulo (Encabezado) H1</td>
+						<td class="ejemplo">&lt;h1&gt;Titulo H1&lt;/h1&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;h2&gt;&lt;/h2&gt;</td>
+						<td class="significado">Titulo (Encabezado) H2</td>
+						<td class="ejemplo">&lt;h2&gt;Titulo H2&lt;/h2&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;h3&gt;&lt;/h3&gt;</td>
+						<td class="significado">Titulo (Encabezado) H3</td>
+						<td class="ejemplo">&lt;h3&gt;Titulo H3&lt;/h3&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;h4&gt;&lt;/h4&gt;</td>
+						<td class="significado">Titulo (Encabezado) H4</td>
+						<td class="ejemplo">&lt;h4&gt;Titulo H1&lt;/h4&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;h5&gt;&lt;/h5&gt;</td>
+						<td class="significado">Titulo (Encabezado) H5</td>
+						<td class="ejemplo">&lt;h5&gt;Titulo H5&lt;/h5&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;h6&gt;&lt;/h6&gt;</td>
+						<td class="significado">Titulo (Encabezado) H6</td>
+						<td class="ejemplo">&lt;h6&gt;Titulo H6&lt;/h6&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!----------- ETIQUETA P ----------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA P -->
+					<tr>
+						<td colspan="3" class="tipo" id="p">Etiqueta P (Parrafo)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se utiliza para definir un parrafo de texto.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">align="center"</td>
+						<td class="significado">Alineación Central</td>
+						<td class="ejemplo">&lt;p align="center"&gt;Parrafo 1&lt;/p&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">align="left"</td>
+						<td class="significado">Alineación Izquierda (pred.)</td>
+						<td class="ejemplo">&lt;p align="left"&gt;Parrafo 1&lt;/p&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">align="right"</td>
+						<td class="significado">Alineación Derecha</td>
+						<td class="ejemplo">&lt;p align="right"&gt;Parrafo 1&lt;/p&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">align="justify"</td>
+						<td class="significado">Alineación Justificada</td>
+						<td class="ejemplo">&lt;p align="justify"&gt;Parrafo 1&lt;/p&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!--------- ETIQUETA PRE ----------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA PRE -->
+					<tr>
+						<td colspan="3" class="tipo" id="pre">Etiqueta PRE (Texto Preformateado)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para mostrar texto preformateado, es decir, respeta los espacios, saltos de linea y tabulaciones tal como están en el código fuente.</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ejemplounicoraro">&lt;pre&gt;
+								<pre>El Oso 
+											grande 
+										es GRIS
+								</pre>&lt;/pre&gt;
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!------ ETIQUETA MARQUESINA ------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA MARQUEE -->
+					<tr>
+						<td colspan="3" class="tipo" id="mar">Etiqueta Marquee (Marquesina en movimiento)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubicaba en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usaba para crear texto o contenido que se mueve automáticamente (por ejemplo, de derecha a izquierda), como un efecto de marquesina. No se recomienda en HTML5.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">bgcolor</td>
+						<td class="significado">Fondo de la Marquesina</td>
+						<td class="ejemplo">&lt;marquee bgcolor="yellow"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">behavior="alternate"</td>
+						<td class="significado">Movimiento: Rebote</td>
+						<td class="ejemplo">&lt;marquee behavior="alternate"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">behavior="slide"</td>
+						<td class="significado">Movimiento: Parada al final</td>
+						<td class="ejemplo">&lt;marquee behavior="slide"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">behavior="scroll"</td>
+						<td class="significado">Movimiento: Sale y se pone (pred.)</td>
+						<td class="ejemplo">&lt;marquee behavior="scroll"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">direction="right"</td>
+						<td class="significado">Dirección movimiento: Izda. a Dcha.</td>
+						<td class="ejemplo">&lt;marquee direction="right"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">direction="left"</td>
+						<td class="significado">Dirección movimiento: Dcha. a Izda. (pred.)</td>
+						<td class="ejemplo">&lt;marquee direction="left"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">direction="up"</td>
+						<td class="significado">Dirección movimiento: Abajo a Arriba</td>
+						<td class="ejemplo">&lt;marquee direction="up"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">direction="down"</td>
+						<td class="significado">Dirección movimiento: Arriba a Abajo</td>
+						<td class="ejemplo">&lt;marquee direction="down"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">scrolldelay=""</td>
+						<td class="significado">Velocidad movimiento (ms)</td>
+						<td class="ejemplo">&lt;marquee scrolldelay="2000"&gt;Texto&lt;/marquee&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!--------- ETIQUETA BR ------------>
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA BR -->
+					<tr>
+						<td colspan="3" class="tipo" id="br">Etiqueta BR (Salto de Linea)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Sirve para insertar un salto de linea dentro de un texto, sin iniciar un nuevo parrafo.</td>
+					</tr>
+
+						<td colspan="3" class="ejemplounico">&lt;br&gt;Texto (salto de linea)</td>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!--------- ETIQUETA HR ------------>
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA HR -->
+					<tr>
+						<td colspan="3" class="tipo" id="hr">Etiqueta HR (Linea de Separacion)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para insertar una linea horizontal que visualmente separa contenido dentro de una página.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributos</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">align</td>
+						<td class="significado">Alinear parrafo</td>
+						<td class="ejemplo">&lt;hr align="center"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">width</td>
+						<td class="significado">Ancho de la Linea</td>
+						<td class="ejemplo">&lt;hr width="80%"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">size</td>
+						<td class="significado">Tamaño de la Linea</td>
+						<td class="ejemplo">&lt;hr size="10px"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">color</td>
+						<td class="significado">Color de la Linea</td>
+						<td class="ejemplo">&lt;hr color="pink"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!--------- ETIQUETA FONT ---------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA FONT -->
+					<tr>
+						<td colspan="3" class="tipo" id="font">Etiqueta FONT (Formato del Texto)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubicaba en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usaba en versiones antiguas de HTML para cambiar el estilo del texto, como el tipo de letra, color y tamaño. Se recomienda el uso de CSS para cambiar los estilos.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">color</td>
+						<td class="significado">Color de Texto</td>
+						<td class="ejemplo">&lt;font color="blue"&gt;Texto&lt;/font&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">size</td>
+						<td class="significado">Tamaño de Texto (1 a 7)</td>
+						<td class="ejemplo">&lt;font size="7"&gt;Texto&lt;/font&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">face</td>
+						<td class="significado">Tipos de Letras (se pueden poner varias por orden)</td>
+						<td class="ejemplo">&lt;font face="verdana, arial"&gt;Texto&lt;/font&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!----- ETIQUETAS RESALTADOS ------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETAS RESALTADOS -->
+					<tr>
+						<td colspan="3" class="tipo" id="res">Etiquetas de Resaltado</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubican en la etiqueta BODY, concretamente para resaltar fragmentos de texto</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Hay varias etiquetas que se usan para resaltar o destacar texto, cada una con un propósito semántico específico.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Etiqueta</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">&lt;b&gt;&lt;/b&gt;</td>
+						<td class="significado">Negrita</td>
+						<td class="ejemplo">&lt;b&gt;Texto&lt;/b&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;strong&gt;&lt;/strong&gt;</td>
+						<td class="significado">Negrita (recomendable)</td>
+						<td class="ejemplo">&lt;strong&gt;Texto&lt;/strong&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;i&gt;&lt;/i&gt;</td>
+						<td class="significado">Cursiva</td>
+						<td class="ejemplo">&lt;i&gt;Texto&lt;/i&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;u&gt;&lt;/u&gt;</td>
+						<td class="significado">Subrayado</td>
+						<td class="ejemplo">&lt;u&gt;Texto&lt;/u&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;s&gt;&lt;/s&gt;</td>
+						<td class="significado">Tachado</td>
+						<td class="ejemplo">&lt;s&gt;Texto&lt;/s&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;sup&gt;&lt;/sup&gt;</td>
+						<td class="significado">Superíndice</td>
+						<td class="ejemplo">&lt;sup&gt;Texto&lt;/sup&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;sub&gt;&lt;/sub&gt;</td>
+						<td class="significado">Subíndice</td>
+						<td class="ejemplo">&lt;sub&gt;Texto&lt;/sub&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">&lt;mark&gt;&lt;/mark&gt;</td>
+						<td class="significado">Resaltado (color predeterminado: amarillo)</td>
+						<td class="ejemplo">&lt;mark&gt;Texto&lt;/mark&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!------ LISTAS DESORDENADAS ------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA LISTAS DESORDENADAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="ul">Etiqueta UL (Listas Desordenadas)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para crear una lista no ordenada, es decir, una lista con viñetas (●, ○,...) en lugar de números.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">type="circle"</td>
+						<td class="significado">Listado Viñeta: Círculo sin relleno</td>
+						<td class="ejemplo">&lt;ul type="circle"&gt;Texto&lt;/ul&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">type="disc"</td>
+						<td class="significado">Listado Viñeta: Círculo (pred.)</td>
+						<td class="ejemplo">&lt;ul type="disc"&gt;Texto&lt;/ul&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">type="square"</td>
+						<td class="significado">Listado Viñeta: Cuadrada</td>
+						<td class="ejemplo">&lt;ul type="square"&gt;Texto&lt;/ul&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">type="none"</td>
+						<td class="significado">Listado Sin Viñeta</td>
+						<td class="ejemplo">&lt;ul type="none"&gt;Texto&lt;/ul&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!-------- LISTAS ORDENADAS -------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA LISTAS ORDENADAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="ol">Etiqueta OL (Listas Ordenadas)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para crear una lista ordenada, es decir, una lista con elementos numerados o con otro tipo de marcador ordenado.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">type="i"</td>
+						<td class="significado">Listado: Número Romano (minúscula)</td>
+						<td class="ejemplo">&lt;ol type="i"&gt;Texto&lt;/ol&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">type="I"</td>
+						<td class="significado">Listado: Número Romano (MAYÚSCULA)</td>
+						<td class="ejemplo">&lt;ol type="I"&gt;Texto&lt;/ol&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">type="a"</td>
+						<td class="significado">Listado: Letra (minúscula)</td>
+						<td class="ejemplo">&lt;ol type="a"&gt;Texto&lt;/ol&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">type="A"</td>
+						<td class="significado">Listado: Letra (MAYÚSCULA)</td>
+						<td class="ejemplo">&lt;ol type="A"&gt;Texto&lt;/ol&gt;</td>
+					</tr>
+					
+					<tr>
+						<td rowspan="3" class="etiqueta">start=""</td>
+						<td class="significado">Listado: Inicio en Número concreto</td>
+						<td class="ejemplo">&lt;ol start="4"&gt;Texto&lt;/ol&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="significado">Listado: Inicio en Número Romano concreto</td>
+						<td class="ejemplo">&lt;ol type="i" start="3"&gt;Texto&lt;/ol&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="significado">Listado: Inicio en Letra concreta</td>
+						<td class="ejemplo">&lt;ol type="a" start="5"&gt;Texto&lt;/ol&gt;</td>
+					</tr>
+					
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!------------- TABLAS ------------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA TABLAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="table">Etiqueta TABLE (Tabla)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica en la etiqueta BODY</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para crear tablas, que organizan datos en filas y columnas.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">border</td>
+						<td class="significado">Borde de Tabla</td>
+						<td class="ejemplo">&lt;table border="1"&gt;&lt;/table&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">width</td>
+						<td class="significado">Ancho de Tabla (px, %, em)</td>
+						<td class="ejemplo">&lt;table width="90%"&gt;&lt;/table&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">align</td>
+						<td class="significado">Alineación de la Tabla</td>
+						<td class="ejemplo">&lt;table align="center"&gt;&lt;/table&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">height</td>
+						<td class="significado">Altura de Tabla (px, %, em)</td>
+						<td class="ejemplo">&lt;table height="300px"&gt;&lt;/table&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">bgcolor</td>
+						<td class="significado">Color de fondo de la Tabla</td>
+						<td class="ejemplo">&lt;table bgcolor="yellow"&gt;&lt;/table&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">background</td>
+						<td class="significado">Imagen de fondo de la Tabla</td>
+						<td class="ejemplo">&lt;table background="img/pantera_rosa.png"&gt;&lt;/table&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">cellpadding</td>
+						<td class="significado">Relleno de la Tabla</td>
+						<td class="ejemplo">&lt;table cellpadding="10px"&gt;&lt;/table&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">cellspacing</td>
+						<td class="significado">Espacio entre bordes de la Tabla</td>
+						<td class="ejemplo">&lt;table cellspacing="0px"&gt;&lt;/table&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">bordercolor</td>
+						<td class="significado">Color de borde de la Tabla</td>
+						<td class="ejemplo">&lt;table bordercolor="blue"&gt;&lt;/table&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!--------- TÍTULO TABLA ----------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="cap">Etiqueta CAPTION (Título de la Tabla)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se coloca dentro de la etiqueta TABLE, generalmente justo después de abrir la tabla</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para añadir un título o descripción a una tabla.</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ejemplounico">&lt;caption&gt;Título de la Tabla&lt;/caption&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!------------- FILAS -------------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA FILAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="tr">Etiqueta TR (Filas)</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ubicacion">Se coloca dentro de la etiqueta TABLE</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para definir una fila dentro de una tabla. Los atributos que se suelen utilizar son de identificación 'id' o 'class'. El estilo se suele otorgar en TABLE o en las celdas TH o TD.</td>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td colspan="3" class="ejemplounico">Fila: &lt;tr&gt;&lt;/tr&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!------------- CELDAS ------------->
+					<!---------------------------------->
+					
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="td">Etiquetas TH o TD (Celdas)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se colocan dentro de la etiqueta TR</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">TH: Representa una celda de encabezado en una tabla. Generalmente el texto aparece en negrita y centrado.</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">TD: Representa una celda normal de datos en una tabla. El texto de manera predeterminada está alineado a la izquierda.</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">align</td>
+						<td class="significado">Alineación Horizontal Celda</td>
+						<td class="ejemplo">&lt;td align="center"&gt;&lt;/td&gt;</td>
+					</tr>
+					
+					<tr>
+						<td rowspan="3" class="etiqueta">valign</td>
+						<td class="significado">Alineación Vertical Celda: Arriba</td>
+						<td class="ejemplo">&lt;td valign="top"&gt;&lt;/td&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="significado">Alineación Vertical Celda: Abajo</td>
+						<td class="ejemplo">&lt;td valign="down"&gt;&lt;/td&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="significado">Alineación Vertical Celda: Centro (pred.)</td>
+						<td class="ejemplo">&lt;td valign="middle"&gt;&lt;/td&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">bgcolor</td>
+						<td class="significado">Color de fondo de la Celda</td>
+						<td class="ejemplo">&lt;td bgcolor="yellow"&gt;&lt;/td&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">background</td>
+						<td class="significado">Imagen de fondo de la Celda</td>
+						<td class="ejemplo">&lt;td background="img/pantera_rosa.png"&gt;&lt;/td&gt;</td>
+					</tr>
+					
+					<!---------------------------------->
+					<!-------- COMBINAR CELDAS --------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo subtipo">Combinación de Celdas</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Se realiza en las etiquetas TH y/o TD mediante los atributos 'colspan' (combinación de celdas de varias columnas) y/o 'rowspan' (combinación de celdas de varias filas).</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">colspan</td>
+						<td class="significado">Unir Celdas de Columnas</td>
+						<td class="ejemplo">&lt;td colspan="2"&gt;&lt;/td&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">rowspan</td>
+						<td class="significado">Unir Celdas de Filas</td>
+						<td class="ejemplo">&lt;td rowspan="3"&gt;&lt;/td&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+					
+					<!---------------------------------->
+					<!------------ ENLACES ------------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="enla">Etiqueta A (Enlaces)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se puede ubicar tanto en la etiqueta BODY como en otras etiquetas</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Se utiliza para crear hipervínculos (enlaces) que permiten navegar a otras páginas, archivos, secciones del mismo documento, correos electrónicos, o iniciar descargas.</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">
+						Rutas Relativas (Enlaces): se utilizan para acceder a archivos de la propia web.
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">
+						Rutas Absolutas (Enlaces): se utilizan para acceder a páginas externas.
+						</td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td rowspan="3" class="etiqueta">href</td>
+						<td class="significado">Rutas Relativas (Enlaces)</td>
+						<td class="ejemplo">&lt;a href="index.html"&gt;&lt;/a&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="significado">Rutas Absolutas (Enlaces)</td>
+						<td class="ejemplo">&lt;a href="http://www.google.es/"&gt;&lt;/a&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="significado">Rutas Vacías (Enlaces Ancla)</td>
+						<td class="ejemplo">&lt;a href="#"&gt;&lt;/a&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">target="_blank"</td>
+						<td class="significado">Apertura en nueva pestaña del navegador (Enlaces)</td>
+						<td class="ejemplo">&lt;a href="http://www.diariodeleon.es" target="_blank"&gt;&lt;/a&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="explicacion">
+						Se recomienda utilizar la etiqueta de enlaces por encima de las etiquetas de parrafo 'p' o elementos de la lista 'li'. Esto permite poder actuar tanto el texto como el posible  botón a generar para un menú.
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ejemplounico">&lt;a href="index.html"&gt;&lt;p&gt;Página Principal&lt;/p&gt;&lt;/a&gt;</td>
+					</tr>
+					
+					<!---------------------------------->
+					<!-------- ENLACES DE ANCLA -------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo subtipo">Enlace de Ancla</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Un enlace de ancla en HTML es un tipo de enlace que lleva al usuario a una parte específica de la misma página (o incluso de otra página), en lugar de redirigirlo completamente.</td>
+					</tr>
+
+					<tr>
+						<th>Tipo</th>
+						<th>Ejemplo de lugar al que se quiere acceder</th>
+						<th>Ejemplo Enlace de Ancla</th>
+					</tr>
+
+					<tr>
+						<td class="ejemplounico title">Enlace a una parte específica</td>
+						<td class="ejemplounico">&lt;a name="palabraclave"&gt;&lt;/a&gt;</td>
+						<td class="ejemplounico">&lt;a href="#palabraclave"&gt;Título 1&lt;/a&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="ejemplounico title">Enlace a una parte específica de otra página</td>
+						<td class="ejemplounico">&lt;a name="palabraclave"&gt;&lt;/a&gt;</td>
+						<td class="ejemplounico">&lt;a href="pag.hmtl#palabraclave"&gt;Página&lt;/a&gt;</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!------------- CAPAS -------------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="conte">Etiquetas DIV (Capas)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se puede ubicar tanto en la etiqueta BODY como en otros contenedores</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Es un contenedor genérico de bloque en HTML. No aporta significado semántico por sí mismo; simplemente agrupa otros elementos para:
+
+							<ol>
+								<li>Organizar el marcado, agrupando secciones lógicas de la interfaz.</li>
+								<li>Aplicar estilos mediante clases o id.</li>
+								<li>Crear estructuras de maquetación (flexbox, grid, columnas,...).</li>
+							</ol>
+						 </td>
+					</tr>
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">id</td>
+						<td class="significado">Identificar un contenedor de forma única</td>
+						<td class="ejemplo">&lt;div id="capa1"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">class</td>
+						<td class="significado">Identificar contenedores a través de clases</td>
+						<td class="ejemplo">&lt;div class="amarillos"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta" rowspan="8">style</td>
+						<td class="significado">Ancho de un Contenedor</td>
+						<td class="ejemplo">&lt;div style="width: 50%;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="significado">Alto de un Contenedor</td>
+						<td class="ejemplo">&lt;div style="height: 500px;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="significado">Color de Fondo</td>
+						<td class="ejemplo">&lt;div style="background-color: blue;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="significado">Márgenes del Contenedor</td>
+						<td class="ejemplo">&lt;div style="margin: 3px;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="significado">Relleno del Contenedor</td>
+						<td class="ejemplo">&lt;div style="padding: 5px;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="significado">Espacio entre letras</td>
+						<td class="ejemplo">&lt;div style="letter-spacing: 5px;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="significado">Bordes de un Contenedor</td>
+						<td class="ejemplo">&lt;div style="border: 1px solid;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="significado">Display de un Contenedor</td>
+						<td class="ejemplo">&lt;div style="display: inline-block;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+
+					<!---------------------------------->
+					<!--------- TIPOS DE CAPAS --------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo subtipo">Tipos de Contenedores</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">A diferencia de las etiquetas DIV, aportan significado sobre el contenido que contienen, lo que mejora la accesibilidad, el SEO y la organización del código.</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Cabecera</td>
+						<td class="ejemplo" colspan="2">&lt;header&gt;&lt;/header&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Menú Superior</td>
+						<td class="ejemplo" colspan="2">&lt;nav&gt;&lt;/nav&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Section</td>
+						<td class="ejemplo" colspan="2">&lt;section&gt;&lt;/section&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Artículo</td>
+						<td class="ejemplo" colspan="2">&lt;article&gt;&lt;/article&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Menú Vertical</td>
+						<td class="ejemplo" colspan="2">&lt;aside&gt;&lt;/aside&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Pie de Página</td>
+						<td class="ejemplo" colspan="2">&lt;footer&gt;&lt;/footer&gt;</td>
+					</tr>
+
+					<!---------------------------------->
+					<!------------ DISPLAY ------------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo subtipo">Propiedad Display</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Regla de estilo para indicar cómo se comporta visualmente un elemento, generalmente se utiliza en los contenedores.</td>
+					</tr>
+
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Dato</th>
+						<th>Acción</th>
+						<th>Ejemplo</th>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Block</td>
+						<td class="significado">Ocupa todo el ancho (pred.)</td>
+						<td class="ejemplo">&lt;div style="display: block;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Inline</td>
+						<td class="significado">Ocupa el espacio del contenido de la etiqueta</td>
+						<td class="ejemplo">&lt;div style="display: inline;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">Inline-Block</td>
+						<td class="significado">Ocupa el espacio del contenido de la etiqueta, permitiendo modificar tamaño y espaciado</td>
+						<td class="ejemplo">&lt;div style="display: inline-block;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">None</td>
+						<td class="significado">No se mostaría el contenedor</td>
+						<td class="ejemplo">&lt;div style="display: none;"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!----------- IMÁGENES ------------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="imag">Etiqueta IMG (Imágenes)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se puede ubicar tanto en la etiqueta BODY como en otras etiquetas que puedan ejercer de contenedor</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Se utiliza para mostrar imágenes en una página web. Hay que tener en cuenta que las imágenes son 'inline', lo que indica que estas se pondrán siempre que quepan en la misma linea.</td>
+					</tr>
+					
+					
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">src</td>
+						<td class="significado">Ruta de la Imagen</td>
+						<td class="ejemplo">&lt;img src="img/logo.png"&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">style</td>
+						<td class="significado">Estilo de la imagen</td>
+						<td class="ejemplo">&lt;img src="img/logo.png" style="opacity: 0.8;"&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">width</td>
+						<td class="significado">Ancho de la imagen</td>
+						<td class="ejemplo">&lt;img src="img/logo.png" width="300px"&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">alt</td>
+						<td class="significado">Descripción</td>
+						<td class="ejemplo">&lt;img src="img/logo.png" alt="Logo de la Empresa"&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">title</td>
+						<td class="significado">Título</td>
+						<td class="ejemplo">&lt;img src="img/logo.png" title="Logo"&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">border</td>
+						<td class="significado">Borde de la imagen</td>
+						<td class="ejemplo">&lt;img src="img/logo.png" border="1px"&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!------------- SPAN --------------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="sp">Etiqueta SPAN</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se puede ubicar tanto en la etiqueta BODY como en otras etiquetas</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Es un contenedor en linea (inline) sin significado semántico propio. Se usa para aplicar estilos o lógica a una parte específica de texto o contenido en linea, sin alterar el flujo del documento.</td>
+					</tr>
+					
+					<tr>
+						<td colspan="3" class="ejemplounico">&lt;span&gt;La casa del pueblo&lt;/span&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!------------- VIDEO -------------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="vd">Etiqueta VIDEO (Inserción de Vídeos)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se puede ubicar tanto en la etiqueta BODY como en otras etiquetas contenedoras</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para incrustar videos en una página web. Permite mostrar archivos de video directamente en el navegador, con controles como reproducir, pausar, volumen...</td>
+					</tr>
+
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">src</td>
+						<td class="significado">Ruta del Vídeo</td>
+						<td class="ejemplo">&lt;video src="video/clip.mkv"&gt;&lt;/video&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">controls</td>
+						<td class="significado">Botones de Control</td>
+						<td class="ejemplo">&lt;video src="video/clip.mkv" controls&gt;&lt;/video&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">muted</td>
+						<td class="significado">Vídeo Silenciado</td>
+						<td class="ejemplo">&lt;video src="video/clip.mkv" controls muted&gt;&lt;/video&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">autoplay</td>
+						<td class="significado">Inicio Automático (sólo con muted)</td>
+						<td class="ejemplo">&lt;video src="video/clip.mkv" controls muted autoplay&gt;&lt;/video&gt;</td>
+					</tr>
+					
+					<tr>
+						<td class="etiqueta">loop</td>
+						<td class="significado">Repetición en bucle</td>
+						<td class="ejemplo">&lt;video src="video/clip.mkv" controls loop&gt;&lt;/video&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">poster</td>
+						<td class="significado">Imagen de Portada</td>
+						<td class="ejemplo">&lt;video src="video/clip.mkv" controls poster="img/imagenclip.jpg"&gt;&lt;/video&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">width</td>
+						<td class="significado">Ancho del Vídeo</td>
+						<td class="ejemplo">&lt;video src="video/clip.mkv" controls width="40%"&gt;&lt;/video&gt;</td>
+					</tr>
+
+					<!---------------------------------->
+					<!--------- SOURCE (VIDEO) --------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo subtipo">Inserción de Vídeos Alternativos (SOURCE)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica dentro de la etiqueta VIDEO</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para proporcionar una o más fuentes alternativas del archivo multimedia. Esto ayuda a asegurar que el navegador pueda reproducir el contenido, incluso si no soporta un tipo de archivo específico. </td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Existe la posibilidad de incluir una imagen como última alternativa para informar de que el navegador no puede reproducir ninguna alternativa.</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ejemplounico">
+							&lt;video controls width="40%"&gt;		
+								<br>&lt;source src="video/clip.mp4 type="video/mp4"&gt;
+								<br>&lt;source src="video/clip.ogg type="video/ogg"&gt;
+								<br>&lt;img src="img/video_no_soportado.jpg"&gt;
+							<br>&lt;/video&gt;
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!------------- AUDIO -------------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="au">Etiqueta AUDIO (Inserción de Audios)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se puede ubicar tanto en la etiqueta BODY como en otras etiquetas contenedoras</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para insertar archivos de sonido o música en una página web.</td>
+					</tr>
+
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Significado</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+					<tr>
+						<td class="etiqueta">src</td>
+						<td class="significado">Ruta del Audio</td>
+						<td class="ejemplo">&lt;audio src="audio/pista.mp3"&gt;&lt;/audio&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">controls</td>
+						<td class="significado">Botones de Control</td>
+						<td class="ejemplo">&lt;audio src="audio/pista.mp3" controls&gt;&lt;/audio&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">muted</td>
+						<td class="significado">Audio Silenciado</td>
+						<td class="ejemplo">&lt;audio src="audio/pista.mp3" controls muted&gt;&lt;/audio&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">autoplay</td>
+						<td class="significado">Inicio Automático (sólo con muted)</td>
+						<td class="ejemplo">&lt;audio src="audio/pista.mp3" controls muted autoplay&gt;&lt;/audio&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">loop</td>
+						<td class="significado">Repetición en bucle</td>
+						<td class="ejemplo">&lt;audio src="audio/pista.mp3" controls loop&gt;&lt;/audio&gt;</td>
+					</tr>
+
+					<!---------------------------------->
+					<!--------- SOURCE (AUDIO) --------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo subtipo">Inserción de Audios Alternativos (SOURCE)</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ubicacion">Se ubica dentro de la etiqueta AUDIO</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Se usa para proporcionar una o más fuentes alternativas del archivo de audio. Esto ayuda a asegurar que el navegador pueda reproducir el contenido, incluso si no soporta un tipo de archivo específico. </td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="explicacion">Existe la posibilidad de incluir una imagen como última alternativa para informar de que el navegador no puede reproducir ninguna alternativa.</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="ejemplounico">
+							&lt;audio controls&gt;		
+								<br>&lt;source src="audio/pista.mp3 type="audio/mpeg"&gt;
+								<br>&lt;source src="audio/pista.ogg type="audio/ogg"&gt;
+								<br>&lt;img src="img/audio_no_soportado.jpg"&gt;
+							<br>&lt;/audio&gt;
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!---------- OTRAS COSAS ----------->
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="cod">CÓDIGOS DESTACADOS</td>
+					</tr>
+
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Código</th>
+						<th>Acción</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+
+
+					<tr>
+						<td class="etiqueta">&lt;!--DOCTYPE  html&gt;</td>
+						<td class="significado">Incluir al inicio del archivo html</td>
+						<td class="ejemplo">&lt;!--DOCTYPE  html&gt;</td>
+					</tr>
+
+
+					<tr>
+						<td class="etiqueta">&lt;!-- &nbsp; &nbsp; &nbsp; --&gt;</td>
+						<td class="significado">Incluir Comentarios</td>
+						<td class="ejemplo">&lt;!-- 'El comentario se ubica aquí' --&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta">&amp;nbsp;</td>
+						<td class="significado">Incluir Espacios en un texto</td>
+						<td class="ejemplo">&lt;p&gt;Hola &amp;nbsp; &amp;nbsp; Mundo! &lt;/p&gt;</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="libre"></td>
+					</tr>
+
+					<!---------------------------------->
+					<!----- INDENTIFACIÓN Y CLASE ------>
+					<!---------------------------------->
+
+					<!-- FILA TÍTULO ETIQUETA COLUMNAS -->
+					<tr>
+						<td colspan="3" class="tipo" id="idclass">ATRIBUTOS DE IDENTIFICACIÓN Y CLASE</td>
+					</tr>
+
+					<!-- FILA TÍTULOS COLUMNAS -->
+					<tr>
+						<th>Atributo</th>
+						<th>Acción</th>
+						<th>Ejemplo</th>
+					</tr>
+					
+					<!-- FILAS ATRIBUTOS -->
+
+
+					<tr>
+						<td class="etiqueta">id</td>
+						<td class="significado">Identifica una etiqueta
+							<ol>
+								<li>No se puede repetir en otras etiquetas</li>
+								<li>Son únicos en cada etiqueta de un archivo html</li>
+								<li>En CSS se representa con: <span>#</span></li>
+							</ol>
+						</td>
+						<td class="ejemplo">&lt;p id="parrafo1"&gt;&lt;/p&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="etiqueta" rowspan="2">class</td>
+						<td class="significado" rowspan="2">Clasifica etiquetas
+							<ol>
+								<li>Se puede repetir en varias etiquetas</li>
+								<li>Puede haber varias clases en una etiqueta (las clases se separan con espacios)</li>
+								<li>En CSS se representa con: <span>.</span></li>
+							</ol>
+						</td>
+						<td class="ejemplo">&lt;div class="naranjas"&gt;&lt;/div&gt;</td>
+					</tr>
+
+					<tr>
+						<td class="ejemplo">&lt;h1 class="tit menus"&gt;&lt;/h1&gt;</td>
+					</tr>
+
+				</table>
+
+				<!-- Capa de NO HAY COINCIDENCIAS para el Buscador -->
+				<div id="nocoincide" onclick="fun_buscador_reset()">
+
+					<h1>NO HAY COINCIDENCIAS EN LA BÚSQUEDA</h1>
+
+					<img src="img/html5-solo.png" alt="logo html5">	
+
+				</div>
+
+			</div>
+
+
+			<div id="volver">
+
+				<img src="img/volver.png" alt="imagen flecha para subir parte superior página" class="volverimg">
+
+			</div>
+		
+		</div>
+
+
+		<!-- MENÚ INFERIOR PÁGINAS PARA DISPOSITIVOS PEQUEÑOS, MÓVILES Y TABLETS -->
+
+		<!-- PIE DE PÁGINA -->
+		<footer>
+
+			<div class="f1">
+
+				<img src="img/logoies.jpg" class="footermin">
+
+			</div>
+			
+			<div class="f2">
+
+				<p class="f2p">Copyright @ 2025 Víctor Álvarez</p>
+
+			</div>
+
+		</footer>
+	
+	</body>
+
+</html>

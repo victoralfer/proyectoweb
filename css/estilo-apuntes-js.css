@@ -1,0 +1,936 @@
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* --------------- HOJA DE ESTILOS --------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+
+body {
+	font-family: arial;
+}
+
+/**********************************/
+/**********************************/
+/************* HEADER *************/
+/**********************************/
+/**********************************/
+
+header {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 10px 0;
+	background-color: white;
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+}
+
+	/* Imagen de Cabecera */
+	#img-cab {
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+	/* Capa Botónes Hamburguesa */
+	#ham {
+		width: 10%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+		/* Hover Capa Botónes Hamburguesa */
+		#ham:hover {
+			cursor: pointer;
+		}
+	
+		/* Imagen Menú Hamburguesa */
+		#img-ham {
+			width: 50%;
+		}
+
+
+
+/* ----- ENLACES ----- */
+
+/* Quitar subyrado a los enlaces */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+/* ----- PÁRRAFOS ----- */
+
+/* Espaciado entre líneas en párrafos normales */
+p {
+	line-height: 25px;
+}
+
+
+/**********************************/
+/**********************************/
+/********* CAPA PRINCIPAL *********/
+/**********************************/
+/**********************************/
+
+#principal {
+	width: 100%;
+	max-width: 1400px;
+	margin: 30px auto;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+
+	/* ---- Menú Vertical ---- */
+	#aside {
+		width: 50%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-content: flex-start;
+		align-items: flex-start;
+		gap: 10px;
+		position: fixed;
+		right: -100%;							/* Se fija una posición negativa */		
+		transform: translateX(100%);			/* Se utiliza la propiedad transform con movimiento horizontal */
+		transition: transform 0.8s ease-out;
+		/* Se utiliza la propiedad transition
+			- 1º/ Se indica la propiedad a transicionar: transform
+			- 2º/ Se indica el tiempo de la transición (0.8s)
+			- 3º/ Con 'ease-out' indica que la animacion se desacelera
+		*/		
+	}
+	
+		/* Capa Menú Vertical */
+		#menu-prin {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+			/* Botón Cerrar Hamburguesa (Sólo Menú Desplegable) */
+			#ham-cerrar {
+				width: 100%;
+				margin: 0 3px 5px 3px;
+				padding: 10px 0;
+				background-color: white;
+				font-size: 0.9em;
+				border: 2px dashed;
+				display: flex;
+				justify-content: center;
+			}
+
+				/* Hover Botón Cerrar Hamburguesa */
+				#ham-cerrar:hover {
+					cursor: pointer;
+					background-color: lightyellow;
+					color: blue;
+					border: 2px dashed blue;
+				}	
+	
+
+			/* Botón Prácticas - Apuntes (Desplegable) */
+			#proy-apun {
+				width: 100%;
+				margin: 0;
+				padding: 10px 0;
+				background-color: rgba(51, 73, 107, 1.0);
+				color: white;
+				font-size: 0.9em;
+				border: 2px solid white;
+				display: flex;
+				justify-content: center;
+			}
+					
+				/* Hover Botón Prácticas - Apuntes (Desplegable) */
+				#proy-apun:hover {
+					cursor: pointer;
+					background-color: rgba(220, 230, 245, 1.0);
+					color: black;
+					border: 2px solid black;
+				}
+			
+			/* Capa Botones */
+			#botones {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				display: flex;
+			}
+				
+				/* Botón Prácticas */
+				.practica {
+					margin: 5px auto;
+					padding: 10px 0;
+					background-color: rgba(66, 135, 245, 0.9);
+					font-size: 0.9em;
+					text-align: center;
+					border: 2px solid white;
+				}	
+
+					/* Hover Botones Prácticas */
+					.practica:hover {
+						cursor: pointer;
+						background-color: black;
+						color: white;
+						border: 2px solid rgba(141, 180, 242, 0.9);
+					}
+				
+				/* Botones Apuntes */
+				.apuntes {
+					margin: 5px auto;
+					padding: 10px 0;
+					background-color: rgba(141, 180, 242, 0.7);
+					font-size: 0.9em;
+					text-align: center;
+					border: 2px solid white;
+				}
+				
+					/* Hover Botones Apuntes */
+					.apuntes:hover {
+						cursor: pointer;
+						background-color: rgba(58, 115, 207, 1);
+						color: white;
+						border: 2px solid rgba(141, 180, 242, 0.9);
+					}
+					
+		
+		/* Línea Separatoria */
+		hr {
+			width: 80%;
+			margin: 0;
+			background-color: black;
+			display: none;
+		}
+		
+		
+		/* Menús Contenido */
+		#menus {
+			width: 100%;
+			margin: 0;
+			display: block;
+		}	
+		
+			/* Botones Títulos de los Menús */
+			#menus h4 {
+				margin: 5px 0;
+				padding: 5px;
+				font-size: 0.9em;
+				text-align: center;
+			}
+		
+
+			/* Botones con Menú */
+			.boton-con-menu {
+				background-color: rgba(230, 171, 9, 0.5);
+				border: 5px double transparent;
+			}	
+
+				.boton-con-menu:hover {
+					cursor: pointer;
+					border: 5px double rgba(141, 180, 242, 1);
+				}
+
+			/* Botones sin Menú */
+			.boton-sin-menu {
+				background-color: rgba(230, 171, 9, 1);
+				border: 5px double transparent;
+			}
+
+				.boton-sin-menu:hover {
+					cursor: pointer;
+					border: 5px double black;
+				}
+
+
+			/* Capa Invisible (menú desplegable) */
+			.ultimo {
+				width: 100%;
+				height: 25px;
+			}
+
+		
+			/* Listas de los Menús */
+			#menus ul {
+				margin: 10px;
+				padding: 0;
+				list-style: none;
+			}
+			
+				/* Elementos de las Listas de los Menús */	
+				#menus ul li {
+					margin: 5px 0;
+					padding: 5px 0;
+					font-size: 0.80em;
+					font-weight: bold;
+				}
+				
+					/* Hover Elementos de las Listas de los Menús */	
+					#menus ul li:hover {
+						cursor: pointer;
+						background-color: lightyellow;
+					}
+	
+	
+
+
+	/* ---- Sección de Articulos ---- */
+	section {
+		width: 100%;
+		margin: 0 auto;
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		gap: 10px;
+	}
+
+
+		/* ---- Artículos ---- */
+		article {
+			width: 100%;
+			box-sizing: border-box;
+			display: flex;
+			flex-flow: column;
+			gap: 5px;
+			overflow: hidden;
+			border-radius: 20px;
+		}
+
+
+			/* Título Principal Artículo */
+			article h1 {
+				width: 100%;
+				margin: 0 auto;
+				padding: 15px 10px;
+				box-sizing: border-box;
+				background-color: orange;
+				text-align: center;
+				border-radius: 20px 20px 0 0;
+			}
+
+
+			/* Títulos Interiores */
+			article h4 {
+				width: 100%;
+				margin: 0;
+				padding: 10px 0;
+				box-sizing: border-box;
+				background-color: rgba(199, 244, 255, 0.7);
+				font-size: 1.2em;
+				text-align: center;
+			}
+			
+			/* Títulos Pequeños */
+			article h5 {
+				margin: 0 0 0 35px;
+				padding: 0;
+				text-decoration: underline;
+			}
+
+				.h5-margen {
+					margin-top: 15px;
+				}
+
+			/* Listas Informativas */
+			article ul {
+				margin: 0 20px 0 35px;
+				padding: 10px 0;
+				list-style: square;
+			}
+
+				/* Elementos Listas Informativas */
+				article ul li {
+					padding: 3px;
+				}
+
+
+			/* Párrafos */
+			article p {
+				margin: 0 10px;
+				padding: 10px 5px;
+				box-sizing: border-box;
+				overflow-wrap: break-word;
+			}
+
+
+			/* Etiqueta Script de Ejemplo */
+			#tag-script {
+				margin: 0 auto;
+				font-weight: bold;
+				text-align: center;
+			}
+
+
+			/* Hover Artículos */
+			article:hover {
+				cursor: url("../img/js-cursor.png"), auto;
+				background-color: rgba(255, 249, 214, 0.7);
+				box-shadow: 2px 2px 4px rgba(117, 186, 255, 1);
+			}
+
+
+
+
+
+
+/* --------------------------- */
+/* ---------- SPANs ---------- */
+/* --------------------------- */
+
+.negrita {
+	font-weight: bold;
+}
+
+.cursiva {
+	font-style: italic;
+}
+
+.blue {
+	color: blue;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
+.brown {
+	color: brown;
+}
+
+.purple {
+	color: purple;
+}
+
+.grey {
+	color: grey;
+}
+
+
+.fondoazul {
+	padding: 2px;
+	background-color: blue;
+	color: white;
+}
+
+
+.fondorojo {
+	padding: 2px;
+	background-color: red;
+	color: white;
+}
+
+.fondoamarillo {
+	padding: 2px;
+	background-color: yellow;
+}
+
+.fondorosa {
+	padding: 2px;
+	background-color: pink;
+}
+
+.fondonaranja {
+	padding: 2px;
+	background-color: orange;
+}
+
+.fondoazulclaro {
+	padding: 2px;
+	background-color: lightblue;
+}
+
+.fondocoral {
+	padding: 2px;
+	background-color: lightcoral;
+	color: white;
+}
+
+
+.centrado {
+	margin: 0;
+	text-align: center;
+}
+
+
+.romanos {
+	margin: 0 0 10px 35px;
+	padding: 0;
+	list-style: upper-roman;
+	font-style: italic;
+	line-height: 23px;
+}
+
+
+.sinespacios {
+	margin: 0 35px;
+	padding: 0;
+}
+
+
+
+
+/**********************************/
+/**********************************/
+/************* FOOTER *************/
+/**********************************/
+/**********************************/
+
+footer {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0;
+	border-radius: 0 0 10px 10px;
+	background-color: pink;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-evenly;
+	align-items: center;
+	order: 6;
+}
+
+	/* Capa Logos Footer */
+	.f1 {
+		width: 30%;
+		margin: 10px;
+		padding: 0;
+		display: flex;
+		align-items: center;
+	}
+
+		/* Imagen Capa Logos Footer */
+		.f1 img {
+			max-width: 80px;
+			margin: 0;
+			padding: 0;
+		}
+
+
+	/* Capa Copyright Footer */
+	.f2 {
+		width: 70%;
+		margin: 10px;
+		padding: 0;
+	}
+
+		/* Texto Copyright Footer */
+		.f2 p {
+			margin: 0;
+			padding: 0;
+			font-size: 0.8em;
+			font-weight: bold;
+			font-style: italic;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-end;
+		}
+
+
+/* ---- BOTÓN VOLVER ARRIBA ---- */
+
+#volver {
+	width: 50px;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	opacity: 0.2;
+	z-index: 20;
+}
+
+	#volver:hover {
+		cursor: pointer;
+		opacity: 0.8;
+		transition: opacity 0.5s ease-out;
+	}
+
+
+
+
+/**********************************************/
+/**********************************************/
+/******************* TOGGLE *******************/
+/**********************************************/
+/**********************************************/
+
+/* Todos los Menús */
+#aside.activar {
+	max-width: 250px;
+	height: 100%;
+	display: block;
+	z-index: 1000;
+	padding: 5px;
+	background-color: white;
+	border-radius: 0 0 0 20px;
+	box-shadow: -2px 2px 4px rgba(26, 104, 163, 0.7);
+	position: fixed;
+	top: 0;
+	right: 0;
+	transform: translateX(0);		/* Fija la nueva posición tras la transformación */
+	overflow-y: auto;				/* Poner scroll a contenido que sobresalga */
+}
+
+
+
+/* Botones de Prácticas y Apuntes */	
+#botones {
+	display: none;
+}
+
+	/* Activar - Botones de Prácticas y Apuntes */
+	#botones.activar {
+		display: block;
+	}
+	
+	
+/* Menús de Contenido */
+#menu-iniciacion, #menu-operaciones-arit, #menu-operaciones-log, #menu-funciones, #menu-math, #menu-mas-funciones, #menu-arrays, #menu-condicionales, #menu-bucles, #captura-objetos-html, #sustituir-contenido, #class-list, #add-event-listener, #extracion-tamanos {
+	display: none;
+}
+
+	/* Activar - Menús de Contenido */
+	#menu-iniciacion.activar, #menu-operaciones-arit.activar, #menu-operaciones-log.activar, #menu-prompt.activar, #menu-funciones.activar, #menu-math.activar, #menu-mas-funciones.activar, #menu-arrays.activar, #menu-condicionales.activar, #menu-bucles.activar, #captura-objetos-html.activar, #sustituir-contenido.activar, #class-list.activar, #add-event-listener.activar, #extracion-tamanos.activar {
+		display: block;
+	}
+
+
+
+	/**************************************/
+	/**************************************/
+	/************** BUSCADOR **************/
+	/**************************************/
+	/**************************************/
+
+	#capa-buscador {
+		max-width: 350px;					/* Tamaño máximo */
+		height: 250px;
+		margin: 0;
+		padding: 0;
+		background-color: white;
+		border-radius: 20px 0 0 20px;
+		box-sizing: border-box;
+		overflow: hidden;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: center;
+		order: 3;
+		position: fixed;
+		top: 40%;
+		right: 0;
+		z-index: 1000;
+		transform: translateX(90%);
+		transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+	}
+
+		/* Toogle para sacar el Buscador */
+		#capa-buscador.activar {
+			right: 0;
+			transform: translateX(0);
+			box-shadow: 2px 2px 4px black;
+		}
+
+
+		/* Botón Buscador */
+		#busc-bot {
+			width: 10%;
+			height: 100%;
+			margin: 0;
+			padding: 35px 0 25px 0;
+			box-sizing: border-box;
+			background-color: orange;
+			border-radius: 20px 0 0 20px;
+			writing-mode: vertical-lr;			/* Pone en Vertical (izda-dcha) el texto */
+			text-orientation: upright;			/* Cambiar orientación */
+			letter-spacing: 8px;
+			font-weight: bold;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+			/* Hover Botón Buscador */
+			#busc-bot:hover {
+				cursor: pointer;
+				background-color: black;
+				color: lightblue;
+			}
+
+
+		/* Buscador */
+		#busc-prac {
+			width: 90%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 40px 10px;
+		}
+
+
+			/* Label del Buscador */
+			#busc-prac label {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				color: green;
+				font-size: 1.3em;
+				font-weight: bold;
+				text-align: center;
+				text-decoration: 1px 1px 2px black;
+			}
+			
+				/* Hover Botón del Buscador */
+				#busc-prac label:hover {
+					cursor: pointer;
+				}
+			
+			/* Input del Buscador */
+			#busc-prac input {
+				width: 320px;
+				margin: 0 20px;
+				padding: 10px;
+				font-size: 1em;
+			}
+			
+				/* Input del Buscador */
+				#busc-prac input:focus {
+					background-color: rgba(255, 247, 189, 0.5);
+				}
+			
+			
+			/* Capa Botones del Buscador */
+			#botones-buscador {
+				width: 100%;
+				display: flex;
+				flex-flow: row;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+			}
+			
+				/* Botón del Buscador */
+				#botones-buscador button {
+					width: 120px;
+					margin: 0;
+					padding: 10px 0;
+					background-color: white;
+					font-size: 1em;
+				}
+				
+					/* Hover Botón Buscar */
+					#buscar:hover {
+						cursor: pointer;
+						background-color: rgba(227, 255, 246, 1);
+					}
+
+					/* Hover Botón Reset */
+					#reset:hover {
+						cursor: pointer;
+						background-color: rgba(206, 237, 199, 1);
+					}		
+			
+			
+		/* NO HAY COINCIDENCIAS EN BÚSQUEDA */
+		
+		/* Capa del Mensaje de 'NO COINCIDE' */
+		#nocoincide {
+			width: 100%;
+			margin: 20px;
+			padding: 30px;
+			display: none;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 30px;
+		}
+		
+			/* Título - Capa del Mensaje de 'NO COINCIDE' */
+			#nocoincide h3 {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				font-size: 1.6em;
+				color: blue;
+				text-align: center;
+			}
+		
+			/* Imange - Capa del Mensaje de 'NO COINCIDE' */
+			#nocoincide img {
+				width: 280px;
+			}
+		
+			/* Hover NO COINCIDE */
+			#nocoincide:hover {
+				background-color: rgba(255, 246, 66, 0.5);
+				border-radius: 20px;
+				box-shadow: 5px 5px 10px;
+			}
+
+
+
+
+
+
+
+/* ---------------------- */
+/* ---------------------- */
+/* ----- RESPONSIVE ----- */
+/* ---- MOBILE FIRST ---- */
+/* ---------------------- */
+/* ---------------------- */
+
+@media (min-width: 576px) {
+
+	/* Tamaño Imagen Capa Logos Footer */
+	.f1 img {
+		max-width: 100px;
+	}
+
+}
+
+
+/* Dispostivos mayores que una tablet */
+/* 2 columnas sin menú vertical */
+
+@media (min-width: 768px) {
+
+
+	/* Sección de Artículos */
+	section {
+		width: 100%;
+	}
+	
+		/* Artículos */
+		article {
+			width: 49%;
+		}
+			
+
+		/* Tamaño Imagen Capa Logos Footer */
+		.f1 img {
+			max-width: 120px;
+		}
+
+		/* Ampliar Letra Copyright */
+		.f2 p {
+			font-size: 0.9em;
+		}
+	
+}
+
+
+/* Dispostivos mayores que un escritorio */
+/* 2 columnas con menú vertical */
+
+@media (min-width: 992px) {
+
+/* ---- CABECERA ---- */
+header {
+	position: static;
+}
+	
+	/* Tamaño Imagen de Cabecera */
+	#img-cab {
+		width: 100%;
+	}
+	
+	
+	/* Desactivar Hamburguesa */
+	#ham {
+		display: none;
+	}
+	
+
+	/* Desactivar Botón Cerrar Menú Hamburguesa */
+	#ham-cerrar {
+		display: none;
+	}
+
+	
+	/* Menú Vertical */
+	#aside {
+		width: 20%;
+		max-width: 250px;
+		height: fit-content;
+		max-height: calc(100vh - 40px);
+		display: flex;
+		position: sticky;
+		top: 15px;
+		left: 15px;
+		transform: none;
+		transition: none;
+		overflow-y: auto;
+	}
+
+		#aside h4 {
+			font-size: 1em;
+		}
+
+	
+		/* Menú Prácticas - Apuntes */
+		#menu-prin {
+			display: flex;
+		}
+		
+			/* Desactivar Botón Prácticas y Apuntes */
+			#proy-apun {
+				display: none;
+			}
+			
+			/* Activar Menú Botones */
+			#botones {
+				display: block;
+			}
+
+
+		hr {
+			display: block;
+		}
+
+		
+		/* Menús Contenidos */
+		#menus {
+			display: block;
+		}
+	
+	
+	/* Sección de Artículos */
+	section {
+		width: 80%;
+	}
+	
+		/* Artículos */
+		article {
+			width: 49%;
+		}
+			
+}
+
+
+/* Dispostivos mayores que un escritorio */
+
+@media (min-width: 1440px) {
+
+
+}

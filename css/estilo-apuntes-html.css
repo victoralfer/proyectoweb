@@ -1,0 +1,855 @@
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* --------------- HOJA DE ESTILOS --------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+
+body {
+	font-family: arial;
+}
+
+
+/* Eliminar Línea y Color en Hipervínculos */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+/* CABECERA */
+
+header {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+	header img {
+		width: 100%;
+	}
+
+	/* Capa Botón Hamburguesa/Cerrar */
+	.ham-cerrar {
+		width: 5%;
+		display: none;
+	}
+	
+		/* Imagen Capa Botón Hamburguesa/Cerrar */
+		.ham-cerrar img {
+			width: 100%;
+		}
+
+		.ham-cerrar:hover {
+			cursor: pointer;
+		}
+
+
+/*************/
+/* CONTENIDO */
+/*************/
+
+#total {
+	max-width: 1400px;
+	margin: 30px auto;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	gap: 15px;
+}
+
+
+
+/* ----- MENÚ LATERAL ----- */
+
+/* CAPA MENÚ LATERAL */
+#menu {
+	width: 24%;
+	max-width: 250px;
+	height: fit-content;
+	max-height: calc(100vh - 50px);
+	margin: 0;
+	padding: 0 5px;
+	box-sizing: border-box;
+	background-color: white;
+	text-align: center;
+	position: sticky;
+	top: 15px;
+	left: 15px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 5;
+}
+
+	#menus {
+		margin: 10px 0;
+	}
+
+	/* Botón Proyectos y Apuntes */
+	.proy-apun {
+		background-color: black;
+		color: white;
+		border: 2px solid transparent;
+	}
+	
+		/* Hover Botón Proyectos y Apuntes */
+		.proy-apun:hover {
+			cursor: pointer;
+			background-color: white;
+			color: black;
+			border: 2px dashed #173159;
+		}
+
+
+	/* Botón Proyectos */
+	.proy {
+		padding: 10px;
+		background-color: #173159;
+	}
+
+	/* Botón Apuntes */
+	.apuntes {
+		padding: 10px;
+		background-color: #2c4e85;
+	}
+
+		/* Hover Botón Proyectos y Apuntes */
+		.proy:hover, .apuntes:hover {
+			background-color: black;
+		}
+
+
+	/* Título Menú Desplegable */
+	h2 {
+		margin: 0 0 10px 0;
+		padding: 10px;
+		background-color: rgba(73, 92, 145, 0.1);
+		color: rgba(73, 92, 145, 0.7);
+		font-size: 0.8em;
+		border: 5px double;
+		border-radius: 10px;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+		display: none;
+	}
+
+		/* Hover Título Menú Desplegable */
+		h2:hover {
+			cursor: pointer;
+			background-color: rgba(204, 161, 149, 0.5);
+			color: rgba(73, 92, 145, 1);
+		}
+		
+
+	/* Título 'Etiquetas y Atributos' */
+	.et {
+		line-height: 25px;
+		border-radius: 20px 20px 0 0;
+		box-shadow: 1px 1px 2px black;
+	}
+
+
+	/* Título Etiquetas */
+	h4 {
+		background-color: #7790b8;
+		color: white;
+		padding: 8px;
+		margin: 0 0 5px 0;
+	}
+	
+	
+	/* Títulos Menús */
+	h3 {
+		margin: 10px 0;
+		padding: 10px;
+		font-size: 1em;
+		background-color: #b9cded;	
+	}
+	
+		/* Hover Títulos Menús */
+		h3:hover {
+			cursor: pointer;
+			opacity: 0.8;
+			transform: scale(1.05);
+		}
+
+
+	/* Títulos Menús HEAD y BODY */
+	.head-body {
+		padding: 10px;
+		font-size: 1em;
+		background-color: rgba(26, 104, 163, 0.7);
+		color: white;
+		text-shadow: 2px 2px 2px black;
+	}
+	
+	/* Listas Menús */
+	ul {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+
+		/* Elementos Menú */
+		li {
+			list-style-type: none;
+			margin: 0px;
+			padding: 8px;
+			font-weight: bold;
+			font-size: 0.8em;
+		}
+
+			li:hover {
+				background-color: rgba(239, 245, 66, 0.3);
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+
+
+/* CONTENEDOR PRINCIPAL */
+
+#principal {
+	width: 80%;
+	max-width: 1200px;
+	box-sizing: border-box;
+}
+
+	/* TABLA */
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+		/* Fila única con título */
+		.tipo-tit {
+			padding: 20px;
+			text-align: center;
+			font-size: 1.5em;
+			font-weight: bold;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+
+		/* Fila única con título */
+		.tipo {
+			padding: 10px;
+			text-align: center;
+			font-size: 1.2em;
+			font-weight: bold;
+			background-color: rgba(239, 245, 66, 0.3);
+		}
+
+		/* Fila única con título para otras opciones en etiquetas */
+		.subtipo {
+			font-size: 1em;
+			background-color: rgba(239, 245, 66, 0.1);
+		}
+
+		/* Fila única con título HEAD o BODY*/
+		.hb {
+			background-color: rgba(26, 104, 163, 0.7);
+			color: white;
+			text-shadow: 2px 2px 2px black;
+		}
+
+	/* Tipo de Columna */
+	th {
+		padding: 6px;
+		font-size: 1em;
+		border: 1px solid black;
+	}
+
+	/* Celdas de la Tabla */
+	td {
+		padding: 5px 10px;
+		border: 1px solid black;
+		text-align: left;
+	}
+	
+		/* Columna Etiqueta */
+		.etiqueta {
+			text-align: center;
+			font-weight: bold;
+		}
+		
+		/* Columna Significado */
+		.significado {
+			font-weight: bold;
+			color: #2f4f80;
+		}
+
+		/* Columna Ejemplo */
+		.ejemplo {
+			color: #0b5915;
+			font-style: italic;
+			font-weight: bold;
+			text-align: center;
+		}
+
+
+	/* FILAS ÚNICAS */
+	.libre {
+		background-color: black;
+	}
+
+	.ejemplounico {
+		text-align: center;
+		font-style: italic;
+		font-weight: bold;
+		color: #0b5915;
+	}
+
+	.ejemplounicoraro {
+		text-align: left;
+		font-style: italic;
+		font-weight: bold;
+		color: #0b5915;
+	}
+
+	
+	/* Ubicación de la Etiqueta */
+	.ubicacion {
+		padding: 6px;
+		background-color: rgba(244, 245, 235, 0.9);
+		color: #1e3b69;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 0.9em;
+		text-align: center;
+	}
+
+
+	/* Explicación de la Etiqueta */
+	.explicacion {
+		padding: 10px;
+		background-color: rgba(245, 247, 240, 0.7);
+		color: #1e3b69;
+		font-size: 0.9em;
+		font-weight: bold;
+		font-style: italic;
+		line-height: 20px;
+		text-indent: 10px;
+		text-align: justify;	
+	}
+
+
+	.title {
+		color: black;
+		font-style: normal;
+	}
+
+	
+	/* HOVER PARA SEGUIMIENTO DE FILAS */
+	tr:hover {
+		background-color: rgba(228, 232, 240, 0.5);
+		cursor: url("../img/html-cursor.png"), auto;
+	}
+
+
+/* BOTÓN VOLVER PARTE SUPERIOR */
+#volver {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	z-index: 7;
+}
+
+	.volverimg {
+		width: 50px;
+		opacity: 0.1;
+	}
+
+	.volverimg:hover {
+		cursor: pointer;
+		opacity: 0.8;
+		transition: opacity 0.5s ease-out;
+	}
+
+
+
+/* LISTAS OL (ORDENADAS) */
+ol {
+	margin: 5px;
+}
+
+	/* ELEMENTOS 'LI' DE LISTAS OL (ORDENADAS) */
+	ol li {
+		list-style-type: upper-roman;
+		margin: 0;
+		padding: 0;
+	}
+
+		ol li:hover {
+			list-style-type: upper-roman;
+			background-color: transparent;
+			cursor: url("../img/html-cursor.png"), auto;
+		}
+
+
+/* SPAN PARA REMARCAR ALMOHADILLA Y PUNTO DE LOS ID Y CLASS */
+span {
+	font-weight: bold;
+	color: darkred;
+	background-color: yellow;
+	padding: 0 10px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0;
+	border-radius: 0 0 10px 10px;
+	background-color: pink;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-evenly;
+	align-items: center;
+	order: 6;
+}
+
+	/* Capa Logos Footer */
+	.f1 {
+		width: 30%;
+		margin: 10px;
+		padding: 0;
+		display: flex;
+		align-items: center;
+	}
+
+		/* Imagen Capa Logos Footer */
+		.f1 img {
+			max-width: 140px;
+			margin: 0;
+			padding: 0;
+		}
+
+
+	/* Capa Copyright Footer */
+	.f2 {
+		width: 70%;
+		margin: 10px;
+		padding: 0;
+	}
+
+		/* Texto Copyright Footer */
+		.f2 p {
+			margin: 0;
+			padding: 0;
+			font-size: 0.9em;
+			font-weight: bold;
+			font-style: italic;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-end;
+		}
+
+
+/**********************************************/
+/**********************************************/
+/******************* TOGGLE *******************/
+/**********************************************/
+/**********************************************/
+
+/* --- MENÚ --- */
+#menu.activo {
+	max-width: 250px;
+	height: 100%;
+	padding: 5px 10px;
+	background-color: white;
+	border-radius: 0 0 20px 0;
+	box-shadow: -1px 2px 2px black;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateX(0);		/* Fija la nueva posición tras la transformación */
+	overflow-y: auto;				/* Poner scroll a contenido que sobresalga */
+	z-index: 5;
+}
+
+
+
+/* Menú Proyectos y Apuntes */
+#menu-prin {
+	display: block;
+}
+
+	#menu-prin.activar {
+		display: block;
+	}
+
+
+/* Menú Etiqueta Head */
+#head {
+	display: none;
+}
+
+	#head.activar {
+		display: block;
+	}
+
+
+/* Menú Etiqueta Body */
+#body {
+	display: none;
+}
+
+	#body.activar {
+		display: block;
+	}
+
+
+/* Menú Formato */
+#formato {
+	display: none;
+}
+
+	#formato.activar {
+		display: block;
+	}
+
+
+/* Menú Etiqueta Listas */
+#listas {
+	display: none;
+}
+
+	#listas.activar {
+		display: block;
+	}
+
+
+/* Menú Tablas*/
+#tablas {
+	display: none;
+}
+
+	#tablas.activar {
+		display: block;
+	}
+
+
+/* Menú Otras */
+#otras {
+	display: none;
+}
+
+	#otras.activar {
+		display: block;
+	}
+
+
+/* Menú Varios */
+#varios {
+	display: none;
+}
+
+	#varios.activar {
+		display: block;
+	}
+
+
+
+
+	/**************************************/
+	/**************************************/
+	/************** BUSCADOR **************/
+	/**************************************/
+	/**************************************/
+
+	#capa-buscador {
+		max-width: 350px;					/* Tamaño máximo */
+		height: 250px;
+		margin: 0;
+		padding: 0;
+		background-color: white;
+		border-radius: 20px 0 0 20px;
+		box-sizing: border-box;
+		overflow: hidden;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: center;
+		order: 3;
+		position: fixed;
+		top: 40%;
+		right: 0;
+		z-index: 1000;
+		transform: translateX(90%);
+		transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+	}
+
+		/* Toogle para sacar el Buscador */
+		#capa-buscador.activar {
+			right: 0;
+			transform: translateX(0);
+			box-shadow: 2px 2px 4px black;
+		}
+
+
+		/* Botón Buscador */
+		#busc-bot {
+			width: 10%;
+			height: 100%;
+			margin: 0;
+			padding: 35px 0 25px 0;
+			box-sizing: border-box;
+			background-color: orange;
+			color: black;
+			border-radius: 20px 0 0 20px;
+			writing-mode: vertical-lr;			/* Pone en Vertical (izda-dcha) el texto */
+			text-orientation: upright;			/* Cambiar orientación */
+			letter-spacing: 8px;
+			font-weight: bold;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+			/* Hover Botón Buscador */
+			#busc-bot:hover {
+				cursor: pointer;
+				background-color: black;
+				color: lightblue;
+			}
+
+
+		/* Buscador */
+		#busc-prac {
+			width: 90%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 40px 10px;
+		}
+
+
+			/* Label del Buscador */
+			#busc-prac label {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				color: green;
+				font-size: 1.3em;
+				font-weight: bold;
+				text-align: center;
+				text-decoration: 1px 1px 2px black;
+			}
+			
+				/* Hover Botón del Buscador */
+				#busc-prac label:hover {
+					cursor: pointer;
+				}
+			
+			/* Input del Buscador */
+			#busc-prac input {
+				width: 320px;
+				margin: 0 20px;
+				padding: 10px;
+				font-size: 1em;
+			}
+			
+				/* Input del Buscador */
+				#busc-prac input:focus {
+					background-color: rgba(255, 247, 189, 0.5);
+				}
+			
+			
+			/* Capa Botones del Buscador */
+			#botones-buscador {
+				width: 100%;
+				display: flex;
+				flex-flow: row;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+			}
+			
+				/* Botón del Buscador */
+				#botones-buscador button {
+					width: 120px;
+					margin: 0;
+					padding: 10px 0;
+					background-color: white;
+					font-size: 1em;
+				}
+				
+					/* Hover Botón Buscar */
+					#buscar:hover {
+						cursor: pointer;
+						background-color: rgba(227, 255, 246, 1);
+					}
+
+					/* Hover Botón Reset */
+					#reset:hover {
+						cursor: pointer;
+						background-color: rgba(206, 237, 199, 1);
+					}		
+			
+			
+		/* NO HAY COINCIDENCIAS EN BÚSQUEDA */
+		
+		/* Capa del Mensaje de 'NO COINCIDE' */
+		#nocoincide {
+			max-width: 1000px;
+			margin: 20px auto;
+			padding: 30px;
+			display: none;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 30px;
+		}
+		
+			/* Título - Capa del Mensaje de 'NO COINCIDE' */
+			#nocoincide h1 {
+				width: 100%;
+				margin: 0;
+				padding: 10px;
+				font-size: 1.6em;
+				color: blue;
+				text-align: center;
+			}
+		
+			/* Imange - Capa del Mensaje de 'NO COINCIDE' */
+			#nocoincide img {
+				width: 280px;
+			}
+		
+			/* Hover NO COINCIDE */
+			#nocoincide:hover {
+				background-color: rgba(255, 246, 66, 0.5);
+				border-radius: 20px;
+				box-shadow: 5px 5px 10px;
+			}
+
+
+
+
+
+
+
+/* ---------------------- */
+/* ---------------------- */
+/* ----- RESPONSIVE ----- */
+/* ---------------------- */
+/* ---------------------- */
+
+
+
+/* Tamaño Máximo: Grandes Escritorio */
+@media (max-width: 1200px) {
+	
+	#principal {
+		width: 75%;
+	}
+
+}
+
+
+/* Tamaño Máximo: Tablet */
+@media (max-width: 768px) {
+	
+	/* Cabecera */
+	header {
+		position: sticky;
+		background-color: white;
+		top: 0;
+		z-index: 2;
+	}
+
+		header img {
+			width: 90%;
+		}
+
+	/* Activar Hamburguesa */
+	.ham-cerrar {
+		display: flex;
+	}
+
+		/* Quitar Título Etiquetas y Atributos */
+		.et {
+			display: none;
+		}
+
+
+	/* Sacar Menú del Lateral */
+	#menu {
+		width: 50%;
+		position: fixed;
+		left: -100%;							/* Se fija una posición negativa */		
+		transform: translateX(-100%);			/* Se utiliza la propiedad transform con movimiento horizontal */
+		transition: transform 0.8s ease-out;
+		/* Se utiliza la propiedad transition
+			- 1º/ Se indica la propiedad a transicionar: transform
+			- 2º/ Se indica el tiempo de la transición (0.8s)
+			- 3º/ Con 'ease-out' indica que la animacion se desacelera
+		*/
+	}
+
+	/* Activar Boón 'CERRAR MENÚ' del Desplegable */
+	h2 {
+		display: block;
+	}
+
+
+		/* Menú Proyectos y Apuntes */
+		#menu-prin {
+			display: none;
+		}
+	
+		/* Resto de Menús */
+		#menus {
+			display: block;
+		}
+
+
+	/* Tamaño Capa de la Tabla */
+	#principal {
+		width: 100%;
+	}
+
+
+	/* Tamaño Imagen F1 */
+	.f1 img {
+		max-width: 100px;
+	}
+
+
+	/* Capa del Mensaje de 'NO COINCIDE' */
+	#nocoincide {
+		max-width: 350px;
+	}
+		
+}
+
+
+/* Tamaño Máximo: Móvil */
+@media (max-width: 576px) {
+
+	/* Tamaño F1 Imagen */
+	.f1 img {
+		max-width: 80px;
+	}
+
+	/* Tamaño Letra Copy */
+	.f2 p {
+		font-size: 0.8em;
+	}
+
+}

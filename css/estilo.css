@@ -1,0 +1,1269 @@
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* --------------- HOJA DE ESTILOS --------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+
+
+body {
+	font-family: arial;
+	-webkit-font-smoothing: antialiased; /* Mejora nitidez tipo de Letra en Safari */
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+/* Párrafos */
+p {
+	padding: 5px 0;
+	box-sizing: border-box;
+	font-size: 1.2em;
+	line-height: 25px;
+	text-indent: 20px;
+	text-align: justify;
+}
+
+
+/* --- CABECERA --- */
+header {
+	width: 95%;
+	max-width: 1400px;
+	margin: 10px auto;
+	background-color: white;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+	/* Imagen de Cabecera */
+	header img {
+		width: 90%;
+	}
+	
+	.ham {
+		width: 5%;
+		padding: 5px;
+	}
+	
+		.ham:hover {
+			cursor: pointer;
+		}
+	
+		#icono_ham {
+			width: 100%;
+		}
+	
+
+/* ----------------- */
+/* --- CONTENIDO --- */
+/* ----------------- */
+
+#contenido {
+	width: 95%;
+	max-width: 1400px;
+	margin: 30px auto;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-evenly;
+	column-gap: 25px;
+}
+
+
+	/* --- MENÚ VERTICAL --- */
+	aside {
+		width: 50%;				/* Tamaño para menú desplegable con JavaScript */
+		margin: 0 0 20px 0;
+		background-color: white;
+		opacity: 1;
+		z-index: 1;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		transform: translateX(100%);			/* Trae el menú desde fuera */
+		transition: transform 0.8s ease-out;	/* Transición de la propiedad transform */
+	}
+
+		aside h2 {
+			margin: 0 0 10px 0;
+			padding: 10px 0;
+			color:  rgba(74, 131, 237, 1);
+			font-size: 0.9em;
+			text-align: center;
+			border: 3px dashed rgba(74, 131, 237, 1);
+		}
+
+			aside h2:hover {
+				cursor: pointer;
+				background-color: rgba(74, 131, 237, 0.1);
+				color: black;
+				border: 3px dashed rgba(74, 131, 237, 0.5);
+			}
+
+	
+		/* Título de todos los Menús */
+		aside h3 {
+			margin: 0px 0 10px 0;
+			padding: 20px;
+			background-color: black;
+			color: white;
+			border-radius: 20px 20px 0 0;
+			display: none;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		/* Títulos de las Listas */
+		aside h4 {
+			margin: 0 0 10px 0;
+			padding: 10px;
+			background-color: rgba(74, 131, 237, 1);
+			color: white;
+			text-align: center;
+		}
+		
+			/* Hover Títulos de las Listas - Despliegue Menús */
+			aside h4:hover {
+				cursor: pointer;
+				opacity: 0.8;
+			}
+
+		/* Listas */
+		aside ul {
+			margin: 5px 0 10px 0;
+			padding: 0;
+			list-style: none;
+			display: none;
+		}
+		
+			/* Elementos de las Listas */
+			aside ul li {
+				padding: 8px;
+				font-size: 0.85em;
+				font-weight: bold;
+			}
+			
+				/* Hover Elementos de las Listas */
+				aside ul li:hover {
+					background-color: rgba(237, 237, 221, 0.4);
+					cursor: pointer;
+				}
+
+		/* Menú Apuntes - Activado */
+		.menu-apuntes {
+			display: block;
+		}
+
+	
+		/* Menú Otros - Desactivado */
+		.menu-otros {
+			display: none;
+		}
+		
+		
+		/* Margen entre Botón Otros y Sección Organismos */
+		.otros {
+			margin-bottom: 15px;
+		}
+
+
+		/* ASIDE: WordPress */		
+		.menu-wordpress {
+			width: 100%;
+			margin: 10px 0;
+			padding: 0 0 10px 0;
+			box-sizing: border-box;
+			overflow: hidden;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* Hover Menú WordPress */
+		.menu-wordpress:hover {
+			cursor: pointer;
+			background-color: rgba(243, 247, 131, 0.3);
+			border-radius: 15px;
+			transition: background-color 1s ease-out;
+		}
+
+
+		/* ASIDE: Logos y Empresa Aside */		
+		.logos {
+			width: 100%;
+			margin: 10px 0 10px 0;
+		}
+		
+			/* Título Sección Logos Aside */
+			.menu-wordpress h5, .logos h5 {
+				width: 100%;
+				margin: 0 0 10px 0;
+				padding: 15px 0;
+				background-color: rgba(74, 131, 237, 0.3);
+				border-radius: 15px 15px 0 0;
+				display: flex;
+				justify-content: center;
+			}
+		
+			/* Imagen Logos Aside: WordPress */
+			.menu-wordpress img {
+				width: 70%;
+				margin-bottom: 5px;
+			}
+
+				
+			/* Imagen Logos Aside */
+			.logos img {
+				width: 100%;
+				margin-bottom: 5px;
+			}
+				
+				/* Hover Imagen Logos Aside */
+				.logos img:hover {
+					cursor: pointer;
+					opacity: 0.9;
+				}
+
+
+
+
+
+/***************************/
+/********** SPANs **********/
+/***************************/
+
+.negrita {
+	font-weight: bold;
+}
+
+.azul {
+	color: blue;
+	font-style: italic;
+	font-size: 1.1em;
+	line-height: 20px;
+}
+
+.verde {
+	color: green;
+	font-style: italic;
+}
+
+.cursiva {
+	font-style: italic;
+}
+
+
+
+	/***********************************************************/
+	/***********************************************************/
+	/************************* TOGGLE **************************/
+	/***********************************************************/
+	/***********************************************************/
+
+	/* --- ACTIVACIÓN/DESACTIVACIÓN HAMBURGUESA CON TOGGLE --- */
+	aside.activo {
+		max-width: 250px;
+		height: 100%;
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 3;
+		border: 6px solid white;
+		box-shadow: -2px 2px 2px rgba(74, 131, 237, 1);
+		transform: translateX(0);
+		overflow-y: auto;
+	}
+
+		/* Icono Hamburguesa */
+		#icono_ham.desactivar {
+			display: none;
+		}
+
+	
+	/* --- ACTIVACIÓN/DESACTIVACIÓN MENÚS CON TOGGLE --- */
+	
+	/* Menú Apuntes - Desactivar */
+	#menu-1.desactivar {
+		display: none;	
+	}
+	
+	/* Menú Otros Documentos - Activar */
+	#menu-3.activar {
+		display: block;	
+	}
+
+
+
+	/* --- ACTIVACIÓN/DESACTIVACIÓN SECCIONES CON TOGGLE --- */
+
+	#contenido-wordpress.desactivar {
+		display: none;
+	}
+
+
+	#contenido-wordpress-enlaces.activar, #contenido-wordpress-themes.activar {
+		display: flex;
+	}
+
+
+
+/*******************************************************/
+
+	/* CAPA PRINCIPAL*/
+	#principal {
+		width: 100%;
+		margin: 0 auto;
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	
+
+		/* --- Capa con Imagen Principal y Título ---- */
+		#imagen-principal {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0;
+			box-sizing: border-box;
+			overflow: hidden;
+			display: flex;
+			flex-flow: row wrap;
+			border-radius: 20px;
+			box-shadow: 2px 2px 4px black;
+		}
+		
+			/* Capa con Imagen */
+			#imagen-imagen {
+				width: 100%;
+				padding: 0;
+				box-sizing: border-box;
+				display: flex;
+				flex-flow: row;
+				justify-content: center;
+				align-items: center;
+			}
+		
+				/* Imagen de Capa Imagen */
+				#imagen-imagen img {
+					width: 100%;
+				}
+			
+			
+			/* Título Áreas Personales */
+			#imagen-principal h1 {
+				width: 100%;
+				margin: 0 auto;
+				padding: 20px;
+				box-sizing: border-box;
+				display: flex;
+				flex-flow: row;
+				justify-content: center;
+				align-items: center;
+				background-color: #eef5fc;
+				text-shadow: 1px 1px 1px rgba(195, 210, 235, 0.5);
+				font-size: 1.4em;
+				border: 4px double black;
+				border-radius: 0 0 20px 20px;
+			}
+		
+		
+
+		/***********************************/
+		/***********************************/
+		/*********** BIENVENIDOS ***********/
+		/***********************************/
+		/***********************************/
+
+		/* Tamaño Capa Párrafos */
+		.bienvenido-i {
+			margin: 20px 20px 10px 20px;
+		}
+
+		.bienvenido {
+			margin: 10px 20px;
+		}
+
+		.bienvenido-f {
+			margin: 10px 20px 0 20px;
+		}
+
+
+		.lista-bienvenido {
+			list-style: square;
+			margin: 0 20px;
+			font-size: 1.2em;
+			font-style: italic;
+		}
+
+			.lista-bienvenido li {
+				padding: 5px 0 5px 10px;
+
+			}
+
+
+
+
+		/***********************************/
+		/***********************************/
+		/********* BOTONES APUNTES *********/
+		/***********************************/
+		/***********************************/
+
+		#botones-apuntes {
+			width: 100%;
+			max-width: 1400px;
+			margin: 0 auto;
+			box-sizing: border-box;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			gap: 30px 10px;
+		}
+
+			/* Título Apuntes */
+			#botones-apuntes h3 {
+				width: 100%;
+				margin: 20px 0 0 0;
+				padding: 20px;
+				box-sizing: border-box;
+				background-color: #eef5fc;
+				text-align: center;
+				border: 2px solid transparent;
+			}
+
+
+			/* Capa Botones */
+			.boton {
+				width: 45%;
+				padding-top: 5px;
+				box-sizing: border-box;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 5px double black;
+				border-radius: 20px;
+			}
+
+			.boton-wordpress {
+				padding: 10px;
+			}
+
+				/* Tamaño Imágenes Botones */
+				.boton img {
+					width: 100%;
+				}
+
+
+			/* Hover Capa Botones */
+			.boton:hover {
+				cursor: pointer;
+				background-color: rgba(184, 241, 242, 0.8);
+				border: 5px double rgba(80, 107, 171, 1);
+				transform: scale(1.03);
+				opacity: 0.8;
+				transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+			}
+
+
+
+
+		/********************************************/
+		/********************************************/
+		/******* ENLACES, PROGRAMAS Y APUNTES *******/
+		/********************************************/
+		/********************************************/
+
+		/* Enlaces de Interés */
+		.elinks {
+			width: 100%;
+			margin: 10px auto;
+			padding: 0;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			align-items: center;
+			gap: 10px;
+		}
+		
+		/* Enlaces  Programas */
+		#programas {
+			width: 100%;
+			margin: 0 0 10px 0;
+			padding: 0;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			align-items: center;
+			gap: 10px;
+		}
+		
+		
+		
+			/* Título Enlaces de Interés y Programas */
+			.elinks h3, #programas h3 {
+				width: 100%;
+				margin: 20px 0;
+				padding: 20px;
+				box-sizing: border-box;
+				background-color: #eef5fc;
+				text-align: center;
+				border: 2px solid transparent;
+			}
+
+
+				/* Botones Enlaces, Bibliografía y Programas */
+				.link, .programa {
+					width: 40%;
+					margin: 0;
+					padding: 5px;
+					box-sizing: border-box;
+					border-radius: 5px;
+				}
+				
+				/* Tamaño Máximo Botones Enlaces y Programas */
+				.link, .programa {
+					max-width: 240px;
+				}
+				
+
+					/* Hover Botones Enlaces de Interés */
+					.link img, .programa img {
+						width: 100%;
+						display: flex;
+						align-items: center;
+					}
+					
+					
+					.link:hover, .programa:hover {
+						background-color: rgba(74, 131, 237, 0.15);
+						border-radius: 20px;
+						box-shadow: 1px 1px 2px black;
+						cursor: pointer;
+						transition: background-color 0.7s ease-out, border-radius 0.3s ease-out, box-shadow 0.3s ease-out;
+					}
+
+
+
+			
+			
+			
+		/* ---- CAPA FRASE ---- */	
+		
+		/* Capa Frase */
+		#frase {
+			width: 100%;
+			height: 200px;
+			margin: 20px auto 0 auto;
+			padding: 20px;
+			box-sizing: border-box;
+		  	background-image: url("../img/background.jpg");
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+		}
+		
+			#frase h4 {
+				margin: 0;
+				padding: 20px;
+				box-sizing: border-box;
+				background-color: rgba(255, 255, 255, 0.6);
+				color: blue;
+				font-family: "anton";
+				font-weight: normal;
+				font-style: italic;
+				font-size: 1.5em;
+				border-radius: 20px;
+			}
+
+
+		
+
+/* -------------- */
+/* --- FOOTER --- */
+/* -------------- */
+
+footer {
+	width: 95%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: rgba(74, 131, 237, 0.5);
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+	#menu-footer {
+		width: 100%;
+		margin: 0;
+		padding: 5px 0;
+		box-sizing: border-box;
+		list-style: none;
+		background-color: black;
+		font-size: 0.8em;
+		display: flex;
+		flex-flow: row;
+		justify-content: flex-end;
+	}
+
+		#menu-footer li {
+			width: 70px;
+			margin: 0 5px 0 0;
+			padding: 4px;
+			background-color: transparent;
+			color: white;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+		}
+
+
+			#menu-footer li:hover {
+				cursor: pointer;
+				background-color: white;
+				color: black;
+				transition: background-color 0.5s ease-out, color 0.5s ease-out;
+			}
+
+
+	/* Capa Imagen Footer */
+	.footimg {
+		width: 25%;
+		padding: 15px 0;
+		display: none;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	
+		/* Imagen Capa Imagen */
+		.footimg img {
+			max-width: 100px;
+			margin: 0;
+			padding: 0;
+		}
+	
+	/* Capa Copy */
+	.copy {
+		width: 100%;
+		margin: 0;
+		padding: 15px 0;
+		font-style: italic;
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+		/* Título Capa Copy */
+		.copy h5 {
+			margin: 0;
+			padding: 0;
+		}
+
+
+	/* ANCLA */
+	.contenedor-ancla {
+		width: 95%;
+		max-width: 1400px;
+		margin: 0 auto;
+		display: flex;
+		align-items: flex-start;
+		position: fixed;
+		bottom: 5px;
+		opacity: 0.2;
+		z-index: 100;
+		pointer-events: none;		/* Hace que el contenedor sea "transparente" al clic */
+	}
+
+		/* Imagen Ancla */
+		#ancla {
+			width: 40px;
+			margin: 15px;
+			pointer-events: auto;	/* Devuelve la interactividad solo a la imagen */
+		}
+
+		/* Hover Ancla */
+		.contenedor-ancla:hover {
+			cursor: pointer;
+			opacity: 0.8;
+			transition: opacity 0.5s ease-out;
+		}
+
+
+
+
+
+/**************************************************/
+/**************************************************/
+/******************* FORMULARIO *******************/
+/**************************************************/
+/**************************************************/
+
+#section2 {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+	/* Capa con Imagen Principal y Título */
+	#capa-titulo-form {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		overflow: hidden;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		border-radius: 20px;
+		box-shadow: 2px 2px 4px black;
+	}
+		
+		/* Capa con Imagen */
+		#imagen-form {
+			width: 100%;
+			padding: 0;
+			box-sizing: border-box;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+		}
+		
+			/* Imagen de Capa Imagen */
+			#imagen-form img {
+				width: 100%;
+			}
+
+
+		/* Título Sección Formulario */
+		#capa-titulo-form h1 {
+			width: 100%;
+			margin: 0 auto;
+			padding: 20px;
+			box-sizing: border-box;
+			background-color: #eef5fc;
+			text-shadow: 1px 1px 1px rgba(195, 210, 235, 0.5);
+			text-align: center;
+			font-size: 1.4em;
+			border: 4px double black;
+			border-radius: 0 0 20px 20px;
+		}
+
+
+	/* FORMULARIO */
+	#formulario {
+		width: 100%;
+		margin: 50px auto 20px auto;
+		padding: 20px;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 12px;
+		border: 1px dashed orange;
+	}
+
+
+		#formulario label {
+			width: 100%;
+			margin: 0 0 0 2px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+
+		#nombre-apellidos, #correo {
+			width: 100%;
+			margin: -5px 0 0 0;
+			padding: 5px;
+			font-size: 1em;
+		}
+
+
+		#adjuntar {
+			margin: -2px 0 0 0;
+			font-size: 1em;
+		}
+
+
+		#area-texto {
+			width: 100%;
+			margin: -5px 0 0 0;
+			height: 200px;
+			font-family: arial;
+			font-size: 1em;
+		}
+
+
+		.botones-form {
+			width: 100%;
+			display: flex;
+			flex-flow: row;
+			justify-content: flex-end;
+			gap: 10px;
+		}
+
+			#envio, #borrar {
+				max-width: 100px;
+				padding: 10px;
+			}
+
+				#envio:hover, #borrar:hover {
+					cursor: pointer;
+					color: blue;
+				}
+
+
+		/* Focus de los Inputs y Área de Texto */
+		input:focus, #area-texto:focus {
+			background-color: rgba(195, 210, 235, 0.2);
+		}
+
+
+		/* Sólo se activa el campo inválido si se hace focus y no está correctaente escrito */
+		input:invalid:focus {
+			background-color: lightyellow;
+		}
+
+
+
+/**************************************************/
+/**************************************************/
+/******************** WORPRESS ********************/
+/**************************************************/
+/**************************************************/
+
+#section3 {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+	/* Capa con Imagen Principal y Título */
+	#capa-titulo-wp {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		overflow: hidden;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		border-radius: 20px;
+		box-shadow: 2px 2px 4px black;
+	}
+		
+		/* Capa con Imagen */
+		#imagen-wp {
+			padding: 0;
+			box-sizing: border-box;
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+		}
+		
+			/* Imagen de Capa Imagen */
+			#imagen-wp img {
+				width: 100%;
+			}
+
+
+		/* Título Sección Formulario */
+		#capa-titulo-wp h1 {
+			width: 100%;
+			margin: 0 auto;
+			padding: 20px;
+			box-sizing: border-box;
+			background-color: #eef5fc;
+			text-shadow: 1px 1px 1px rgba(195, 210, 235, 0.5);
+			text-align: center;
+			font-size: 1.4em;
+			border: 4px double black;
+			border-radius: 0 0 20px 20px;
+		}
+
+
+		/* Tamaño Capa Párrafos */
+		#wp-p-1 {
+			margin: 20px 20px 10px 20px;
+		}
+
+		#wp-p-2, #wp-p-3, #wp-p-4 {
+			margin: 10px 20px;
+		}
+
+		#wp-p-5 {
+			margin: 10px 20px 20px 20px;
+		}
+
+
+			/* Capa oculta con Botón */
+			#web-wp {
+				width: 100%;
+				padding: 10px 0 0 0;
+				height: 100%;
+				box-sizing: border-box;
+				font-family: 'Fjalla One', sans-serif;
+				background-color: rgba(243, 247, 131, 0.7);
+				display: flex;
+				flex-flow: column wrap;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+				#web-wp-tit {
+					margin: 0;
+					padding: 0;
+					font-size: 1.3em;
+					line-height: 30px;
+					text-align: center;
+				}
+
+				#web-wp img {
+					width: 50px;
+					position: absolute;
+					right: 12%;
+				}
+
+
+		/* ---- CAPAS WORDPRESS ---- */
+		#wordpress, #wordpress-enlaces, #wordpress-themes-plugins {
+			width: 100%;
+			margin: 10px 0;
+			padding: 0;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+
+
+			/* Títulos WordPress: Instalación */
+			#titw {
+				width: 100%;
+				margin: 10px 0 0 0;
+				padding: 20px 50px;
+				box-sizing: border-box;
+				background-color: #eef5fc;
+				background-image: url("../img/resta.png");
+				background-size: 15px;
+				background-position: 97% center;
+				background-repeat: no-repeat;
+				text-align: center;
+				border: 2px solid transparent;
+			}
+
+
+			/* Títulos WordPress: Enlaces */
+			#tit-w-e {
+				width: 100%;
+				margin: 0;
+				padding: 20px 50px;
+				box-sizing: border-box;
+				background-color: #eef5fc;
+				background-image: url("../img/suma.png");
+				background-size: 15px;
+				background-position: 97% center;
+				background-repeat: no-repeat;
+				text-align: center;
+				border: 2px solid transparent;
+			}
+
+
+			/* Títulos WordPress: Plugins */
+			#tit-w-t {
+				width: 100%;
+				margin: 0;
+				padding: 20px 50px;
+				box-sizing: border-box;
+				background-color: #eef5fc;
+				background-image: url("../img/suma.png");
+				background-size: 15px;
+				background-position: 97% center;
+				background-repeat: no-repeat;
+				text-align: center;
+				border: 2px solid transparent;
+			}
+
+				/* Toggle Títulos WordPress */
+				#titw.abrir {;
+					background-image: url("../img/suma.png");
+				}
+
+
+				/* Toggle Títulos WordPress */
+				#tit-w-e.cerrar, #tit-w-t.cerrar {;
+					background-image: url("../img/resta.png");
+				}
+
+
+				/* Hover Títulos WordPress */
+				#section3 h3:hover, #section3 h3:hover, #section3 h3:hover {
+					cursor: pointer;
+					background-color: lightyellow;
+					border: 2px dashed rgba(74, 131, 237, 0.3);
+					transition: background-color 0.5s ease-out, border 0.5s ease-out;
+				}
+
+
+			/* WordPress - Capas Interiores: Instalación */
+			#contenido-wordpress {
+				width: 100%;
+				margin: 0 20px;
+				padding: 0;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-evenly;
+				align-items: center;
+			}
+
+				/* Iframe WordPress */
+				#wordpress iframe {
+					margin: 10px 0;
+				}
+
+
+			/* WordPress - Capas Interiores: Enlaces y Plugins */
+			#contenido-wordpress-enlaces, #contenido-wordpress-themes {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				display: none;
+				flex-flow: row wrap;
+				justify-content: space-evenly;
+				align-items: center;
+				gap: 10px;
+			}
+
+
+				/* Botones WordPress */
+				.wp-link {
+					width: 40%;
+					margin: 0;
+					padding: 5px;
+					box-sizing: border-box;
+					border-radius: 5px;
+				}
+				
+				/* Tamaño Máximo Botones WordPress */
+				.wp-link {
+					max-width: 240px;
+				}
+
+
+					/* Hover Botones Enlaces de WordPress*/
+					.wp-link img {
+						width: 100%;
+						display: flex;
+						align-items: center;
+					}
+
+					/* Estilo Especial de algunos Botones de WordPress */
+					#forminator, #childthemes, #embed, #hooks {
+						border-radius: 20px;
+					}
+					
+					
+					.wp-link:hover {
+						background-color: rgba(74, 131, 237, 0.15);
+						border-radius: 20px;
+						box-shadow: 1px 1px 2px black;
+						cursor: pointer;
+						transition: background-color 0.7s ease-out, border-radius 0.3s ease-out, box-shadow 0.3s ease-out;
+					}
+
+
+
+
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* ---------------------- RESPONSIVE ---------------------- */
+/* --------------------- Mobile First --------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+
+
+/* -------------------------------------- */
+/* ----- TAMAÑO A PARTIR DE MÓVILES ----- */
+/* -------------------------------------- */
+
+@media (min-width: 576px) {
+
+	/* Tamaño Botones Enlaces, Bibliografía y Programas */
+	.link, .programa {
+		width: 30%;
+	}
+
+}
+
+
+
+/* -------------------------------------- */
+/* ----- TAMAÑO A PARTIR DE TABLETS ----- */
+/* -------------------------------------- */
+
+@media (min-width: 768px) {
+	
+	/* Desactivar Hamburguesa */
+	.ham {
+		display: none;
+	}
+
+	header {
+		position: static;
+	}
+
+
+		/* Tamaño Imagen Header */
+		header img {
+			width: 100%;
+		}
+	
+	
+	/* --- MENÚ VERTICAL --- */
+	aside {
+		width: 25%;
+		display: block;
+		position: static;
+		transform: none;
+		transition: none;
+	}
+		
+
+		/* Quitar Botón Cerrar Menú (Sólo en desplegable) */
+		.cerrar-menu {
+			display: none;
+		}
+
+	
+		/* Activar - Título de todos los Menús */
+		aside h3 {
+			display: flex;
+		}
+
+	
+		/* Activar - Logos y Empresa - Aside */
+		.logos {
+			display: block;
+		}
+
+	
+	/* Tamaño Botones */
+	.boton {
+		width: 28%;
+	}
+
+	
+	/* --- PRINCIPAL --- */
+	#principal, #section2, #section3 {
+		width: 75%;
+	}
+
+		/* Tamaño Botones Enlaces de WordPress */
+		.wp-link {
+			width: 22.5%;
+		}
+
+	
+	
+	/* Capa Frase */
+	#frase {
+		display: none;
+	}
+
+
+	/* Activar Capa Imagen Footer */
+	.footimg {
+		display: flex;
+	}
+
+	/* Tamaño Copyright */
+	.copy {
+		width: 70%;
+		justify-content: flex-end;
+	}
+	
+		/* Título Capa Copy */
+		.copy h5 {
+			font-size: 1em;
+		}
+	
+}
+
+
+
+/* -------------------------------------- */
+/* --- TAMAÑO A PARTIR DE ESCRITORIOS --- */
+/* -------------------------------------- */
+
+@media (min-width: 992px) {
+
+	aside {
+		width: 20%;
+	}
+
+
+	/* --- PRINCIPAL --- */
+	#principal, #section2, #section3 {
+		width: 80%;
+	}
+
+
+	/* Tamaño Botones Enlaces y Programa */
+	.link, .programa {
+		width: 18%;
+	}
+
+
+		/* Posición Click en Botón WordPress desplegable */
+		#web-wp img {
+			right: unset;		/* Eliminar valor de la propiedad */
+			bottom: 8%;
+		}
+
+}
+
+
+@media (min-width: 1200px) {
+
+	/* Tamaño Botones */
+	.boton {
+		width: 12%;
+	}
+
+}
+

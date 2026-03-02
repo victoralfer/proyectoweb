@@ -307,6 +307,8 @@ function fun_buscador_reset() {
 
     if (no_coincide) no_coincide.style.display = "none";
 
+    capa_buscador.classList.toggle("activar");
+
 }
 
 
